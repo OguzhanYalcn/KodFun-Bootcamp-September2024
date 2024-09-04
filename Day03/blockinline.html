@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block vs. Inline</title>
+  </head>
+  <body>
+    <!-- elements such as h1, p, div, ul are block elements. It reserves the line it is on for itself. Even if the right side is empty, it does not accept a new element to the right. -->
+
+    <!-- h1, p, div, ul gibi elementler block elementtir. Bulunduğu satırı kendine rezerve eder. Sağ tarafı boş dahi olsa sağına yeni bir element kabul etmez. -->
+
+    <p>My name is</p>
+    <p>Ali</p>
+    <!-- Written One Below The Other -->
+    <!-- Alt Alta Yazılır -->
+
+    <hr />
+    <!-- Horizontal Rule : Yatay Çizgi -->
+
+    <!-- elements like span, img, a, strong, em are inline elements. They share a line, they line up side by side. THEY BEHAVE LIKE THE LETTERS OF A SENTENCE. -->
+
+    <!-- span, img, a, strong, em gibi elementler inline elementtir. Satırı paylaşırlar, yan yana sıralanırlar. SANKİ BİR CÜMLENİN HARFLERİ GİBİ DAVRANIRLAR. -->
+
+    <span>My name is</span>
+    <span>Veli</span>
+    <!-- Written Side by Side -->
+    <!-- Yan Yana Yazılır -->
+
+    <hr />
+
+    This picture
+    <img src="//picsum.photos/id/144/1000" alt="bir resim" height="16" /> is for
+    <em>Oguzhan</em>
+
+    <hr />
+
+    <!-- p>lorem5 → Creates a Paragraph of 5 Words. -->
+    <!-- p>lorem5 → 5 Kelimelik Bir Paragraf Oluşturur. -->
+    <p>
+      Lorem <a href="https://kod.fun">ipsum</a> <strong>dolor</strong> sit amet.
+    </p>
+    <hr />
+    <p>Area: 100km<sup>2</sup></p>
+    <p>
+      Bol bol <strong><em>H<sub>2</sub>O</em></strong> içiniz.
+      <br />
+      Bol bol <em><strong>H<sub>2</sub>O</strong></em> içiniz.
+      <!-- There's no difference. -->
+      <!-- Aralarında bir fark yok. -->
+    </p>
+
+    <!-- NOT: HTML TAGLERİNDE SON AÇILAN TAG İLK ÖNCE KAPANIR !!! -->
+    <!-- NOTE: IN HTML TAGS, THE LAST OPENED TAG IS CLOSED FIRST!!! -->
+
+    <!-- YANLIŞ KULLANIM ÖRNEĞİ -->
+    <!-- EXAMPLE OF INCORRECT USAGE -->
+    <!-- <span><strong>abc</span></strong> -->
+
+    <!-- DOĞRU KULLANIM ÖRNEĞİ -->
+    <!-- EXAMPLE OF CORRECT USAGE -->
+    <!-- <span><strong>abc</strong></span> -->
+
+    <!-- Element div not allowed as child of element span in this context. (Suppressing further errors from this subtree.) -->
+    <!-- <span>
+      <div></div>
+    </span> -->
+  </body>
+</html>

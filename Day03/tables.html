@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <h2>Some Cities of Turkey</h2>
+    <!-- CSS should be used instead of Border Attribute, it was used temporarily. -->
+    <table border="1">
+      <tr><!-- table row -->
+        <td rowspan="4">TURKEY</td>
+        <th>License Plate</th><!-- table heading -->
+        <th>City</th>
+        <th>What is the city famous for?</th>
+        <th>Region</th>
+        <th>Is there a sea in the city?</th>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>Samsun</td>
+        <td>Bafra Pita</td>
+        <td>Black Sea Region</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>Izmir</td>
+        <td>Boyoz</td>
+        <td>Aegean Region</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>Tokat</td>
+        <td>Stuffed Grape Leaves, Grape</td>
+        <td>Black Sea Region</td>
+        <td>No</td>
+      </tr>
+    </table>
+
+    <h2>Movies</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>IMDB Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kaybedenler Kulübü</td>
+          <td>2011</td>
+          <td>7.5 / 10</td>
+        </tr>
+        <tr>
+          <td>The Godfather</td>
+          <td>1972</td>
+          <td>9.2 / 10</td>
+        </tr>
+        <tr>
+          <td>Babam ve Oğlum</td>
+          <td>2005</td>
+          <td>8.2 / 10</td>
+        </tr>
+        <tr>
+          <td>Cars</td>
+          <td>2006</td>
+          <td>7.2 / 10</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+            <th colspan="2">Average IMDB Rating</th>
+            <th>8.025 / 10</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
