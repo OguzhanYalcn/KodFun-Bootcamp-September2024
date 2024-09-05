@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Search Engine</title>
+  </head>
+  <body>
+    <form action="https://google.com/search">
+      <label for="word">Words to Search</label>
+      <input type="text" id="word" name="q" placeholder="Search..." />
+      <!-- q = query -->
+      <!-- If value=‘toast’ is written, toast text comes by default. placeholder does not appear.-->
+      <!-- value="toast" yazılırsa, default olarak toast yazısı gelir. Placeholder gözükmez.-->
+
+      <!-- You can add the following hidden field to search in the Images section -->
+      <!-- Görseller bölümünde aratmak için aşağıdaki gizli alanı ekleyebilirsiniz -->
+
+      <!-- <input type="hidden" name="udm" value="2"/>  -->
+      <!-- ‘hidden’ is used to prevent the user from changing this value. ‘udm’ and “2” were found by analysing the address information in the google search bar.-->
+      <!-- "hidden", kullanıcının bu değeri değiştirmemesi için kullanılmıştır. "udm" ve "2" olması google'da arama çubuğundaki adres bilgisi incelenerek bulunmuştur.-->
+    
+      <button>Send</button>
+    </form>
+  </body>
+</html>
