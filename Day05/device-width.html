@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bu satır, web sitesinin mobil cihazlardaki çözünürlüğüne göre ayarlama yapılması için yazılmıştır. Zorunlu değildir. Yazılan web sitesi mobil uyumlu olsun mu, olmasın mı? -->
-    <title>Device - Width Trial</title>
+    <!-- This line with meta tag is written to adjust the resolution of the website on mobile devices. It is not mandatory. Is the written website mobile compatible or not? -->
+    <!-- meta etiketli bu satır, web sitesinin mobil cihazlardaki çözünürlüğüne göre ayarlama yapılması için yazılmıştır. Zorunlu değildir. Yazılan web sitesi mobil uyumlu olsun mu, olmasın mı? -->
+    <!-- meta tag was removed and mobile compatibility and appearance were tested. -->
     <!-- meta etiketi kaldırılarak mobildeki uyumluluk ve görünüm test edilmiştir. -->
+    <title>Device - Width Trial</title>
+    <!-- Apart from testing the "device-width" property, HTML attributes that may be encountered were examined. -->
+    <!-- "device-width" özelliğinin test edilmesinin dışında karşımıza çıkabilecek HTML nitelikleri incelenmiştir. -->
 </head>
 <body>
-    <button onclick="alert('bana tıklama bir daha burası js gerisi html')">BEN BİR BUTONUM</button>
-    <p contenteditable>Lütfen bu paragrafın içeriğini değiştirmeye çalışın (contenteditable)</p>
-    <img src="" alt=""> 
-    <!-- svg dosyası -->
+    <button onclick="alert('Do Not Ever Click On Me Again !!!')">I'M A BUTTON</button>
+    <!-- alert() is a function in JavaScript language. All other parts except the "alert()" function are HTML related. -->
+    <!-- alert(), JavaScript dilinde bir fonksiyonudur. "alert()" fonksiyonu dışındaki diğer kısımlar HTML ile ilgilidir. -->
+    <!-- The "alert()"" function displays a warning window on the screen when the button is clicked and this window contains the message in brackets. -->
+    <!-- "alert()" fonksiyonu, butona tıklandığında ekranda bir uyarı penceresi gösterir ve bu pencere parantez içindeki mesajı içerir. -->
+    <hr>
+    <p contenteditable>Please try to change the content of this paragraph (contenteditable property)</p>
+    <!-- contenteditable, bir öğeyi (örneğin bir paragrafı) düzenlenebilir hale getirmeye yarayan HTML özelliğidir. Bu özellik kullanıldığında kullanıcı o öğenin içeriğini tarayıcı üzerinden değiştirebilir. Bu paragrafın içeriği, web sayfası üzerinde doğrudan düzenlenebilir hale gelir. Kullanıcı bu metni seçip, klavyesiyle yazı ekleyip silebilir. Özetle, sayfa üzerinde bu paragrafı "düzenlenebilir" yapar.-->
+    <!-- contenteditable is an HTML property for making an element (for example a paragraph) editable. When this property is used, the user can change the content of that element through the browser. The content of this paragraph becomes directly editable on the web page. The user can select this text and add or delete text with the keyboard. In summary, it makes this paragraph "editable" on the page.-->
+    <hr>
+    <img src="twitter-brands-solid.svg" alt="twitter-bird" width="100"> 
+    <!-- SVG File -->
+    <hr>
     <h1>This Is A Title</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quibusdam eum consequuntur minus ratione placeat enim eos quas iure repellendus?</p>
     <p>Hic doloremque tenetur dolorum, rem nam facilis, eius, maiores iusto neque quasi asperiores vitae doloribus maxime magnam assumenda dignissimos ducimus.</p>
@@ -22,12 +35,10 @@
         <p>
             Did you do your military service?
             <!-- Askerlik Yaptınız Mı? -->
-            <label>
-                <input type="radio" name="military-status" value="yes"> Yes
-            </label>
-            <label>
-                <input type="radio" name="military-status" value="no"> No
-            </label>
+            <label><input type="radio" name="military-status" value="yes"> Yes </label>
+            <label><input type="radio" name="military-status" value="no"> No </label>
+            <!-- Since both "input" tags have the same "name" value, the user can select only one option. -->
+            <!-- Her iki "input" etiketinin de "name" değeri aynı olduğu için, kullanıcı sadece bir seçeneği işaretleyebilir. -->
         </p>
         <p>
             What are your hobbies?
@@ -38,6 +49,8 @@
             <label><input type="checkbox" name="hobby" value="handball"> Handball </label>
             <label><input type="checkbox" name="hobby" value="tennis"> Tennis </label>
             <label><input type="checkbox" name="hobby" value="swimming"> Swimming </label>
+            <!-- More than one hobby can be selected because each "input" tag is set as a checkbox. Since all "input" tags have the same "name" value, the selected hobbies are sent as a group. -->
+            <!-- Birden fazla hobi seçimi yapılabilir çünkü her "input" etiketi checkbox olarak ayarlanmıştır. Tüm "input" etiketlerinin "name" değeri aynı olduğu için, seçilen hobiler grup olarak gönderilir. -->
         </p>
         <p>
             <label for="city">Place of Birth:</label>
@@ -47,19 +60,30 @@
                 <option value="3">Los Angeles</option>
                 <option value="4">San Francisco</option>
             </select>
+            <!-- The "select" tag presents a drop-down list to the user; the "option" tags define the options of this list. -->
+            <!-- "select" etiketi, kullanıcıya bir açılır liste sunar; "option" etiketleri ise bu listenin seçeneklerini tanımlar. -->
         </p>
-        <br>
-        <h2>Kod Fun</h2>
-        <!-- Bir web sitesi içinde başka bir web sitesi göstermeye yarar. -->
-        <iframe src="https://kod.fun" width="300" height="400" frameborder="1"></iframe>
-        <br>
-        <br>
+        <p>
+            <label for="name">Your Name:</label>
+            <input type="text" required>
+            <label for="surname">Your Surname:</label>
+            <input type="text" required>
+            <!-- The "input" tags provide fields for the user to enter the required text information. The "required" property specifies that these fields cannot be left blank. -->
+            <!-- "input" etiketleri, kullanıcının gerekli metin bilgilerini girmesi için alanlar sağlar. "required" özelliği, bu alanların boş bırakılamayacağını belirtir. -->
+        </p>
         <button>Send</button>
-
+        <br>
+        <br>
+        <hr>
+        <h2>Kod Fun</h2>
+        <iframe src="https://kod.fun" width="300" height="400" frameborder="1"></iframe>
+        <!-- The "iframe" tag allows to display another web page embedded in the current page. The "src" property specifies the URL of the page to display, and the "width" and "height" properties specify the dimensions of the iframe. -->
+        <!-- "iframe" etiketi, başka bir web sayfasını mevcut sayfada gömülü olarak görüntülemeye olanak tanır. "src" özelliği, gösterilecek sayfanın URL'sini belirtir; "width" ve "height" özellikleri ise iframe'in boyutlarını belirler. -->
+        <br>
+        <br>
     </form>
     <br>
     <hr>
     <br>
-
 </body>
 </html>
