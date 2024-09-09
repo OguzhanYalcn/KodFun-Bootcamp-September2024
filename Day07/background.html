@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background</title>
+    <style>
+      body {
+        /* background-color: silver; */
+        /* background-image: url(monster.png); */
+        /* background-size: 200px; → Buranın ölçüleri virgüller ile farklı farklı verilebiliyor. || The measurements here can be given differently with commas. */
+        /* cover → En boy oranını bozmadan kaplar. || Covers without changing the aspect ratio. */
+        /* %100 %100 → Bu ifade ile en boy oranı bozulur. || With this expression the aspect ratio is distorted. */
+        /* background-repeat: repeat-x; → Sadece x ekseninde tekrar etsin. (Aynı ifade y ekseni için de düzenlenebilir.) || Repeat only on the x-axis. (The same expression can also be arranged for the y-axis). */
+        /* background-repeat: no-repeat; → Tekrarı önler. || Avoids repetition. */
+        /* background-position: right 10px bottom 15px; */
+        /* The above expression specifies where the background image will be placed on the page. With this expression, the background image will be placed at the bottom right of the page. It means "10 px from the right and 15 px from the bottom". It is based on the x and then the y axis. */
+        /* Yukarıdaki ifade, arka plan görselinin sayfada nerede duracağını belirtir. Bu şekildeki ifade ile arka plan görseli sayfanın sağ altında yer alır. "Sağdan 10, alttan 15 px uzaklıkta olsun" anlamına gelir. Önce x, sonra y ekseni baz alınır. */
+        /* Veya yüzde olarak da verilebilir. || Or it can be given as a percentage. */
+        /* background-position: 20% 60%; → Soldaki boşluk, kapsayıcının yatay uzunluğunun %20'si kadar; Üstteki boşluk, kapsayıcının dikey uzunluğunun %60'ı kadar olur. || The gap on the left is 20% of the horizontal length of the container; the gap on the top is 60% of the vertical length of the container. */
+        /* Veya şu şekilde bir kullanım da vardır: || Or there is also a usage like this: */
+        /* background-position: center center; */
+        /* background-attachment: fixed; */
+        /* This statement ensures that the background image remains fixed below the visible part of the page. */
+        /* Bu ifade arka plan görselinin, sayfanın görünen kısmının altında sabit şekilde kalmasını sağlar. */
+
+        /* Background family can be expressed without such a long spelling. There is a shorter way of writing it. This is called “Background Shorthand”. */
+        /* Background ailesi bu kadar uzun yazılmadan da ifade edilebiliyor. Daha kısa bir yazım şekli var. Buna "Background Shorthand" adı verilir. */
+
+        /* 
+            body {
+                background-color: #ffffff;
+                background-image: url("img_tree.png");
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+
+            ↓↓↓↓ CSS Background - Shorthand Property
+
+            body {
+                background: #ffffff url("img_tree.png") no-repeat right top;
+            }
+
+            When using the shorthand property the order of the property values is:
+                • background-color
+                • background-image
+                • background-repeat
+                • background-attachment
+                • background-position
+            It does not matter if one of the property values is missing, as long as the other ones are in this order. Note that we do not use the background-attachment property in the examples above, as it does not have a value.
+
+            Kısaltılmış özellik kullanılırken özellik değerlerinin sırası şöyledir:
+                • background-color
+                • background-image
+                • background-repeat
+                • background-attachment
+                • background-position
+            Diğerleri bu sırada olduğu sürece özellik değerlerinden birinin eksik olması önemli değildir. Yukarıdaki örneklerde background-attachment özelliğini kullanmadığımızı unutmayın, çünkü bir değeri yoktur.
+
+        */
+
+        background: silver url(monster.png) no-repeat fixed right 10px bottom 15px;
+        background-size: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ratione
+      facere corrupti, quo commodi, laborum nihil maiores adipisci, possimus
+      accusamus doloribus dolores nesciunt aliquid velit quibusdam! Voluptatum
+      distinctio voluptas iusto.
+    </p>
+    <p>
+      Qui dolorem praesentium cum distinctio sunt quod repellat aut architecto,
+      veniam corrupti aliquid, quas laudantium ipsum assumenda. Voluptate quae
+      fugiat ex. Numquam culpa nemo unde, eveniet cupiditate necessitatibus vel
+      magnam?
+    </p>
+    <p>
+      At enim eius nulla eum. Doloribus laborum libero maiores magnam voluptas
+      minima, itaque ratione architecto impedit provident quae ipsam vero
+      deleniti quibusdam, aliquam placeat cum rerum esse magni dolore quasi.
+    </p>
+    <p>
+      Sunt quos, fugit libero optio sed velit dolorem repudiandae nobis,
+      assumenda sequi incidunt omnis deleniti ipsam odio. Aliquid saepe
+      provident sequi vero delectus nostrum laborum, corrupti nulla. Provident,
+      tempore incidunt.
+    </p>
+    <p>
+      Praesentium ipsa aperiam dolore at dolor ipsum velit adipisci beatae
+      tenetur similique. Ea nemo sit placeat ex dolores non aliquam, molestias,
+      inventore dolor, eligendi saepe error? Asperiores cumque voluptatibus
+      tempora.
+    </p>
+    <p>
+      Inventore sunt tempore asperiores omnis repellendus perferendis eveniet
+      odio ipsum quidem. Omnis minus inventore commodi quaerat beatae
+      reiciendis! Praesentium aliquam reprehenderit fuga natus fugit quidem rem
+      delectus consequatur dolorem enim.
+    </p>
+    <p>
+      Cum unde in mollitia pariatur sequi. Repellat quae vitae eos distinctio
+      quod! Minima repudiandae at perferendis tempore doloremque quo mollitia
+      quod, saepe corrupti aut eaque tenetur! Doloribus, tenetur. Quisquam, sit.
+    </p>
+    <p>
+      Corporis soluta ad autem voluptates vitae consequatur deserunt at fugiat
+      dolores esse! Consequuntur iusto consequatur nobis aliquam quibusdam
+      cumque cupiditate recusandae, vel nesciunt quo voluptate vero dolorum.
+      Neque, quas autem.
+    </p>
+    <p>
+      Dicta, expedita. Ab corrupti architecto, dicta tenetur dolorem dignissimos
+      sit vero deserunt reprehenderit quas eveniet dolore distinctio deleniti
+      minus assumenda quia iure, quod aliquid facere eos voluptate mollitia
+      possimus accusantium.
+    </p>
+    <p>
+      Non id veniam reiciendis quos. Adipisci asperiores, ut enim in fugit
+      maiores quae molestiae culpa doloremque aut. Maxime, nisi dolorum illo
+      velit voluptas id exercitationem aperiam, dolores possimus nihil ratione!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+      consequuntur eos beatae dignissimos officia atque, officiis eius ratione
+      quis adipisci eligendi, eaque velit unde illo earum maxime ducimus
+      accusamus vitae.
+    </p>
+    <p>
+      Fugit illum dolores, aliquam nisi exercitationem reiciendis eum corporis,
+      quo quis numquam incidunt, maxime vitae eius fugiat debitis! Nemo aliquid
+      maxime assumenda culpa, debitis illum hic voluptatibus excepturi minima
+      deserunt.
+    </p>
+    <p>
+      Laborum vitae dolores, blanditiis ullam ut dicta. Esse blanditiis commodi
+      dignissimos velit consectetur magni fugit, neque minima pariatur corporis
+      molestiae aspernatur quae labore harum cupiditate veniam dolores deleniti
+      optio sequi.
+    </p>
+    <p>
+      Earum impedit, dolore tenetur quisquam molestias tempore accusamus vero,
+      itaque et fugiat quia repellendus quidem, vitae quis praesentium natus.
+      Quos sunt aliquid consectetur accusamus laudantium asperiores possimus
+      tempore a sapiente.
+    </p>
+    <p>
+      Accusantium animi provident ipsa est repudiandae necessitatibus amet, quos
+      esse quidem dolore inventore temporibus velit ut eaque, accusamus quod
+      facere natus, et libero architecto molestias in. Ut minus natus
+      voluptatum!
+    </p>
+    <p>
+      Illo optio quia autem perspiciatis aperiam, suscipit omnis quidem. Id,
+      error dolore sapiente beatae voluptatum expedita. Assumenda vitae nesciunt
+      modi at dolore reiciendis eos consectetur iste id? Similique, doloremque
+      delectus?
+    </p>
+    <p>
+      Quae, iusto aliquam! Ut, aspernatur! Officia tempore eos ab, mollitia
+      provident ex, veritatis tenetur fugit, nulla distinctio recusandae illo.
+      Quasi officiis unde harum commodi nesciunt, sequi dignissimos doloribus
+      dolor fugiat!
+    </p>
+    <p>
+      Placeat hic, corrupti quam facilis ex quibusdam ipsam impedit recusandae?
+      Praesentium impedit, tenetur voluptates adipisci molestias debitis
+      officiis dolor eum odit similique est nemo cum quia quidem sed doloribus
+      minus?
+    </p>
+    <p>
+      Cupiditate velit eius iste, sit omnis, dolore ipsam magni officia natus
+      voluptate, sequi esse illum accusamus debitis rerum consequuntur eveniet
+      quis necessitatibus placeat quae quia ipsum dignissimos. Nesciunt, illum
+      nemo.
+    </p>
+    <p>
+      Adipisci voluptatem architecto veritatis error odio! Autem sunt eligendi
+      nam cumque, consectetur repudiandae maxime eum, nisi ex fugiat at
+      perferendis a et recusandae porro, accusantium iure architecto mollitia
+      illum labore!
+    </p>
+  </body>
+</html>

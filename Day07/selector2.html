@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Selectors-2</title>
+    <style>
+      .important {
+        border-left: 10px solid green;
+      }
+      /* How do I select the "list item" / sibling after the class name "important"? Like this: */
+      /* "Önemli" sınıf adından sonra "liste öğesini" / kardeşini nasıl seçerim? Şöyle: */
+      .important + li {
+        border-left: 10px solid red;
+      }
+      /* How do I select all "list items" / siblings after the class name "not-important"? Like this: */
+      /* "Önemli değil" sınıf adından sonraki tüm "liste öğelerini" / kardeşleri nasıl seçerim? Bunun gibi: */
+      /* This expression means all "list items" after the "not-important" class. */
+      /* Bu ifade, "önemli değil" sınıfından sonraki tüm "liste öğeleri" anlamına gelir. */
+      .not-important ~ li {
+        border-left: 10px solid cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ul>li*9>lorem2 -->
+    <ul>
+      <li>Lorem, ipsum.</li>
+      <li>Culpa, asperiores.</li>
+      <li class="important">Velit, rerum?</li>
+      <li>Nobis, tempora?</li>
+      <li>Assumenda, quidem.</li>
+      <li class="not-important">Facere, fuga.</li>
+      <li>Dignissimos, ad.</li>
+      <li>Soluta, unde?</li>
+      <li>Eius, reprehenderit?</li>
+    </ul>
+  </body>
+</html>

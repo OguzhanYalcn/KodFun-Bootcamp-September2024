@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url(sea.jpg) fixed center;
+            background-size: cover; /* resmin tamamını görmek için contain demek gerekir. contain deyince tekrarlama yapar. coverda sağ sol gözükmez*/
+            font-family: "Open Sans", sans-serif; /* fallback, olmadığında sans-serif'i kullanır. bu da olmazsa başka bir şey yazılabilir. sondaki family olur ama. */
+        }
+        div {
+            background-color: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(3px);
+            /* arkada resmi biraz buzlu gösterir. 1px en az bulanık. */
+            font-size: 1.5em;
+            padding: 30px; /* kutunun içinden. evin duvara olan uzaklığın */
+            margin: 20px; /* kutunun dışından kenarlara. diğer evlere olan uzaklık. */ 
+            border-radius: 20px; /* kutunun köşelerinin yuvarlaklığı */
+            color: rgba(255, 255, 255, .9);
+            /* font-family: sans-serif; */ /* tırnaksız fonttur */
+            /* font-family: Verdana; */ /* → pcde olduğu için gösterdi, olmasaydı göstermezdi import etmemiz gerekir. */
+            line-height: 1.5; /* satırlar arasındaki boşluk */
+            text-shadow: 1px 1px 3px black; /* → 1px sağında 1 px altında siyah 3 px de blur yapar yayar. */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati quos eveniet exercitationem adipisci odit quaerat pariatur provident, deleniti commodi labore maxime architecto nobis atque eum vero quod ipsam harum.</p>
+        <p>Possimus delectus itaque et! A laudantium facere nobis, quis adipisci ab nam tempore dolores, vero similique, sed molestiae quaerat. Dignissimos omnis praesentium vel sed architecto nulla culpa veniam! Rerum, officia!</p>
+        <p>Nisi numquam reiciendis veniam illo aliquam quibusdam tempora! Laborum mollitia facilis deserunt necessitatibus dolor tenetur totam dolores, dolorum, veritatis, nostrum ea repudiandae aliquam optio delectus a. Harum adipisci repellat ratione?</p>
+    </div>
+</body>
+</html>
