@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      * {
+        box-sizing: border-box; /* Bootstrap gives the property we wrote in this line by default. || Bootstrap, bu satırda yazdığımız özelliği default olarak verir. */
+        /* The rules in "*{}"" apply to all elements on the page. || "*{}" içindeki kurallar, sayfadaki tüm öğelere uygulanır. */
+      }
+
+      .box1 {
+        /* box-sizing: border-box; → After writing this expression, the value given to the "height" property becomes the total height. With this expression, margins and borders are included in the "height" and "width" values, so that the total height and width are limited to the specified values.*/
+        /* box-sizing: border-box; → Bu ifade yazıldıktan sonra "height" özelliğine verilen değer, toplam yükseklik olur. Bu ifade ile "height" ve "width" değerlerine kenar boşlukları ve sınırlar dahil edilir, böylece toplam yükseklik ve genişlik belirtilen değerlerle sınırlı olur.*/
+        /* The added padding and border values are calculated from the area allocated to the element's content. That is, the padding and border are subtracted from this area and the total height and width remain within the specified values. This makes the overall dimensions of the element more manageable. */
+        /* Eklenen padding(dolgu) ve border(kenarlık) değerleri, öğenin içeriğine ayrılan alandan hesaplanır. Yani, padding ve border bu alandan düşülür ve toplam yükseklik ile genişlik belirtilen değerler içinde kalır. Bu, öğenin toplam boyutlarının daha yönetilebilir olmasını sağlar. */
+        background-color: yellow;
+        border: 10px solid green;
+        padding: 20px;
+        /* This space, called "padding", is located between the content and the border of the element. It creates 20px of space on each of the four sides (top, right, bottom, left). */
+        /* "padding" isimli bu boşluk, öğenin içeriğiyle (content) kenarları (border) arasında yer alır. Her dört tarafta (üst, sağ, alt, sol) 20px'lik boşluk oluşturur. */
+        height: 200px;
+        /* This value only gives the height of the contents of the div box. To calculate the total height, padding and border must be added. || 260px */
+        /* Bu değer yalnızca div kutusunun içeriğinin yüksekliğini verir. Toplam yüksekliği hesaplamak için padding ve border eklenmelidir. || 260px */
+        /* box-sizing: border-box; → If this expression is used, padding and border will be included in the total height, and the specified 200px will be the total height of the box. */
+        /* box-sizing: border-box; → Bu ifade kullanılırsa, padding ve border toplam yüksekliğe dahil olur, ve belirtilen 200px kutunun toplam yüksekliği olur. */
+        width: 100%;
+        margin-top: 20px;
+        /* margin-top: 20px; → If the header has a margin-bottom value and box1 is given "margin-top: 20px", the two margin values will not overlap. The browser will apply the larger of the two margins. This is called "margin collapsing". */
+        /* margin-top: 20px; → Eğer header'ın margin-bottom değeri varsa ve box1'e "margin-top: 20px" verilirse, iki margin değeri çakışmaz. Tarayıcı, bu iki margin arasında en büyük olanını uygular. Bu duruma "margin collapsing" denir. */
+      }
+
+      header {
+        background-color: pink;
+        margin-bottom: 20px; /* Puts a 20px space between it and the item below, pushing the item down. || Alttaki öğe ile arada 20px boşluk bırakır, öğeyi aşağı iter. */
+        text-align: center; /* tac → TAB */
+        padding: 20px; /* p20 → TAB */
+        border: 15px dashed purple;
+        /* Besides "dashed", there are other border styles such as "solid", "double", "dotted", "groove", "ridge", "inset", and "outset".*/
+        /* "dashed" dışında "solid", "double", "dotted", "groove", "ridge", "inset", ve "outset" gibi farklı border stilleri de vardır.*/
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER HEADER HEADER</header>
+    <!-- Elements like h1 and p have a default padding value, the header element does not. -->
+    <!-- h1 ve p gibi elementlerin varsayılan padding değeri vardır, header elementinde bu yoktur. -->
+    <!-- Header works like a div, usually used at the top of the page. -->
+    <!-- Header, genellikle sayfanın tepesinde kullanılan bir div gibi çalışır. -->
+    <div class="box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab error minus
+      praesentium, quod reprehenderit possimus consectetur ut id! Facere harum
+      dicta accusantium temporibus modi. Provident error repellendus libero
+      commodi illo.
+    </div>
+  </body>
+</html>

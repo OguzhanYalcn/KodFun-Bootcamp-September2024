@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Give the div elements CSS with the following properties: || div elementlerine aşağıdaki özellikleri taşıyacak şekilde CSS verin:
+        1. Total Height (Toplam Yükseklik): 200px
+        2. Total Width (Toplam Genişlik): 200px 
+        3. Give Background Color (Your Choice) || Arka Plan Rengi Verin (Siz Seçin)
+        4. Padding (Dolgu): 20px 
+        5. Border (Kenarlık): 10px
+        6. Margin: 15px
+        7. Font Color (Yazı Rengi): White
+        */
+      div {
+        box-sizing: border-box;
+        height: 200px;
+        width: 200px;
+        background-color: cornflowerblue;
+        padding: 20px;
+        border: 10px solid salmon;
+        margin: 15px; /* m15 → TAB */
+        color: white; /* c:white → TAB */
+        /* EXTRA (The styles given here apply to elements inside. || Burada verilen stiller içerideki öğeler için geçerli.) */
+        /* display: flex;
+           align-items: center; → Centers on the vertical axis. || Dikey eksende ortalar.
+           justify-content: center; → Centers on the horizontal axis. || Yatay eksende ortalar.
+        */
+        /* Since div is a block-level element, it is stacked one below the other, not side by side. */
+        /* div, blok seviyesinde bir element olduğu için yan yana değil, alt alta dizilir. */
+        float: left;
+        /* The boxes are left-aligned and come next to each other. However, in this case, the main container "main" does not wrap the boxes it contains, because the float elements are out of the normal stream. This creates a "crashing" effect. The solution will be explained when we cover floats. */
+        /* Kutular sola hizalanır ve yan yana gelir. Ancak bu durumda, ana kapsayıcı olan "main" içerdiği kutuları sarmaz, çünkü float öğeler normal akıştan çıkar. Bu durum "çökme" etkisi yaratır. Çözüm, float konusu işlenirken anlatılacak. */
+        outline: 10px solid #99cd3296;
+        /* An outline is a frame drawn outside the border. It has no volume, meaning it doesn't push other elements or take up space. */
+        /* Outline, border'ın dışında çizilen bir çerçevedir. Hacmi yoktur, yani diğer öğeleri itmez veya yer kaplamaz. */
+        /* outline-offset: 5px; → Puts distance between outline and border. || Outline ile border arasına mesafe koyar. */
+      }
+      main {
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Since div is a block level element, boxes are placed one per line. || div blok seviyesi bir element olduğu için, kutular her satırda birer tane yerleşir. -->
+    <!-- Block elements are imported into a container with the "main" tag. || Blok elementleri, "main" etiketi ile bir kapsayıcıya aldık. -->
+
+    <!-- PROBLEM: Why is the border of the main box not enclosing everything inside it when it should? Because floats are used, "main" does not wrap around the boxes inside it. This is due to float elements being out of the normal flow. The solution will be given in the float topic. -->
+    <!-- PROBLEM: main kutusunun kenarlığı içindeki her şeyi çevrelemesi gerekirken neden şu an çevrelemiyor? Float kullanıldığı için, "main" içindeki kutuların etrafını sarmaz. Bu durum float öğelerin normal akıştan çıkmasından kaynaklanır. Çözüm float konusu işlenirken verilecek. -->
+
+    <main>
+      <!-- "main" is placed as a big box that contains all divs. || "main" tüm div'leri içine alan büyük bir kutu olarak yerleştirildi. -->
+      <!-- div*10>{Box $} -->
+      <div>Box 1</div>
+      <div>Box 2</div>
+      <div>Box 3</div>
+      <div>Box 4</div>
+      <div>Box 5</div>
+      <div>Box 6</div>
+      <div>Box 7</div>
+      <div>Box 8</div>
+      <div>Box 9</div>
+      <div>Box 10</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .box{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        } */
+      /* If we give all divs a common class name (like "box"), we can apply the same properties for all these divs thanks to this structure. */ 
+      /* Eğer tüm div'lere ortak bir class ismi verirsek ("box" gibi), bu yapı sayesinde tüm bu div'ler için aynı özellikleri uygulayabiliriz. */
+      /* OR || VEYA */
+      /* Selects all div classes starting with "box". || "box" ile başlayan tüm div class'larını seçer. */
+      div[class^="box"] {
+        /* "Choose me such divs that the class name starts with 'box', the following characters are not important." It means. */
+        /* "Bana öyle div'ler seç ki class ismi 'box' ile başlasın, devamındaki karakterler önemli değil." anlamına geliyor. */
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      /* CSS Attr Selectors → https://www.w3schools.com/css/css_attribute_selectors.asp */
+      
+      /* w3schools - CSS Gradients || https://www.w3schools.com/css/css3_gradients.asp */
+      /* KodFun Instagram - Gradient Example → https://www.instagram.com/p/C9F2DlXspYa/ */
+      .box1 {
+        background: linear-gradient(to right, cyan, magenta);
+      }
+      .box2 {
+        background: linear-gradient(135deg, cyan, magenta, yellow);
+      }
+      .box3 {
+        background: radial-gradient(red, blue);
+      }
+      .box4 {
+        background: repeating-linear-gradient(90deg, red, white 10px);
+        /* There are different models, they can be examined. || Değişik modeller de vardır, incelenebilir. */
+      }
+      .box5 {
+        background: repeating-radial-gradient(
+          black,
+          black 5px,
+          white 5px,
+          white 10px
+        );
+        /* We create sharp transitions between colors with pauses in between. */
+        /* Aralara duraklar koyarak renkler arasında keskin geçişler sağlıyoruz. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </body>
+</html>
