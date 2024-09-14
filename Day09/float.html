@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Float and Float Cleaning</title>
+    <style>
+        .all {
+            border: 5px dashed black;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            color: white;
+            margin: 10px;
+            float: right;
+        }
+
+        /* Solution-1: float'un kesilmesini istediğimiz float eden elemanda sonra boş bir dive bu sınıf verilir.*/
+        /* .cleaning {
+            clear: both;
+        } */
+
+        /* COMMENT */
+        .box:nth-child(even) {
+            float: left;
+        }
+
+        /* "Only CSS" Solution - Modern Solution */
+        /* yalandan div icat etmeye gerek kalmıyor, mevcut html yapısı daha anlamlı */
+        /* hepsi'nin sonuna yalandan bir element koyar. hepsi divininn kapanışından hemen öncesi. */
+        .all::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div.all>div.box*12>{Box $} -->
+    <div class="all">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box">Box 7</div>
+        <div class="box">Box 8</div>
+        <div class="box">Box 9</div>
+        <div class="box">Box 10</div>
+        <div class="box">Box 11</div>
+        <div class="box">Box 12</div>
+        <!-- div.cleaning -->
+        <!-- içerik aslında burada bitiyor sinyali verecek -->
+        <!-- <div class="cleaning"></div> -->
+    </div>
+</body>
+</html>
