@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8"/>
     <title>Color</title>
     <style>
-        div.box1 {
-            background-color: rgb(16, 125, 57);
-            /* rgb → red - green - blue || rgb(255, 255, 0) → yellow || rgb(255, 0, 255) → magenta || rgb(0, 255, 255) → cyan */
-            color: #f0ebe4;
-            /* rgb(16, 125, 57); → After typing this, you can switch between different color coding types by clicking where this expression is written in the window that opens. */
-            /* rgb(16, 125, 57); → Bunu yazdıktan sonra açılan pencerede bu ifadenin yazılı olduğu yere tıklandığında farklı renk kodlama türleri arasında geçiş yapılabilir. */
-            /* rgb(16, 125, 57); → Hexadecimal Equivalent (in Hexadecimal Number System) → #107d3a; */
-            /* rgb(16, 125, 57); → Hexadecimal Karşılığı (Onaltılık Sayı Sisteminde) → #107d3a; */
-            /* #107d3a; → 10 - Red , 7d → Green , 39 → Blue */
-            /* 16 → 16^1 , 1 → 16^0 || 10 → 16*1 + 1*0 = 16 || 7d → 16*7 + 1*13 = 125 || 39 → 16*3 + 1*9 = 57 */
-            /* A-a → 10 || B-b → 11 || C-c → 12 || D-d → 13 || E-e → 14 || F-f → 15 */
-            height: 20px;
-        }
-        /* If we want the rules given above to be applied only to the first div, we can give the first div a class, id or we can apply the following: */
-        /* Üst tarafta verilen kuralların sadece ilk div'e uygulanmasını istersek ilk div'e class verebiliriz, id verebiliriz ya da şunları uygulayabiliriz: */
-        
-        /* div:nth-child(1) → Bu ifade "ilk div çocuğu" demek. Kullanım açısından aslında pek iyi değil, üstüne başka bir etiket (örneğin <a></a> etiketi) gelirse bozulur. Bu ifade, bir kapsayıcının ilk çocuğu olan <div> öğesini seçer ve ona stil uygular. */
-        /* div:nth-of-type() → Bu ifade "gelen ilk div" anlamına gelir. Bu ifade, bir kapsayıcıdaki belirli sıradaki (n'inci) <div> öğesini seçer, diğer türdeki öğelere bakmadan sadece o türdeki öğeleri sayar. */
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* df → TAB -- display: flex; →→ Esnek bir görünüm kazandırır. */
-            /* display: flex ifadesi, bir öğeyi esnek bir kapsayıcı (flex container) haline getirir. İçindeki öğeler yatay veya dikey olarak hizalanabilir ve düzenlenebilir. Flexbox, öğelerin kolayca düzgün hizalanmasını ve boşluk kullanımını optimize eder. */
-            /* jcc → TAB -- justify-content: center; →→ Flexbox veya Grid içindeki öğelerin yatayda ortalanmasını sağlar. */ 
-            /* İçeriğin ortalı yerleşmesini sağlıyor. Bu ifade, flex container içinde öğeleri yatay olarak ortalar. "justify-content: center;" öğeleri, kapsayıcının yatay ekseninde ortalar. */
-            /* aic → TAB -- align-items: center; →→  Flexbox veya Grid içindeki öğeleri dikey eksende ortalar. */ 
-            /* "align-items: center;", flex container içindeki öğelerin dikey eksende (yani yukarıdan aşağıya) ortalanmasını sağlar. */
-        }
-        .box2 {
-                background-image: url(https://picsum.photos/id/997/500/300);
-                height: 200px;
-                /* font-weight: 900; → Bu ifade, metnin çok kalın bir yazı tipiyle gösterilmesini sağlar. CSS'de font ağırlıkları genellikle 100 (çok ince) ile 900 (çok kalın) arasında numaralarla tanımlanır. 900, yazı tipi ağırlığı açısından en kalın derecelerden birini temsil eder. Bu, başlıklar veya dikkat çekici metinler için kullanılır. */
-                font-family: Impact; 
-                /* font-family: Impact; → Bu ifade, metnin Impact yazı tipinde görüntülenmesini sağlar. Impact yazı tipi, kalın, sıkıştırılmış ve büyük harfleriyle tanınan sans-serif bir yazı tipidir. Genellikle başlıklarda, dikkat çekici içeriklerde veya kısa, vurucu ifadelerde kullanılır. */
-                font-size: 128px;
-                color: rgba(255, 23, 44, .5);
-                /* color: #00000080; */
-                /* Renk Kodları: "https://www.w3schools.com/colors/colors_names.asp" → w3schools'un bu bağlantısında 148 tane hazır renk kodu ve bu kodlara denk gelen isimler yer almaktadır. VS Code'ta direkt olarak bu renk isimleri kullanılabilir. */
-        }
-        .box3 {
-            height: 30px;
-            background-color: crimson;
-        }
+      div.box1 {
+        background-color: rgb(16, 125, 57);
+        /* rgb → red - green - blue || rgb(255, 255, 0) → yellow || rgb(255, 0, 255) → magenta || rgb(0, 255, 255) → cyan */
+        color: #f0ebe4;
+        /* rgb(16, 125, 57); → After typing this, you can switch between different color coding types by clicking where this expression is written in the window that opens. */
+        /* rgb(16, 125, 57); → Bunu yazdıktan sonra açılan pencerede bu ifadenin yazılı olduğu yere tıklandığında farklı renk kodlama türleri arasında geçiş yapılabilir. */
+        /* rgb(16, 125, 57); → Hexadecimal Equivalent (in Hexadecimal Number System) → #107d3a; */
+        /* rgb(16, 125, 57); → Hexadecimal Karşılığı (Onaltılık Sayı Sisteminde) → #107d3a; */
+        /* #107d3a; → 10 - Red , 7d → Green , 39 → Blue */
+        /* 16 → 16^1 , 1 → 16^0 || 10 → 16*1 + 1*0 = 16 || 7d → 16*7 + 1*13 = 125 || 39 → 16*3 + 1*9 = 57 */
+        /* A-a → 10 || B-b → 11 || C-c → 12 || D-d → 13 || E-e → 14 || F-f → 15 */
+        height: 20px;
+      }
+      /* If we want the rules given above to be applied only to the first div, we can give the first div a class, id or we can apply the following: */
+      /* Üst tarafta verilen kuralların sadece ilk div'e uygulanmasını istersek ilk div'e class verebiliriz, id verebiliriz ya da şunları uygulayabiliriz: */
+
+      /* div:nth-child(1) → This expression means "first child of div". It is not really good in terms of usage, it breaks if another tag (for example <a></a> tag) comes on top of it. This expression selects the first child <div> element of a container and applies style to it. */
+      /* div:nth-child(1) → Bu ifade "ilk div çocuğu" demek. Kullanım açısından aslında pek iyi değil, üstüne başka bir etiket (örneğin <a></a> etiketi) gelirse bozulur. Bu ifade, bir kapsayıcının ilk çocuğu olan <div> öğesini seçer ve ona stil uygular. */
+      /* div:nth-of-type() → This expression means "first div to come". This expression selects the (nth) <div> element in a container in a given order, counting only the elements of that type without looking at elements of other types. */
+      /* div:nth-of-type() → Bu ifade "gelen ilk div" anlamına gelir. Bu ifade, bir kapsayıcıdaki belirli sıradaki (n'inci) <div> öğesini seçer, diğer türdeki öğelere bakmadan sadece o türdeki öğeleri sayar. */
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* df → TAB -- display: flex; →→ It gives a flexible appearance. | Esnek bir görünüm kazandırır. */
+        /* display: flex turns an element into a flexible container. The elements inside it can be aligned and arranged horizontally or vertically. Flexbox easily optimizes the proper alignment of elements and the use of whitespace. */
+        /* display: flex ifadesi, bir öğeyi esnek bir kapsayıcı (flex container) haline getirir. İçindeki öğeler yatay veya dikey olarak hizalanabilir ve düzenlenebilir. Flexbox, öğelerin kolayca düzgün hizalanmasını ve boşluk kullanımını optimize eder. */
+        /* jcc → TAB -- justify-content: center; →→ Allows items in a Flexbox or Grid to be centered horizontally. | Flexbox veya Grid içindeki öğelerin yatayda ortalanmasını sağlar. */
+        /* Makes the content centered. This statement centers items horizontally in the flex container. "justify-content: center;" centers items on the horizontal axis of the container. */
+        /* İçeriğin ortalı yerleşmesini sağlıyor. Bu ifade, flex container içinde öğeleri yatay olarak ortalar. "justify-content: center;" öğeleri, kapsayıcının yatay ekseninde ortalar. */
+        /* aic → TAB -- align-items: center; →→ Centers elements in a Flexbox or Grid on the vertical axis. | Flexbox veya Grid içindeki öğeleri dikey eksende ortalar. */
+        /* "align-items: center;" makes the items in the flex container centered on the vertical axis (i.e. top to bottom). */
+        /* "align-items: center;", flex container içindeki öğelerin dikey eksende (yani yukarıdan aşağıya) ortalanmasını sağlar. */
+      }
+      .box2 {
+        background-image: url(https://picsum.photos/id/997/500/300);
+        height: 200px;
+        /* font-weight: 900; → This expression makes the text appear in a very bold font. In CSS, font weights are usually defined by numbers between 100 (very thin) and 900 (very thick). 900 represents one of the thickest grades in terms of font weight. This is used for headings or attention-grabbing text. */
+        /* font-weight: 900; → Bu ifade, metnin çok kalın bir yazı tipiyle gösterilmesini sağlar. CSS'de font ağırlıkları genellikle 100 (çok ince) ile 900 (çok kalın) arasında numaralarla tanımlanır. 900, yazı tipi ağırlığı açısından en kalın derecelerden birini temsil eder. Bu, başlıklar veya dikkat çekici metinler için kullanılır. */
+        font-family: Impact;
+        /* font-family: Impact; → This statement causes text to be displayed in the Impact font. The Impact font is a sans-serif font known for its bold, compressed and capitalized letters. It is often used in headlines, attention-grabbing content, or short, punchy phrases. */
+        /* font-family: Impact; → Bu ifade, metnin Impact yazı tipinde görüntülenmesini sağlar. Impact yazı tipi, kalın, sıkıştırılmış ve büyük harfleriyle tanınan sans-serif bir yazı tipidir. Genellikle başlıklarda, dikkat çekici içeriklerde veya kısa, vurucu ifadelerde kullanılır. */
+        font-size: 128px;
+        color: rgba(255, 23, 44, 0.5);
+        /* color: #00000080; */
+        /* Color Codes: "https://www.w3schools.com/colors/colors_names.asp" → This link from w3schools has 148 ready-made color codes and corresponding names. These color names can be used directly in VS Code. */
+        /* Renk Kodları: "https://www.w3schools.com/colors/colors_names.asp" → w3schools'un bu bağlantısında 148 tane hazır renk kodu ve bu kodlara denk gelen isimler yer almaktadır. VS Code'ta direkt olarak bu renk isimleri kullanılabilir. */
+      }
+      .box3 {
+        height: 30px;
+        background-color: crimson;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box3"></div>
     <!-- The shortcut "div.box2" or ".box2" can be used to get these spellings. -->
     <!-- "div.box2" ya da ".box2" kısayolu ile bu yazım şekilleri elde edilebilir. -->
-    <div class="box2 center">ADANA</div>
+    <div class="box2 center">ADANA</div> 
+    <!-- An element can have more than one class name separated by a space. -->
+    <!-- Bir elemente boşlukla ayrılmış birden fazla class ismi verilebilir. -->
     <div class="box1">BOX 1</div>
-</body>
+  </body>
 </html>

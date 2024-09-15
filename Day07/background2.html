@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Addition of "Open Sans" font | "Open Sans" fontunun eklenmesi -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background: url(sea.jpg) fixed center;
-            background-size: cover; /* resmin tamamını görmek için contain demek gerekir. contain deyince tekrarlama yapar. coverda sağ sol gözükmez*/
-            font-family: "Open Sans", sans-serif; /* fallback, olmadığında sans-serif'i kullanır. bu da olmazsa başka bir şey yazılabilir. sondaki family olur ama. */
-        }
-        div {
-            background-color: rgba(255, 255, 255, .2);
-            backdrop-filter: blur(3px);
-            /* arkada resmi biraz buzlu gösterir. 1px en az bulanık. */
-            font-size: 1.5em;
-            padding: 30px; /* kutunun içinden. evin duvara olan uzaklığın */
-            margin: 20px; /* kutunun dışından kenarlara. diğer evlere olan uzaklık. */ 
-            border-radius: 20px; /* kutunun köşelerinin yuvarlaklığı */
-            color: rgba(255, 255, 255, .9);
-            /* font-family: sans-serif; */ /* tırnaksız fonttur */
-            /* font-family: Verdana; */ /* → pcde olduğu için gösterdi, olmasaydı göstermezdi import etmemiz gerekir. */
-            line-height: 1.5; /* satırlar arasındaki boşluk */
-            text-shadow: 1px 1px 3px black; /* → 1px sağında 1 px altında siyah 3 px de blur yapar yayar. */
-        }
+      body {
+        background: url(sea.jpg) fixed center;
+        background-size: cover; /* Scales the image to include the background. | Arka planı kapsayacak şekilde resmi ölçeklendirir. */
+        /* 'background-size: contain;' can be used to display the entire image. However, this may result in empty spaces when fitting the image into the container, or the image may repeat. It may be necessary to add 'background-repeat: no-repeat;' to prevent the image from repeating. When using 'background-size: cover;' the image will completely cover the container, but parts of the image may be cut off. */
+        /* 'background-size: contain;' kullanılarak resmin tamamı görülebilir. Ancak bu durumda, resim konteynıra sığdırılırken boş alanlar oluşabilir veya resim tekrar edebilir. Resmin tekrar etmesini önlemek için 'background-repeat: no-repeat;' eklemek gerekebilir. 'background-size: cover;' kullanıldığında ise resim konteynırı tamamen kaplar, ancak resmin bazı kısımları kesilebilir. */
+        font-family: "Open Sans", sans-serif; /* If "Open Sans" is not available, a font from the "sans-serif" font family is used. The latter is usually a generic font family. | "Open Sans" yoksa "sans-serif" font ailesinden bir font kullanılır. Son yazılan genellikle genel bir font ailesidir. */
+        /* Specifying more than one font in the "font-family" property gives the browser alternatives. Here, the browser first tries to use the "Open Sans" font. If "Open Sans" is not available (e.g. the font file cannot be loaded), the browser automatically uses a font from the default "sans-serif" font family installed on the system (e.g. Arial, Helvetica). (fallback) This method ensures that the web page is displayed consistently across different devices and browsers. Thus the text always remains legible.*/
+        /* "font-family" özelliğinde birden fazla font belirtilerek tarayıcıya alternatifler sunulur. Burada, tarayıcı öncelikle "Open Sans" fontunu kullanmaya çalışır. Eğer "Open Sans" kullanılamazsa (örneğin, font dosyası yüklenemezse), tarayıcı otomatik olarak sistemde yüklü olan varsayılan "sans-serif" font ailesinden bir font(örneğin, Arial, Helvetica) kullanır. (fallback) Bu yöntem, web sayfasının farklı cihaz ve tarayıcılarda tutarlı bir şekilde görüntülenmesini sağlar. Böylece metinler her zaman okunaklı kalır.*/
+      }
+      div {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Makes the background color white at 20% opacity. | Arka plan rengini %20 opaklıkta beyaz yapar. */
+        backdrop-filter: blur(3px);
+        /* Makes the background image look a bit frosted. 1px is the least blurry. | Arkaplandaki resmi biraz buzlu gösterir. 1px en az bulanık. */
+        font-size: 1.5em;
+        padding: 30px; /* The space between the content and the border. Inside the box - like the distance of the items from the wall. | İçerik ile kenarlık arasındaki boşluk. Kutunun içinden — eşyaların duvara olan uzaklığı gibi. */
+        margin: 20px; /* The space between the outer edges of the box and other elements. From the outside of the box - such as the distance of the house from other houses. | Kutunun dış kenarları ile diğer öğeler arasındaki boşluk. Kutunun dışından — evin diğer evlere olan uzaklığı gibi. */
+        border-radius: 20px; /* Roundness of the corners of the box | Kutunun köşelerinin yuvarlaklığı */
+        color: rgba(255, 255, 255, 0.9);
+        /* font-family: sans-serif; */ /* Font without quotes. | Tırnaksız fonttur. */
+        /* font-family: Verdana; */ /* If it is not installed locally, you need to import it. | Yerel olarak yüklü değilse import etmek gerekir. */
+        line-height: 1.5; /* It is the space ratio between lines. | Satırlar arasındaki boşluk oranıdır. */
+        text-shadow: 1px 1px 3px black; /* Adds a black shadow to the text: 1px right, 1px down, 3px blur.  | Metne siyah bir gölge ekler: 1px sağa, 1px aşağı, 3px bulanıklık. */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <h1>Lorem</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati quos eveniet exercitationem adipisci odit quaerat pariatur provident, deleniti commodi labore maxime architecto nobis atque eum vero quod ipsam harum.</p>
-        <p>Possimus delectus itaque et! A laudantium facere nobis, quis adipisci ab nam tempore dolores, vero similique, sed molestiae quaerat. Dignissimos omnis praesentium vel sed architecto nulla culpa veniam! Rerum, officia!</p>
-        <p>Nisi numquam reiciendis veniam illo aliquam quibusdam tempora! Laborum mollitia facilis deserunt necessitatibus dolor tenetur totam dolores, dolorum, veritatis, nostrum ea repudiandae aliquam optio delectus a. Harum adipisci repellat ratione?</p>
+      <h1>Lorem</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati
+        quos eveniet exercitationem adipisci odit quaerat pariatur provident,
+        deleniti commodi labore maxime architecto nobis atque eum vero quod
+        ipsam harum.
+      </p>
+      <p>
+        Possimus delectus itaque et! A laudantium facere nobis, quis adipisci ab
+        nam tempore dolores, vero similique, sed molestiae quaerat. Dignissimos
+        omnis praesentium vel sed architecto nulla culpa veniam! Rerum, officia!
+      </p>
+      <p>
+        Nisi numquam reiciendis veniam illo aliquam quibusdam tempora! Laborum
+        mollitia facilis deserunt necessitatibus dolor tenetur totam dolores,
+        dolorum, veritatis, nostrum ea repudiandae aliquam optio delectus a.
+        Harum adipisci repellat ratione?
+      </p>
     </div>
-</body>
+  </body>
 </html>
