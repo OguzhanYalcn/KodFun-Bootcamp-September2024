@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Positioning-2</title>
+    <style>
+      .box {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        position: relative; /* This feature has been added because it is requested to be at the bottom of the box it is in. | İçinde bulunduğu kutunun en altına gelmesi istendiği için bu özellik eklendi. */
+        /* "relative" position, "absolute" is the reference point for positioned items.  */
+        /* "relative" konum, "mutlak (absolute)" konumlu öğeler için referans noktasıdır. */
+      }
+      .poke {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      /* Absolute positioning ("absolute") positions the element relative to the browser window. However, if the parent element has "position: relative", the element is positioned relative to that parent element. */
+      /* Mutlak konumlandırma ("absolute"), öğeyi tarayıcı penceresine göre yerleştirir. Ancak, eğer parent elementte "position: relative" varsa, öğe bu parent elemente göre konumlanır. */
+      .long {
+        position: relative; /* Provides a reference for absolute position items below this item. | Bu öğenin altındaki mutlak konumlu öğeler için referans sağlar. */
+      }
+      .tree {
+        position: absolute;
+        /* left: 50%; */
+        /* top: 50%; */
+        /* Based on the top left corner of the item. To base on the centre of the item, a function like the one below should be written. */
+        /* Öğenin sol üst köşesi baz alınır. Öğenin ortasının baz alınması için aşağıdaki gibi bir fonksiyon yazılması gerekir. */
+        left: calc(50% - 50px); /* Calculation for centring an image horizontally | Görseli yatayda ortalamak için hesaplama */
+        top: calc(50% - 50px); /* Calculation for centring an image vertically | Görseli dikeyde ortalamak için hesaplama */
+        /* Aligns the item in the centre of the box. | Öğeyi kutunun ortasına hizalar. */
+        /* It will always appear in the centre of that paragraph. | Her zaman o paragrafın ortasında gözükecektir. */
+        z-index: -1; /* It keeps the image in the background. | Görselin arka planda kalmasını sağlar. */
+        opacity: 0.5; /* Reduces visibility to 50 per cent. | Görünürlüğü %50'ye düşürür. */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Title</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, nostrum
+      corrupti. Accusamus quia magnam, quaerat deleniti magni consequuntur totam
+      delectus corporis pariatur quidem ratione. Temporibus dolores veritatis
+      eos ut ex!
+    </p>
+    <div class="box">
+      <img class="poke" src="pikachu.png" alt="Pokemon" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magnam in
+      minus accusamus? Esse, impedit consectetur, reiciendis necessitatibus
+      quidem quod harum laudantium perferendis iusto debitis numquam. Rerum
+      molestias dolorem cumque?
+    </p>
+    <p class="long">
+      <img class="tree" src="palm-tree.png" alt="tree" height="100" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae
+      nesciunt minima fugiat quisquam possimus sapiente suscipit at culpa
+      praesentium odio nisi consectetur, dolorem mollitia recusandae delectus
+      placeat, maxime repellat rem eligendi tenetur! Facilis sapiente cumque
+      adipisci! Dolor animi recusandae beatae optio, reprehenderit aliquam,
+      error quam laborum consectetur officiis voluptatibus qui quos quis esse
+      blanditiis minima in? Temporibus delectus animi excepturi aliquid eum.
+      Natus blanditiis vero ratione, reiciendis ipsum quia delectus error quis
+      distinctio dolorum accusantium magnam, est inventore quisquam dolore
+      officiis velit earum perspiciatis voluptatem necessitatibus voluptate
+      odit? Quas laboriosam dicta similique at ratione nemo illum excepturi
+      corrupti dolor numquam consequuntur quaerat, totam saepe nulla! Sit
+      mollitia nisi eum nostrum, rem dolor iste ipsam minima nam est ipsum fugit
+      ea reiciendis ipsa dicta porro nobis iure nemo eius a vel. Libero
+      recusandae similique quibusdam laborum doloribus minima totam rerum
+      pariatur placeat blanditiis. Nemo, aperiam? Dicta ut veritatis ipsam
+      labore.
+    </p>
+    <p>
+      Delectus expedita pariatur quasi architecto laboriosam repudiandae porro
+      consectetur vel ut quod tenetur perferendis rerum, aliquid magnam a
+      repellendus nobis nesciunt, amet esse ea earum sequi inventore deserunt!
+      Molestias, corrupti!
+    </p>
+    <p>
+      Tenetur ipsum harum quos voluptate exercitationem aspernatur, alias iure
+      cumque. Doloremque sed rem a accusantium aliquam earum ut totam recusandae
+      consequuntur molestiae quaerat reprehenderit laborum quae, iusto alias
+      culpa saepe?
+    </p>
+    <p>
+      Debitis labore explicabo in aperiam pariatur iusto minus vitae alias nobis
+      dicta magni, aspernatur a enim nostrum saepe dolorem cupiditate, sequi
+      iste! Amet ad dignissimos exercitationem dolore. Accusamus, aut id!
+    </p>
+    <p>
+      Voluptas ullam totam ipsam soluta ratione, delectus voluptatem rerum
+      officia a ducimus maxime suscipit ad harum reprehenderit obcaecati sit
+      tempore explicabo, error aut odit provident dolores corrupti fugit velit!
+      Illum.
+    </p>
+    <p>
+      Exercitationem doloremque deserunt deleniti alias dolore reprehenderit id
+      et iste neque minima placeat, velit officiis quia aliquid distinctio
+      nobis, optio temporibus dolorem quibusdam ab cumque provident ipsam. Sit,
+      nesciunt quam.
+    </p>
+    <p>
+      Officiis quae enim ducimus inventore omnis asperiores unde debitis.
+      Ratione corporis sunt aliquam vitae recusandae voluptatum explicabo
+      quisquam ipsam molestiae nisi vero itaque animi, quia molestias iure
+      distinctio. Ratione, optio.
+    </p>
+    <p>
+      Cumque magni amet accusamus vero eos totam optio aspernatur dolores
+      repellendus at harum suscipit excepturi tenetur debitis, quis accusantium
+      sint facere neque officia commodi laborum? At veritatis quam in id.
+    </p>
+    <p>
+      Nobis debitis qui esse quos commodi fugit eius ab, necessitatibus, odit
+      similique eos quis velit magnam, ea veritatis illum nam in. Molestiae et
+      est deserunt dolores, delectus ipsam consequuntur modi.
+    </p>
+    <p>
+      Molestias suscipit, ipsum inventore laudantium ipsam eos cumque optio
+      aperiam dolorum corporis maiores fugit debitis incidunt! Eligendi
+      reprehenderit, a illum nihil eveniet, obcaecati earum iure officia enim
+      quos voluptate quibusdam?
+    </p>
+  </body>
+</html>

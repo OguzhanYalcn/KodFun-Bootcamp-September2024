@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+    <style>
+      h4 {
+        margin-bottom: 0;
+      }
+      ul {
+        margin-top: 5px;
+      }
+      .style1 {
+        list-style: none; /* Removes list marks. | Liste işaretlerini kaldırır. */
+      }
+      .style2 {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .style3 {
+        list-style-type: square; /* Makes the list marks "square". | Liste işaretlerini "kare" yapar. */ /* lst → TAB | Different options can be displayed with "CTRL + SPACE". | Farklı seçenekler "CTRL + SPACE" ile görüntülenebilir. */
+      }
+      /* .style4 {
+            list-style-position: outside;
+        } */
+      /* By default "list-style-position: outside" is applied. | Varsayılan olarak "list-style-position: outside" uygulanır. */
+      ul.style4 > li {
+        border: 1px solid black; /* Adds a border to list items. | Liste öğelerine kenarlık ekler. */
+      }
+      .style5 {
+        list-style-position: inside; /* Positions the list marks inside. | Liste işaretlerini içeride konumlandırır. */
+        /* padding: 0; */
+      }
+      ul.style5 > li {
+        border: 1px solid black;
+      }
+      ul.style6 {
+        list-style-image: url(restaurant.png); /* Uses an image as a list marker. | Liste işareti olarak görsel kullanır. */
+      }
+      ul.style7 > li::marker {
+        color: blue;
+        font-size: 2em; /* 2x the default size | Varsayılan boyutun 2 katı */
+      }
+      ul.style7 > li:nth-child(even)::marker {
+        color: lightcoral; /* Marker color of even numbered items | Çift numaralı öğelerin işaret rengi */
+      }
+      ul.style8 {
+        list-style: none;
+        padding: 0;
+        border: 1px solid gainsboro;
+        border-radius: 8px;
+        overflow: hidden; /* Hides the overflowing content. | Taşan içeriği gizler. */
+      }
+      ul.style8 > li {
+        /* border: 1px solid gainsboro; */
+        /* A more specific or exceptional style should be written after the general style. | Daha spesifik veya istisnai bir stil, genel stilden sonra yazılmalıdır. */
+        /* The order of the "border-bottom" and "border" properties is important. (Because they are related to each other.) The more specific "border-bottom" property should come after the more general "border" property. */
+        /* "border-bottom" ve "border" özelliklerinin sırası önemlidir. (Çünkü birbirleriyle ilişkilidirler.) Daha spesifik olan "border-bottom", genel olan "border" özelliğinden sonra gelmelidir. */
+        padding: 12px;
+        border-bottom: 1px solid gainsboro;
+      }
+      ul.style8 > li:last-child {
+        border-bottom: none; /* Removes the bottom border of the last item. | Son öğenin alt kenarlığını kaldırır. */
+      }
+      ul.style8 > li:nth-child(even) {
+        background-color: #f0f0f0; /* Adds background colour to even numbered items.  | Çift numaralı öğelere arka plan rengi ekler. */
+      }
+      ul.style8 > li:hover {
+        background-color: black;
+        color: white;
+        /* Note: Hover may overflow the element outside the container. ("li" overflows outside "ul".) For this, the "overflow: hidden;" property has been added (valid on ul). */
+        /*  Not: Hover etkisiyle öğe, kapsayıcının dışına taşabilir. ("li", "ul"un dışına taşıyor.) Bunun için (ul'de geçerli olacak şekilde) "overflow: hidden;" özelliği eklendi. */
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Advanced List Design</h4>
+    <!-- Gelişmiş Liste Tasarımı -->
+    <ul class="style8">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>Customisation of List Marks</h4>
+    <!-- Liste İşaretlerinin Özelleştirilmesi -->
+    <ul class="style7">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>Visual Use as a List Mark</h4>
+    <!-- Liste İşareti Olarak Görsel Kullanımı -->
+    <ul class="style6">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>List Mark Position (Inside) - Position The List Item Markers</h4>
+    <!-- Liste İşareti Konumu (İçeride) -->
+    <ul class="style5">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>List Mark Position [Outside(Default)] - Position The List Item Markers</h4>
+    <!-- Liste İşareti Konumu (Dışarıda - Varsayılan) -->
+    <ul class="style4">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>List Mark Type</h4>
+    <!-- Liste İşareti Türü -->
+    <ul class="style3">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>Gapless and Markerless List | De-styled List</h4>
+    <!-- Boşluksuz ve Marker'sız Liste | Stillerinden Arındırılmış Liste -->
+    <ul class="style2">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>Markerless List</h4>
+    <!-- İşaretsiz Liste -->
+    <!-- Başlık ve liste arasındaki boşluğu azaltmak için h4 için margin-bottom: 0;(mb 0), ul için margin-top: 5px;(mt 5px) ayarları yapılabilir. -->
+    <ul class="style1">
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+    <h4>Standard View</h4>
+    <!-- Standart Görünüm -->
+    <ul>
+      <li>Cag Kebab</li>
+      <li>Lahmacun</li>
+      <li>Doner Kebab</li>
+      <li>Pasta</li>
+      <li>Turkish Dumplings (Manti)</li>
+      <li>Meatballs with Pita (Pideli Kofte)</li>
+    </ul>
+  </body>
+</html>

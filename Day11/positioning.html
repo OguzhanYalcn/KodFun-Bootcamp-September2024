@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <style>
+      .pos1 {
+        position: fixed; /* absolute (in the visible part | görünen kısımda) The first moment the page is opened is important. | Sayfanın ilk açıldığı an önemlidir. | top 0 left 0 → default */
+        /* Remains fixed even if the page is scrolled. Positioned relative to the top left corner of the image. */
+        /* Sayfa kaydırılsa bile sabit kalır. Resmin sol üst köşesine göre konumlanır. */
+        /* left: 300px; */
+        /* top: 100px; */
+        bottom: 0;
+        right: 0;
+        /* Aligns to the bottom right corner of the page. | Sayfanın sağ alt köşesine hizalar. */
+        /* z-index: -1; */
+        /* The z-index can be used to determine the layer order; larger values will be displayed in front. */
+        /* z-index ile katman sırası belirlenebilir; daha büyük değerler daha önde görünür. */
+
+        /* z-index: 1; */
+      }
+      .pos2 {
+        position: relative;
+        /* "relative" positions the item according to its position in the page layout (normal flow). The normal position of the element is preserved, but it can be moved from this position with values such as "left", "top". Other elements will continue to be positioned relative to where this element normally is.*/
+        /* "relative", öğeyi sayfa düzenindeki (normal akıştaki) yerine göre konumlandırır. Öğenin normal konumu korunur, ancak "left", "top" gibi değerlerle bu konumdan kaydırılabilir. Diğer öğeler, bu öğenin normalde olduğu yere göre yerleşmeye devam eder.*/
+        left: 60px;
+        bottom: 80px;
+        /* position: fixed; */
+        /* bottom: 0; */
+        /* right: 0; */
+
+        /* z-index: -1; */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="palm-tree.png" alt="Palm Tree" width="150" class="pos1" />
+    <h1>Lorem, ipsum.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eius! Iure officiis accusamus eaque ut, atque repellendus tempore consequatur molestias ea a aperiam numquam, illo, suscipit dolorum impedit ullam reiciendis.</p>
+    <p>Harum ab consequuntur rem perspiciatis expedita, voluptas similique nisi quasi, nostrum eos ipsa quis qui omnis natus tempore architecto ea placeat libero accusantium magni sunt itaque, deserunt dicta facere. Non?</p>
+    <img src="car.png" alt="car" class="pos2" />
+    His car is located on the left. <!-- Onun arabası solda yer almaktadır. -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore rerum praesentium vitae laboriosam assumenda, error deserunt sapiente ea eum, eveniet esse similique totam dolores quia nobis quaerat culpa atque. Sequi?</p>
+    <p>Perferendis voluptas ipsum fuga, quod sit ratione voluptates recusandae, illum dicta maxime quos quia cupiditate? Esse, quibusdam voluptatum atque culpa corrupti modi? Id iusto, molestias unde eos nesciunt atque nihil.</p>
+    <p>Corporis reiciendis magni id a alias saepe excepturi recusandae. Iusto porro ab, eius, veniam quis reiciendis omnis voluptate sed quos nostrum officiis consectetur doloribus illum consequuntur eaque aperiam voluptates harum!</p>
+    <p>Expedita, laboriosam. Quod eos deleniti reprehenderit voluptatem quo et nesciunt, quae dolorum magni ratione ea tempora illum reiciendis labore odit dolorem libero rem quis exercitationem quasi, rerum sunt commodi. Ut?</p>
+    <p>Nam doloribus commodi soluta? Corporis incidunt voluptatum ipsum odit! Perspiciatis eligendi aliquam quidem quasi. Soluta harum dolorum eius optio perspiciatis architecto placeat, facilis enim praesentium pariatur mollitia perferendis ducimus tempore.</p>
+    <p>Atque quia eos, mollitia est temporibus, fugit odio, ipsam minima similique praesentium maiores veritatis. Aliquid facilis, ad error dignissimos, harum fugit molestiae a, commodi pariatur ipsa quis debitis veniam natus.</p>
+    <p>Modi, eaque dolor numquam necessitatibus tenetur corporis placeat magni nam sapiente, deserunt recusandae maiores libero nihil accusamus cum repellendus rerum aperiam quibusdam, quas alias? Placeat ipsum asperiores delectus quibusdam nesciunt!</p>
+    <p>Corporis debitis voluptatibus optio quod facere dolorum, alias ratione rerum libero quisquam cum eum dicta quo est error voluptates adipisci iure consequuntur numquam blanditiis neque obcaecati voluptas. Fugit, ut neque.</p>
+    <p>Quia sint laboriosam ipsum aliquam tenetur libero temporibus, quod dicta harum est odit dolor sed non ea assumenda inventore amet, atque expedita soluta iusto voluptas at esse molestiae nobis. Veritatis.</p>
+    <p>Dolorum quidem dignissimos a fuga rem amet excepturi magni cum aliquam distinctio aut, natus nulla ipsum numquam inventore maxime consequuntur quam alias molestiae porro! Molestiae reiciendis temporibus similique libero quia.</p>
+    <p>Voluptatum non provident veritatis, laborum aliquid earum debitis doloremque quod sequi, laboriosam vitae omnis eaque recusandae unde voluptatem magnam quibusdam cumque pariatur, quia quidem natus vel sint porro rem. Facilis.</p>
+    <p>Quisquam fugiat veritatis minima delectus similique quibusdam provident nisi at, eius sit quod tempore voluptatibus perspiciatis facere magnam? Animi totam nesciunt perspiciatis esse ut fugiat unde omnis nihil aperiam accusamus.</p>
+    <p>Libero enim est quo dolorem repellendus cumque beatae molestiae vero! Maxime corporis incidunt dignissimos adipisci. Quis porro iusto cum sequi hic tenetur nostrum possimus omnis fugiat, voluptatum soluta ratione exercitationem!</p>
+    <p>Nam odit repellendus quaerat modi. Voluptate error sunt a, quia nobis alias totam expedita repellat possimus, odit esse beatae perferendis quis voluptates distinctio, quam ea impedit! Temporibus voluptate non illum.</p>
+    <p>Dolor distinctio ut corrupti nulla delectus quod! Minima, neque? Assumenda nostrum autem quas dolore aliquam consequuntur at quo vitae, vero officiis, veritatis numquam perferendis dolorem. Mollitia iusto cumque praesentium numquam.</p>
+    <p>Nemo ipsa cumque explicabo veniam. Nobis itaque tempore sit omnis necessitatibus? Reiciendis, nesciunt, quod nulla accusamus necessitatibus inventore quasi autem eaque quam sapiente in consectetur ratione ipsa ullam iure unde.</p>
+    <p>Laudantium molestias, ea illo recusandae assumenda reprehenderit animi fuga enim qui deleniti possimus dolore quia reiciendis vitae, exercitationem quo voluptates, soluta obcaecati quod totam asperiores provident cupiditate officia? Alias, possimus?</p>
+    <p>Tempora sapiente cum facere atque, perspiciatis dolorum culpa ad aperiam officiis accusamus provident velit delectus sequi consequatur nobis, odit et molestiae numquam voluptate? Esse, nostrum. Neque adipisci officia vitae consequuntur?</p>
+  </body>
+</html>
