@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title> <!-- bir durumdan bir duruma geçerken yavaş yavaş olmasını sağlıyor. -->
+    <style>
+        .box1 {
+            height: 60px;
+            width: 20%;
+            background-color: crimson;
+            margin-bottom: .5rem;
+            /* transition-property: all;  */
+            /* height verilirse sadece height etkilenir, all hepsi etkilenir. */
+            /* transition-duration: 1s;  */
+            /*  ne kadar sürede geçiş olsun */
+            /* transition-timing-function: ease;  */
+            /* ease-in-out: geçiş animasyonu diyebilirim, steps(10) → 10 adıma böldü. cubic-bezier ile özelleştirebilirsin, google'da cubic-bezier calculatorlar var. */
+            /* transition-delay: .5s; */
+            /* 4ünü birden tek satırda nasıl yazarız */
+            transition: all 1s ease .5s;
+            
+
+
+
+
+
+
+
+
+            /* transition: 1s all .5s linear;  */
+            /* width 10s genişlik özelliği değişecekse bunu 10saniyeye yay. hiçbir şeysiz: yavaş - hızlı - yavaş, giderek yavaşla ease-out, ağır ağır başlayıp sonra hızlanıyor ease-in, linear - sabit, transition delay (ilk verilen değer olan 1s) → gecikmeli olarak başlama*/
+            margin-bottom: .5rem;
+        }
+
+        .box1:hover {
+            height: 180px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+</body>
+</html>

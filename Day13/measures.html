@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mobil cihazlarda 1px her zaman 1px olmayabilir. Mobil cihazlarda ekran çözünürlüğü yüksek olduğu için, 1 piksel bazen ekranda çok küçük kalabilir. Bu meta etiket, cihazın ekran genişliğine göre piksel ölçeklemesini düzenler. -->
+    <title>Measures</title>
+    <style>
+      html {
+        /* html, body'ye miras verir. */
+        /* 1rem = html elementinin font-size değeri. */
+        font-size: 20px; /* Tüm sayfa için referans büyüklük belirleniyor. (1rem'i belirleyen kural) */
+      }
+      .rod1 {
+        height: 20px;
+        background-color: purple;
+        width: 96px; /* Piksel bazlı genişlik */
+      }
+      .rod2 {
+        height: 20px;
+        background-color: pink;
+        width: 6rem; /* 6rem = 120px (1rem = 20px, çünkü html'de font-size: 20px) */
+      }
+      .rod3 {
+        height: 20px;
+        background-color: green;
+        width: 6em; /* 6em, parent elementin font-size'ına bağlı */
+      }
+      .rod2-container {
+        font-size: 10px; /* 1rem = 10px olacak, bu container için */
+      }
+      .rod3-container {
+        font-size: 10px; /* 1em = 10px olacak, bu container için */
+      }
+      .question1 {
+        font-size: 4px; /* Temel font boyutu 4px */
+      }
+      .question1-a {
+        font-size: 1.5em; /* Parent'ın font-size'ının 1.5 katı: 4px x 1.5 = 6px */
+      }
+      .question1-b {
+        font-size: 150%; /* %150 = 1.5em (6px x 1.5 = 9px) */
+      }
+      .question1-c {
+        font-size: 1.5em; /* Parent'ın 1.5 katı: 9px x 1.5 = 13.5px */
+        /* font-size: 1.5rem; → 30px olurdu, çünkü 1rem = 20px */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Units of Measurement</h1>
+    <!-- Ölçü Birimleri -->
+    <h2>A div with a width of 96px</h2>
+    <!-- 96px genişliğinde bir div -->
+    <div class="rod1"></div>
+    <h2>A div with a width of 6rem</h2>
+    <!-- 6rem genişliğinde bir div -->
+    <div class="rod2-container">
+      <div class="rod2"></div>
+    </div>
+    <div class="rod3-container">
+      <h2>A div with a width of 6em</h2>
+      <!-- 6em genişliğinde bir div -->
+      <!-- 1.5em yapan da tarayıcıdır. Tarayıcının vermiş olduğu ezilebilir. -->
+      <div class="rod3"></div>
+    </div>
+    <hr/>
+    <!-- .question1>.question1-a>.question1-b>.question1-c -->
+    <div class="question1">
+      <div class="question1-a">
+        <div class="question1-b">
+          <div class="question1-c">
+            <!-- Bu yazının hesaplanmış boyutu kaç pixel'dir? Cevap: 13.5px (4px x 1.5 = 6px | 6px x 1.5 = 9px | 9px x 1.5 = 13.5px) -->
+            QUESTION 1: THE BREAK IS COMING
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </body>
+</html>
+<!--     
+    1px: ekrandaki en ufak nokta (önemli açıklama: mobil cihazlarda, cihaza göre ölçekleme sağlamak için viewport meta tag'i kullanılır ve px hesaplaması 2-3 noktaya karşılık gelecek şekilde hesaplanabilir) 
+    
+    1rem: "html" kök elementinin font-size değeridir. Birçok tarayıcıda html elementi 16px varsayılan bir font değerine sahiptir.
+  
+    1em: Bir elementin parent'ından miras aldığı font-size'ına karşılık gelir. 
+
+    Font-Size miras alınan bir değerdir.
+
+-->
