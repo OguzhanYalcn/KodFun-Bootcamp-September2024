@@ -3,47 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- On mobile devices, 1px may not always be 1px. Because of the high screen resolution on mobile devices, 1 pixel can sometimes be too small on the screen. This meta tag adjusts the pixel scaling according to the screen width of the device. -->
     <!-- Mobil cihazlarda 1px her zaman 1px olmayabilir. Mobil cihazlarda ekran çözünürlüğü yüksek olduğu için, 1 piksel bazen ekranda çok küçük kalabilir. Bu meta etiket, cihazın ekran genişliğine göre piksel ölçeklemesini düzenler. -->
     <title>Measures</title>
     <style>
       html {
-        /* html, body'ye miras verir. */
-        /* 1rem = html elementinin font-size değeri. */
-        font-size: 20px; /* Tüm sayfa için referans büyüklük belirleniyor. (1rem'i belirleyen kural) */
+        /* html inherits to body. | html, body'ye miras verir. */
+        /* 1rem = font-size value of the html element (html elementinin font-size değeri) */
+        font-size: 20px; /* Determining the reference size for the whole page (rule that determines 1rem) | Tüm sayfa için referans büyüklük belirleniyor. (1rem'i belirleyen kural) */
       }
       .rod1 {
         height: 20px;
         background-color: purple;
-        width: 96px; /* Piksel bazlı genişlik */
+        width: 96px; /* Pixel-based width | Piksel bazlı genişlik */
       }
       .rod2 {
         height: 20px;
         background-color: pink;
-        width: 6rem; /* 6rem = 120px (1rem = 20px, çünkü html'de font-size: 20px) */
+        width: 6rem; /* 6rem = 120px (1rem = 20px, because in html font-size: 20px) */
       }
       .rod3 {
         height: 20px;
         background-color: green;
-        width: 6em; /* 6em, parent elementin font-size'ına bağlı */
+        width: 6em; /* 6em depends on the font-size of the parent element | 6em, parent elementin font-size'ına bağlı */
       }
       .rod2-container {
-        font-size: 10px; /* 1rem = 10px olacak, bu container için */
+        font-size: 10px; /* 1rem = 10px, for this container */
       }
       .rod3-container {
-        font-size: 10px; /* 1em = 10px olacak, bu container için */
+        font-size: 10px; /* 1em = 10px, for this container */
       }
       .question1 {
-        font-size: 4px; /* Temel font boyutu 4px */
+        font-size: 4px; /* Base font size 4px */
       }
       .question1-a {
-        font-size: 1.5em; /* Parent'ın font-size'ının 1.5 katı: 4px x 1.5 = 6px */
+        font-size: 1.5em; /* 1.5 times the font-size of parent (Parent'ın font-size'ının 1.5 katı): 4px x 1.5 = 6px */
       }
       .question1-b {
         font-size: 150%; /* %150 = 1.5em (6px x 1.5 = 9px) */
       }
       .question1-c {
-        font-size: 1.5em; /* Parent'ın 1.5 katı: 9px x 1.5 = 13.5px */
-        /* font-size: 1.5rem; → 30px olurdu, çünkü 1rem = 20px */
+        font-size: 1.5em; /* 1.5 times the font-size of parent (Parent'ın font-size'ının 1.5 katı): 9px x 1.5 = 13.5px */
+        /* font-size: 1.5rem; → would be 30px, because 1rem = 20px */
       }
     </style>
   </head>
@@ -61,7 +62,8 @@
     <div class="rod3-container">
       <h2>A div with a width of 6em</h2>
       <!-- 6em genişliğinde bir div -->
-      <!-- 1.5em yapan da tarayıcıdır. Tarayıcının vermiş olduğu ezilebilir. -->
+      <!-- It is the browser that sets this to "1.5em". This value given by the browser can be crushed. -->
+      <!-- Bunu "1.5em" olarak belirleyen de tarayıcıdır. Tarayıcının vermiş olduğu bu değer ezilebilir. -->
       <div class="rod3"></div>
     </div>
     <hr/>
@@ -70,7 +72,7 @@
       <div class="question1-a">
         <div class="question1-b">
           <div class="question1-c">
-            <!-- Bu yazının hesaplanmış boyutu kaç pixel'dir? Cevap: 13.5px (4px x 1.5 = 6px | 6px x 1.5 = 9px | 9px x 1.5 = 13.5px) -->
+            <!-- How many pixels is the calculated size of this text? (Bu yazının hesaplanmış boyutu kaç pixel'dir?) Answer: 13.5px (4px x 1.5 = 6px | 6px x 1.5 = 9px | 9px x 1.5 = 13.5px) -->
             QUESTION 1: THE BREAK IS COMING
           </div>
         </div>
@@ -80,12 +82,20 @@
   </body>
 </html>
 <!--     
-    1px: ekrandaki en ufak nokta (önemli açıklama: mobil cihazlarda, cihaza göre ölçekleme sağlamak için viewport meta tag'i kullanılır ve px hesaplaması 2-3 noktaya karşılık gelecek şekilde hesaplanabilir) 
+    1px: the smallest point on the screen (important clarification: on mobile devices, the viewport meta tag is used to provide scaling according to the device and the px calculation can be calculated to correspond to 2-3 points). 
+    
+    1rem: The font-size of the root element "html". In many browsers, the html element has a default font size of 16px.
+  
+    1em: Corresponds to the font-size an element inherits from its parent. 
+
+    Font-Size is an inherited value.
+-->
+<!--     
+    1px: ekrandaki en ufak nokta (önemli açıklama: mobil cihazlarda, cihaza göre ölçekleme sağlamak için viewport meta tag'i kullanılır ve px hesaplaması 2-3 noktaya karşılık gelecek şekilde hesaplanabilir.) 
     
     1rem: "html" kök elementinin font-size değeridir. Birçok tarayıcıda html elementi 16px varsayılan bir font değerine sahiptir.
   
     1em: Bir elementin parent'ından miras aldığı font-size'ına karşılık gelir. 
 
     Font-Size miras alınan bir değerdir.
-
 -->

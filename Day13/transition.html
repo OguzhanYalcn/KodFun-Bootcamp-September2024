@@ -1,49 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition</title> <!-- bir durumdan bir duruma geçerken yavaş yavaş olmasını sağlıyor. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <!-- Provides smooth transition between states. | Durumlar arası yumuşak geçiş sağlar. -->
     <style>
-        .box1 {
-            height: 60px;
-            width: 20%;
-            background-color: crimson;
-            margin-bottom: .5rem;
-            /* transition-property: all;  */
-            /* height verilirse sadece height etkilenir, all hepsi etkilenir. */
-            /* transition-duration: 1s;  */
-            /*  ne kadar sürede geçiş olsun */
-            /* transition-timing-function: ease;  */
-            /* ease-in-out: geçiş animasyonu diyebilirim, steps(10) → 10 adıma böldü. cubic-bezier ile özelleştirebilirsin, google'da cubic-bezier calculatorlar var. */
-            /* transition-delay: .5s; */
-            /* 4ünü birden tek satırda nasıl yazarız */
-            transition: all 1s ease .5s;
-            
+      .box1 {
+        height: 60px;
+        width: 20%;
+        background-color: crimson;
+        margin-bottom: 0.5rem;
 
+        /* transition-property: all; */
+        /* Specifies the properties to be changed. "all" affects all properties. If only "height" is written, only "height" is affected. | Değişecek özellikleri belirler. "all" tüm özellikleri etkiler. Sadece "height" yazılırsa sadece "height" etkilenir. */
 
+        /* transition-duration: 1s; */
+        /* Sets the duration of the transition. | Geçişin süresini ayarlar. (1 saniye) */
 
+        /* transition-timing-function: ease; */
+        /* Controls the speed of the transition. "ease" for a smooth start and end. | Geçiş hızını ayarlar. "ease" yumuşak geçiş yapar. */
 
+        /* transition-delay: .5s; */
+        /* Delay before the transition starts. | Geçişin başlamadan önceki bekleme süresi (0.5 saniye) */
 
+        /* How to combine four transition features into one line? | Dört geçiş özelliği tek bir satırda nasıl birleştirilir?*/
+        transition: all 1s ease 0.5s;
+        /* Valid for all features, transitions in 1 second with ease animation with a "0.5" second delay. */
+        /* Tüm özelliklerde geçerli olmak üzere 1 saniyede, ease animasyonu ile "0.5" saniye gecikmeli geçiş yapar. */
 
+        /* 
+            For transition-timing-function;
+            default: slow-fast-slow,
+            ease-out: gradually slows down (giderek yavaşla), 
+            ease-in: starts slow, then speeds up (yavaş başlayıp hızlan), 
+            linear: constant speed (sabit hız).   
+        */
+        /* transition-timing-function: steps(10); Splits the transition into 10 steps. | Geçişi 10 adıma böler.*/
+        /* transition-timing-function: cubic-bezier(); custom transition curve. You can use "cubic bezier calculator" on Google to customize. | özel geçiş eğrisi. Google'da "cubic bezier calculator" ile özelleştirilebilir. */
+        margin-bottom: 0.5rem;
+      }
 
+      .box1:hover {
+        height: 180px;
+        background-color: orange;
+      }
 
-            /* transition: 1s all .5s linear;  */
-            /* width 10s genişlik özelliği değişecekse bunu 10saniyeye yay. hiçbir şeysiz: yavaş - hızlı - yavaş, giderek yavaşla ease-out, ağır ağır başlayıp sonra hızlanıyor ease-in, linear - sabit, transition delay (ilk verilen değer olan 1s) → gecikmeli olarak başlama*/
-            margin-bottom: .5rem;
-        }
+      .faked-up {
+        opacity: 0;
+        /* Initially hidden, becomes visible on hover. | Başlangıçta gizli, hover ile görünür. */
+        transition: all 1s ease 0.5s;
+        /* Smooth transition to opacity 1 with a 0.5s delay. | 0,5 saniyelik gecikmeyle opacity 1'e yumuşak geçiş. */
+      }
 
-        .box1:hover {
-            height: 180px;
-            background-color: orange;
-        }
+      .box1:hover > .faked-up {
+        opacity: 1; /* Full visibility when hovered. | Hover yapıldığında tam görünürlük. */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="faked-up">ABC</div>
+      <!-- This content will be visible on hover. | Bu içerik, hover yapıldığında görünür olacak. -->
+    </div>
     <div class="box1"></div>
     <div class="box1"></div>
     <div class="box1"></div>
     <div class="box1"></div>
-    <div class="box1"></div>
-</body>
+  </body>
 </html>
