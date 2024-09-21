@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-3 (Fill the Space - Alanı Doldur)</title>
+    <style>
+      .container {
+        border: 10px dashed darkolivegreen;
+        height: 400px;
+        display: flex; /* Activates the Flexbox layout, making the elements in it flexible. | Flexbox düzenini aktif eder, içindeki öğeleri esnek hale getirir. */
+      }
+      .column {
+        flex: 1;
+        /* If other elements are not given a special flex value, it defaults to giving each column equal space. */
+        /* Eğer diğer öğelere özel bir flex değeri verilmezse, varsayılan olarak her sütuna eşit alan verir. */
+
+        /* If "flex value" is not given, the columns will take the width according to their content. */
+        /* "Flex değeri" verilmezse, sütunlar içeriklerine göre genişlik alır. */
+      }
+      .c1 {
+        background-color: burlywood;
+      }
+      .c2 {
+        background-color: deepskyblue;
+        /* flex: 3; */ /* This column takes up 3 times more space than the other columns (ratio 1 - 3 - 1) | Bu sütun, diğer sütunlara göre 3 kat daha fazla yer kaplar. (1 - 3 - 1 oranı) */
+      }
+      .c3 {
+        background-color: lightgreen;
+        /* flex: 1;  */ /* If other columns are not given a special flex value, it will spread as far as it can into the field. | Eğer diğer sütunlara özel bir flex değeri verilmediyse, alana yayılabildiği kadar yayılır. */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Equal Width Columns</h2>
+    <!-- Eşit Genişlikli Sütunlar -->
+    <div class="container">
+      <!-- div.column*3>{COLUMN $} -->
+      <div class="column c1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        ratione commodi culpa quis. Sit veritatis exercitationem officia
+        adipisci explicabo doloribus sapiente, molestiae labore, eum optio
+        laborum minus. Rerum, dignissimos facilis?
+      </div>
+      <div class="column c2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        mollitia, illum libero perspiciatis quasi est.
+      </div>
+      <div class="column c3">COLUMN 3</div>
+    </div>
+  </body>
+</html>

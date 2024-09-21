@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-2</title>
+    <style>
+      .all {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .all > div {
+        background-color: burlywood;
+        color: brown;
+      }
+
+      .a {
+        order: 1; /* "ADANA" goes to the far right because its order is 1 | "ADANA" en sağa gider, çünkü sırası 1 */
+      }
+
+      .d {
+        order: -333; /* "DENIZLI" goes to the far left, because negative order values are placed at the beginning. | "DENIZLI" en sola gider, çünkü negatif sıralama başta yer alır */
+      }
+
+      /* The default "order" value is 0. Negatives go to the beginning, positives go to the end (ordered from left to right in descending order). */
+      /* Varsayılan "order" değeri 0'dır. Negatifler başa, pozitifler sona gider. (Soldan sağa küçükten büyüğe olarak sıralanır.) */
+
+      /* If finer adjustment is desired, all elements can be given an "order" value. */
+      /* Daha ince ayar isteniyorsa, tüm elemanlara bir "order" değeri verilebilir. */
+
+      /* It is not the number itself that is important, but the difference in order of magnitude. */
+      /* Önemli olan sayının kendisi değil, sıralamadaki büyüklük-küçüklük farkıdır. */
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="a">ADANA</div>
+      <div class="b">BURSA</div>
+      <div class="c">CEYHAN</div>
+      <div class="d">DENIZLI</div>
+      <div class="e">EDIRNE</div>
+      <div class="f">FATSA</div>
+      <div class="g">GUMUSHANE</div>
+    </div>
+  </body>
+</html>

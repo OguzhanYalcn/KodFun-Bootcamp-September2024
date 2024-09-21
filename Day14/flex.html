@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      .container {
+        border: 10px dashed sandybrown;
+        height: 300px;
+
+        display: flex;
+        /* It arranges the elements inside flexibly. | İçindeki elemanları esnek düzenler. */
+
+        /* When a height value is not given to the container, its height is automatically adjusted according to the height of the child elements inside. When used with Flexbox, it provides horizontal flexibility, but if no height is specified, the height of the container will be the same as the content inside. */
+        /* Container'a bir yükseklik değeri verilmediği zaman, yüksekliği içerideki çocuk elemanların yüksekliğine göre otomatik ayarlanır. Flexbox kullanıldığında yatayda esneklik sağlar, ancak yükseklik belirtilmediyse container'ın yüksekliği, içindeki içerik kadar olur. */
+
+
+
+        flex-direction: row;
+        /* Sets how the flexbox elements will be arranged according to the specified axis. The default value is "row", meaning the elements are arranged horizontally from left to right. "row" means "row" in Turkish and can be thought of as "Place in a row".*/
+        /* Belirlenen eksene göre esnek kutu elemanlarının nasıl dizileceğini ayarlar. Varsayılan değer "row"dur, yani elemanlar yatayda soldan sağa dizilir. "row", Türkçede "satır" anlamına gelir ve "Bir satıra yerleştir" gibi düşünülebilir.*/
+
+        /* Other possible options for "flex-direction": | "flex-direction" için verilebilecek diğer seçenekler:
+            - row-reverse: arranged from right to left | sağdan sola dizilir, 
+            - column: arranged vertically from top to bottom | dikeyde yukarıdan aşağıya dizilir, 
+            - column-reverse: elements arranged vertically from bottom to top | elemanlar dikeyde aşağıdan yukarıya dizilir.
+        */
+        /*
+            When "align-items" is not given, 
+            In the "row" and "row-reverse" direction flex items vertically fill the full height of the container, i.e. they stretch vertically across. 
+            In the "column" or "column-reverse" direction, the elements expand horizontally, i.e. they fill the width of the container. 
+        */
+        /*
+            "align-items" verilmediğinde, 
+            "row" ve "row-reverse" yönünde flex öğeler dikeyde container'ın yüksekliğini tam olarak doldurur, yani boydan boya dikey olarak uzar. 
+            "Column" veya "column-reverse" yönlerinde ise öğeler yatayda genişler, yani container'ın genişliğini doldurur. 
+        */
+
+        /* There are also "initial" and "inherit". Source: w3schools | Bunlara ek olarak "initial" ve "inherit" de var. Kaynak: w3schools */
+
+
+
+        justify-content: space-evenly;
+        /* Determines how the "flex boxes" are distributed horizontally. With the "Space-evenly" option, equal space is left between elements and on the edges (Balanced Space) */
+        /* "Flex kutuların" yatayda nasıl dağıtılacağını belirler. "Space-evenly" seçeneği ile elemanlar arasında ve kenarlarda eşit boşluk bırakılır. (Dengeli Boşluk) */
+
+        /* Other possible options for "justify-content": | "justify-content" için verilebilecek diğer seçenekler:
+           - center: Elements are centered. | Elemanlar ortalanır.
+           - flex-start: Elements are gathered at the start point (left). | Elemanlar başlangıç noktasında (sol) toplanır.
+           - flex-end: Elements are gathered at the end point (right). | Elemanlar bitiş noktasında (sağ) toplanır.
+           - space-between: Maximum spacing between elements, no spacing on the edges (the furthest possible distance from each other). | Elemanlar arası maksimum boşluk bırakılır, kenarlarda boşluk olmaz. (birbirlerine muhtemel en uzak mesafe)
+           - space-around: Spacing between elements and on the edges, but the edge spacing is smaller because the spacing on the edges is half the spacing between elements. | Elemanlar arası ve kenarlarda boşluk bırakılır, ancak kenar boşlukları daha küçük olur çünkü kenarlardaki boşluklar elemanlar arasındaki boşluğun yarısı kadardır.
+           - space-evenly: Equal spacing between elements and edges. | Elemanlar ve kenarlar arasında eşit boşluk bırakılır.
+        */
+
+        /* Why does the color reach to the bottom of the box? Because by default align-items: stretch; (flex items cover the container height) */
+        /* Neden renk kutunun altına kadar geliyor? Çünkü varsayılan olarak align-items: stretch; (flex öğeler container yüksekliğini kaplar) */
+
+
+
+        align-items: center; 
+        /* Aligns "flex elements" vertically. | "Flex öğeleri" dikeyde hizalar. */
+        
+        /* Other possible options for "align-items": | "align-items" için verilebilecek diğer seçenekler:
+            - center: Center items vertically. | Öğeleri dikeyde ortalar.
+            - flex-start: Aligns items above. | Öğeleri yukarıda hizalar.
+            - flex-end: Aligns items below. | Öğeleri aşağıda hizalar.
+            - stretch: Stretches items and makes them occupy the full height of the container. (default) | Öğeleri esnetir ve container'ın tam yüksekliğini kaplamalarını sağlar. (varsayılan)
+            - baseline: Aligns items to the bottom line of the content. | Öğeleri içeriğin alt çizgisine göre hizalar. */
+
+        /* "justify-content" positions it horizontally, "align-items" vertically. | "justify-content" yatayda, "align-items" dikeyde konumlandırır. */
+      }
+      .box1 {
+        background-color: #d0e81e;
+      }
+      .box2 {
+        background-color: #1ee840;
+        /* font-size: 3em; */
+      }
+      .box3 {
+        background-color: #1eb2e8;
+        /* font-size: 1.5em; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Lorem, ipsum dolor.</div>
+      <div class="box2">Laboriosam<!-- , doloremque deserunt! --></div>
+      <div class="box3">Corrupti, dolor nihil.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borders</title>
+    <style>
+      /* HATIRLATMA !!! */
+      /* .box {
+            box-sizing: border-box;
+            background-color: pink;
+            height: 100px;
+            border: 10px solid black;
+            padding: 10px;
+         } 
+      */
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        margin-bottom: 10px; /* bir sonraki kutuyla yapışık başlamasın diye */
+      }
+
+      .box1 {
+        height: 50px;
+        /* border-width: 3px;
+           border-color: black;
+           border-style: solid; */
+        /* şu 3 satırı tek satırda yazmaya shorthand deniyor. şöyle yazılıyor: */
+        border: 3px solid black;
+      }
+
+      .box2 {
+        height: 100px;
+        border-top: 5px dashed green;
+        border-right: 10px dotted red;
+        border-bottom: 15px double blue;
+        border-left: 20px groove orange;
+        /* tüm çeşitlerine w3schoolstan bakılabilir. */
+      }
+
+      /* kutunun tamamı borderdan oluşsaydı ne olurdu? olur muydu? */
+      /* şekil oluşturmak için falan yapılabilir. Üçgen*/
+      .box3 {
+        width: 100px;
+        height: 100px;
+        border: 50px solid salmon;
+        border-color: gold brown purple green; /* renkleri tek tek verdiğimizde oluşan şekilleri ve renklerin sıralanmasını görebiliriz. */
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        border: 50px solid salmon;
+        border-color: transparent transparent dodgerblue dodgerblue;
+      }
+
+      .box5 {
+        width: 100px;
+        height: 100px;
+        border: 50px solid salmon;
+        border-color: transparent transparent darkseagreen transparent; /* btw eklendiğinde gold gözükmedi */
+        /* border: 50px solid transparent 
+           border-bottom-color: darkseagreen → kısa yazım şekli */
+        border-top-width: 0;
+        border-bottom-width: 100px;
+      }
+      .box6 {
+        height: 150px;
+        border-style: solid;
+        border-width: 10px 20px 30px 40px; /* bu şekilde her kenara farklı kalınlık verilebilir. */
+        border-radius: 10px;
+        border-color: deeppink deepskyblue darkslateblue darkgoldenrod; /* bu da 4lü kullanılabilir. */
+      }
+
+      /* kenarlık kullanmadan radius gösterme */
+      .box7 {
+        height: 150px;
+        background-color: #8bc6ec;
+        background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+        border-radius: 10px 20px 30px 40px; /* her köşeye farklı radius verilebilir, yüzde değer verince farklı oldu sanki. */
+      }
+
+      .box8 {
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+        border-radius: 50%; /* 50px yerine 50% demek otomatik olarak daire yapar çünkü width ve height değerleri değişebilir zamanla. */
+      }
+
+      /* resimleri kenarlık gibi kullanabiliyoruz. */
+      .box9 {
+        border: 20px solid transparent;
+        border-image: url(sunflower.png) 20 stretch; /* strech ortadaki dilimlerin yaydırılması */
+        height: 120px;
+      }
+
+      .box10 {
+        /* background-color: goldenrod; */
+        /* background: radial-gradient(circle, #facc05, #dd8404); */
+        background: radial-gradient(#facc05, #dd8404);
+        border: 15px solid transparent;
+        border-image: url(sunflower.png) 20 round; /* round tekrarlama | resim kaçlık dilimlere ayırarak alayım diyor, resim 60a 60, 20 20 bölersek 9 parça oluyor. 3te biri girilmeli aslında resmin, 20 yerine 33% gibi bir değer de verilebilir. */
+        height: 120px;
+        border-image-outset: 10px; /* biraz daha dışarı genişliyor görseller. */
+        margin: 20px 10px;
+
+        /* background: linear-gradient(135deg, #CF6404, #F6C725 20%, #CF6404 90%, #f6C725); */
+        /* background-clip: padding-box; */ /* bu yazıldığından border-image-outset kaldırılıyor. */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HATIRLATMA !!! -->
+    <!-- <div class="box">
+        abc
+    </div> -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+  </body>
+</html>
