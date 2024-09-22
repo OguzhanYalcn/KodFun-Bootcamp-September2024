@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Borders</title>
     <style>
-      /* HATIRLATMA !!! */
-      /* .box {
-            box-sizing: border-box;
-            background-color: pink;
-            height: 100px;
-            border: 10px solid black;
-            padding: 10px;
-         } 
-      */
-
       html,
       body {
         min-height: 100%;
@@ -35,7 +25,7 @@
       }
 
       div {
-        margin-bottom: 10px; /* bir sonraki kutuyla yapışık başlamasın diye */
+        margin-bottom: 10px; /* Prevents the next box from starting right next to it. | Bir sonraki kutunun hemen yanında başlamasını engeller. */
       }
 
       .box1 {
@@ -43,96 +33,127 @@
         /* border-width: 3px;
            border-color: black;
            border-style: solid; */
-        /* şu 3 satırı tek satırda yazmaya shorthand deniyor. şöyle yazılıyor: */
+        /*  Shorthand usage: | Shorthand kullanım: */
         border: 3px solid black;
       }
 
       .box2 {
         height: 100px;
+        /* Borders are defined with different styles and thicknesses for each side. | Kenarlıklar her kenar için farklı stil ve kalınlıkta tanımlanmıştır. */
         border-top: 5px dashed green;
         border-right: 10px dotted red;
         border-bottom: 15px double blue;
         border-left: 20px groove orange;
-        /* tüm çeşitlerine w3schoolstan bakılabilir. */
+        /* All border styles and options can be found on "w3schools.com". | Tüm border çeşitleri ve özelliklerine "w3schools.com"dan bakılabilir. */
       }
 
-      /* kutunun tamamı borderdan oluşsaydı ne olurdu? olur muydu? */
-      /* şekil oluşturmak için falan yapılabilir. Üçgen*/
+      /* What would happen if the whole box was bordered? Would it work? | Kutunun tamamı borderdan oluşsaydı ne olurdu? Olur muydu? */
+      /* It can be used to obtain triangles or other shapes. | Üçgen ya da diğer şekilleri elde etmek için kullanılabilir. */
       .box3 {
         width: 100px;
         height: 100px;
         border: 50px solid salmon;
-        border-color: gold brown purple green; /* renkleri tek tek verdiğimizde oluşan şekilleri ve renklerin sıralanmasını görebiliriz. */
+        border-color: gold brown purple green;
+        /* When the colors are given one by one, the shapes formed and the order of the colors can be seen. | Renkler tek tek verildiğinde oluşan şekiller ve renklerin sıralanması görülebilir. */
       }
 
+      /* Some of the borders were made transparent to create a "right triangle". | "Dik Üçgen" oluşturmak için kenarlıklardan bazıları şeffaf yapıldı. */
       .box4 {
         width: 100px;
         height: 100px;
         border: 50px solid salmon;
         border-color: transparent transparent dodgerblue dodgerblue;
+        /* Top and right borders are transparent, the others are dodgerblue. | Üst ve sağ kenarlar şeffaf, diğerleri dodgerblue. */
       }
 
       .box5 {
         width: 100px;
         height: 100px;
+
         border: 50px solid salmon;
-        border-color: transparent transparent darkseagreen transparent; /* btw eklendiğinde gold gözükmedi */
-        /* border: 50px solid transparent 
-           border-bottom-color: darkseagreen → kısa yazım şekli */
-        border-top-width: 0;
+        border-color: transparent transparent darkseagreen transparent;
+        /* Removing the top edge with "border-top-width" does not create a complete right triangle. For this you also need to say "no top edge". */
+        /* "border-top-width" ile üst kenar kaldırıldığında tam bir dik üçgen oluşmaz. Bunun için ekstradan "üst kenar görünmesin" de demek gerekli. */
+        /* Üstteki iki satırın kısa yazılışı: | Üstteki iki satırın kısa yazım şekli:
+           border: 50px solid transparent 
+           border-bottom-color: darkseagreen */
+
+        border-top-width: 0; /* Do not show the top edge | Üst kenar görünmesin */
         border-bottom-width: 100px;
       }
+
       .box6 {
         height: 150px;
+        /* Each side has a different border width and color. | Her kenara farklı kalınlık ve renk uygulanıyor. */
         border-style: solid;
-        border-width: 10px 20px 30px 40px; /* bu şekilde her kenara farklı kalınlık verilebilir. */
+        border-width: 10px 20px 30px 40px;
         border-radius: 10px;
-        border-color: deeppink deepskyblue darkslateblue darkgoldenrod; /* bu da 4lü kullanılabilir. */
+        border-color: deeppink deepskyblue darkslateblue darkgoldenrod;
       }
 
-      /* kenarlık kullanmadan radius gösterme */
+      /* Rounding corners without a border using border-radius | Border-radius kullanarak kenarlık olmadan köşeleri yuvarlama */
       .box7 {
         height: 150px;
         background-color: #8bc6ec;
         background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
-        border-radius: 10px 20px 30px 40px; /* her köşeye farklı radius verilebilir, yüzde değer verince farklı oldu sanki. */
+        border-radius: 10px 20px 30px 40px;
+        /* Different radius values are applied to each corner. Using percentage (%) creates a different effect. */
+        /* Her köşeye farklı bir yuvarlama (radius) uygulanıyor. Yüzde (%) değer verildiğinde köşelerde farklı bir etki oluşur. */
       }
 
       .box8 {
         width: 100px;
         height: 100px;
         background-color: burlywood;
-        border-radius: 50%; /* 50px yerine 50% demek otomatik olarak daire yapar çünkü width ve height değerleri değişebilir zamanla. */
+        border-radius: 50%;
+        /* Using "50%" makes the box a circle because this ratio is calculated based on the width and height values. Even if the values change, the ratio is preserved and a full circle is always created. */
+        /* "50%" kullanmak, kutuyu daire yapar çünkü bu oran genişlik (width) ve yükseklik (height) değerlerine göre hesaplanır. Değerler değişse bile oran korunur ve her zaman tam bir daire oluşturulur. */
       }
 
-      /* resimleri kenarlık gibi kullanabiliyoruz. */
+      /* Using an image as a border. | Görsel, kenarlık olarak kullanılıyor. */
       .box9 {
         border: 20px solid transparent;
-        border-image: url(sunflower.png) 20 stretch; /* strech ortadaki dilimlerin yaydırılması */
+        border-image: url(sunflower.png) 20 stretch;
+        /* The "stretch" value stretches the image slices by spreading them across the border. Sections of the image are stretched along the border. */
+        /* "stretch" değeri, görsel dilimlerini kenarlığa yayarak genişletir. Görselin bölümleri, kenarlık boyunca esnetilir. */
         height: 120px;
       }
 
       .box10 {
-        /* background-color: goldenrod; */
-        /* background: radial-gradient(circle, #facc05, #dd8404); */
-        background: radial-gradient(#facc05, #dd8404);
+        background: radial-gradient(
+          #facc05,
+          #dd8404
+        ); /* background: radial-gradient(circle, #facc05, #dd8404); */
+        /* Color gradient from the center to the edges in the background (radial gradient) | Arka planda merkezden kenarlara doğru renk geçişi (radial gradient) */
         border: 15px solid transparent;
-        border-image: url(sunflower.png) 20 round; /* round tekrarlama | resim kaçlık dilimlere ayırarak alayım diyor, resim 60a 60, 20 20 bölersek 9 parça oluyor. 3te biri girilmeli aslında resmin, 20 yerine 33% gibi bir değer de verilebilir. */
+        border-image: url(sunflower.png) 20 round;
+        /* "round": The image repeats along the border. | Görsel kenarlık boyunca tekrar eder.
+           Image 60x60 px, each border is divided into 20x20 px slices. If 1/3 of the image is used for the border, about 33% can be used instead of 20.
+           Görsel 60x60 px, her kenar 20x20 px dilimlere bölünür. Eğer resmin 1/3'ü kenarlık için kullanılacaksa 20 yerine yaklaşık %33 kullanılabilir. */
         height: 120px;
-        border-image-outset: 10px; /* biraz daha dışarı genişliyor görseller. */
+        border-image-outset: 10px; /* The border, i.e. the visual, expands a little bit outwards. | Kenarlık, yani görsel, biraz dışarı doğru genişler. */
         margin: 20px 10px;
+      }
 
-        /* background: linear-gradient(135deg, #CF6404, #F6C725 20%, #CF6404 90%, #f6C725); */
-        /* background-clip: padding-box; */ /* bu yazıldığından border-image-outset kaldırılıyor. */
+      .box11 {
+        background: linear-gradient(
+          135deg,
+          #cf6404,
+          #f6c725 20%,
+          #cf6404 90%,
+          #f6c725
+        );
+        border: 15px solid transparent;
+        border-image: url(sunflower.png) 20 round;
+        height: 120px;
+        margin: 20px 10px;
+        background-clip: padding-box; 
+        /* The background extends to the padding. The background does not appear in the border, it is applied only to the content and padding area. This property cannot be used with "border-image-outset". */
+        /* Arka plan, padding'e kadar uzanır. Arka plan, kenarlıkta görünmez, yalnızca içerik ve padding alanına uygulanır. Bu özellik "border-image-outset" ile birlikte kullanılamaz. */
       }
     </style>
   </head>
   <body>
-    <!-- HATIRLATMA !!! -->
-    <!-- <div class="box">
-        abc
-    </div> -->
-
     <div class="box1"></div>
     <div class="box2"></div>
     <div class="box3"></div>
@@ -143,5 +164,6 @@
     <div class="box8"></div>
     <div class="box9"></div>
     <div class="box10"></div>
+    <div class="box11"></div>
   </body>
 </html>
