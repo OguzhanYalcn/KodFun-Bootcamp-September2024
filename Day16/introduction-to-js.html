@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <h1>Learning JavaScript</h1>
+    <p><!-- Buranın içini js ile değiştirebilir miyiz? --></p>
+    
+
+    <script>
+        /* Burası JS bölgesi */
+        
+        // JS'te HTML dokümanına karşılık gelen document adında bir nesne vardır. (çizim yaparken her şeyin başı olarak DOM ağacının tepesinde gösterdik)
+        // document nesnesi üzerinden mevcut sayfadaki dokümanın tüm elementlerine erişebiliriz (belirli yöntemlerle)
+
+        // safyadaki ilk p elementine eriş ve içinde metni değiştir
+        // özelliklerde parantez olmaz ama komutlarda vardır.
+        // p adındaki ilk elementi getir, nokta diyerek text contentini şu yap diyeceğiz.
+        
+        // nesneleri değişkenlere taşıyabiliriz
+        let ilkParag = document.querySelector("p");
+
+        //nesnelerin özelliklerine . operatörü ile erişiriz
+        // = operatörü ile yeni değerler veririz
+        ilkParag.textContent = "Biz kimseyi yarı yolda bırakmadık, onlar müsait bir yerde indiler... - Bir Kamyon Arkası Sözü";
+
+        // elementlerin özelliklerinin özelliklerine erişip değiştirebiliriz
+        ilkParag.style.color = "purple";
+
+        // DOM ağacının ilk dallarından biri olan body'ye bu şekilde erişebiliriz.
+        document.body.style.background = "linear-gradient(to right ,orange, white)";
+
+        // Programlama:
+        // KOmutların belli sırada belirli bir amaç için çalıştırılması (Algoritma ile)
+        // Komutlar insan diline yakın bir dille bilgisayara iş yapması için fısıldamaktır.
+        // alert("Hoooop ... palaaa!!!");
+        // alert("Welcome :)");
+        // Alert metodu ingilizcedeki anlamına yakın bir şekilde bir uyarı mesajı vermek için kullanılır.
+
+
+    </script>
+</body>
+</html>
