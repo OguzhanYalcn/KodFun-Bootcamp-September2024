@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Değişkenler (JS)</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // variable = var
+      //   var a = 3;
+      let a = 3; // Number
+      document.write(a);
+      document.write("a"); // çift tırnak
+      document.write("a"); // tek tırnak
+      a = 4.5;
+      document.write(a);
+
+      let b = alert; // amaç fonk çalıştırmak değil, depolamak
+      //   b("George Boole"); // alert fonksiyonu çalışacak
+
+      let c = "Level"; // string
+      document.write(c);
+
+      let d = true; // boolean
+
+      // let willYouMarryMe = false;
+      /* const willYouMarryMe = false; */ /* const ile oluşturulan değişkenlerin değeri değiştirilemez. */
+      /* willYouMarryMe = true; */ /* böyle bir durumda yani değişkenin değeri değiştirilmek istendiğinde hata mesajı konsolda görülebilir. */
+
+      let e = document; // document, önden tanımlı bir object
+      document.write(e.title);
+
+      let f; // undefined
+
+      let g = null; // null'ın veri türü object'tir.
+
+      document.body.innerHTML += "<hr>";
+      document.write("<hr>");
+      // console.log("Look at the window !!!");
+
+      document.write("<h3>Veri Türleri</h3>");
+      document.write(typeof a);
+      document.write("<br>");
+      document.write(typeof b);
+      document.write("<br>");
+      document.write(typeof c);
+      document.write("<br>");
+      document.write(typeof d);
+      document.write("<br>");
+      document.write(typeof e);
+      document.write("<br>");
+      document.write(typeof f);
+      document.write("<br>");
+      document.write(typeof g);
+    </script>
+  </body>
+</html>
