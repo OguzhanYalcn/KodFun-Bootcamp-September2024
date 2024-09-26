@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <script src="../common/writeConsole.js"></script>
+    <!-- JavaScript dosyası yüklendi. Düzgün bir şekilde yüklenmesi için buraya yazıldı. -->
+    <script>
+      // 1. Aritmetik Operatörler
+      // Operatör: Taraflar arasında belli işlemler yaparak yeni sonuçlar üreten sembollerdir.
+
+      // Aritmetik işlemleri gerçekleştiren operatörler: + - * / % **(üslü sayı)
+      writeConsole(4 + 4);
+      writeConsole("test");
+      drawLine("vs. vs.");
+
+      // "+" operatörü birleştirme yapar, taraflardan biri string ise diğerini de string yapar
+      // string concatenation
+      writeConsole("4" + 4); // "44"
+
+      let proof = "4" + 4;
+      writeConsole(proof); // "44"
+      writeConsole(typeof proof); // "string"
+
+      // Çarpma İşlemi
+      // Çarpma işlemi taraflarında sayı ister. Stringler sayıya dönüştürülür.
+      writeConsole(3 * 4);
+      writeConsole("2" * "2"); // Burada tür dönüşümü olur.
+
+      // "typeof" operatörü sağındaki verinin türünü "string" olarak döndürür.
+      let sonuc = typeof 4;
+      writeConsole(sonuc); // "number"
+
+      // "()" operatörü metotları / fonksiyonları çağırmaya (call) yarar.
+      drawLine();
+
+      // "." operatörü bir nesnenin üyelerine (method / property) erişmeyi ve değiştirmeyi sağlar.
+      writeConsole(document.title);
+      document.title = "Adana Kebab + Ayran + Magnolia"; // "title" güncellenir.
+
+      // Bir değişkenin içindeki değere ekleme yapma kısayolu
+      // "+=" kısayolu, değere ekleme yapar.
+      let a = 3;
+      // a = a + 4; // a'ya 4 ekleyip a'ya eşitle
+      // Kısayolu
+      a += 4; // a = a + 4; // 7
+      writeConsole(a);
+      // Aynı kısayol yazım şekli diğer işlemlerde de var:
+      // -=, *=, /=, %=,
+      // a -= 2; // a = a - 2;  // 5
+      // a *= 3; // a = a * 3;  // 15
+      // a /= 5; // a = a / 5;  // 3
+      // a %= 2; // a = a % 2;  // 1
+
+      // **=, <<=, >>=, >>>, <<, >>, >>>=, &=, ^=, |=
+
+      // FIRST QUESTION
+      let question1 = 2;
+      question1 *= question1; // question1 = question1 * question1
+      writeConsole(question1); // 4
+
+      // SECOND QUESTION: İşlem önceliği
+      let question2 = 2 + 3 * 4; // Çarpma önce, 2 + 12 = 14
+      writeConsole(question2); // 14
+
+      // THIRD QUESTION: Parantezle işlem önceliği değişir
+      let question3 = (2 + 3) * 4; // 5 * 4 = 20
+      writeConsole(question3); // 20
+
+      // FOURTH QUESTION: String birleştirme
+      let question4 = "falanca" + 4 + 3; // "falanca43"
+      writeConsole(question4); // falanca43
+
+      // FIFTH QUESTION: Önce toplama sonra string birleştirme
+      let question5 = 3 + 4 + "falanca"; // 7 + "falanca" = "7falanca"
+      writeConsole(question5); // 7falanca
+
+      // SIXTH QUESTION: Çarpma sonra string birleştirme
+      let question6 = "falanca" + 4 * 3; // "falanca" + 12 = "falanca12"
+      writeConsole(question6); // falanca12
+
+      // SEVENTH QUESTION: Çarpma yapılır sonra string birleştirme
+      let question7 = "2" + 4 * 3; // "2" + 12 = "212"
+      writeConsole(question7); // 212
+
+      // EIGHTH QUESTION: Parantezler işlemi değiştirir
+      let question8 = ("2" + 4) * 3; // "24" * 3 = 72
+      writeConsole(question8); // 72
+    </script>
+  </body>
+</html>
