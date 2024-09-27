@@ -8,3 +8,6 @@ function writeConsole(html = "") {
 function drawLine(html = "") {
     document.body.innerHTML += html + "<hr>";
 }
+function clearConsole() {
+    document.body.innerHTML = "";
+}

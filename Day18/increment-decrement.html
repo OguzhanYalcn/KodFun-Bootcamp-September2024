@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increment & Decrement</title>
+  </head>
+  <body>
+    <script src="../common/writeConsole.js"></script>
+    <script>
+      let a = 1;
+      a++; // a += 1 arasındaki fark nedir?
+      // bu ifadeyi ayrı bir cümle olarak kullanılır, diğerini (a++) ifade içinde de kullanabilirsin gibi
+      drawLine(a); // 2
+      // "++" gecikmeli arttırma
+
+      let b = 1;
+      drawLine(b++ * 3); // 3 → b'nin değeri kullanım sonrası arttırılır.
+      drawLine(b); // 2
+
+      let c = 5;
+      drawLine(c++); // 5
+      drawLine(c); // 6
+
+      let d = 3;
+      drawLine(d++ * d); // 3 * 4 = 12
+
+      let e = 3;
+      drawLine(++e * e); // 3 * 3 = 9
+
+      let f = 10;
+      drawLine(f-- + --f); // 10 + 8 = 18
+
+      // x++ önce x değeri kullanılır sonra arttırılır
+      // +xx önce arttırılır sonra x değeri kullanılır
+
+      let g = 3;
+      writeConsole(++g - g--); // 4 - 4 = 0
+      drawLine(g);
+
+      let h = 4;
+      h = h++;
+      drawLine(h); // 4
+
+      let i = 7;
+      i = ++i;
+      drawLine(i); // 8
+
+      clearConsole();
+
+      let j = 5;
+      j *= j++; // j = j * j++
+      drawLine(j); // 25
+
+      let k = 0;
+      writeConsole(k++ - --k); //
+      drawLine(k);
+
+      let l = 3;
+      l = l + l * l++; // 3 + 3 * 3
+      drawLine(l); // 12
+
+      // debugger; // console açıldıktan sonra F9 ile geçtikçe m'nin anlık değerlerini görebiliriz.
+      let m = 2;
+      m = m * (m + ++m);
+      drawLine(m); // 10
+
+      // mantıksal operatörler konusundan sonra bakın
+      let n = 3;
+      let sonuc = n++ == 3 || ++n == 5; // 3 == 3 → true olduğu için sağ taraf çalışmaz dolayısıyla n değeri 4'te kalır.
+      writeConsole(sonuc); // true
+      drawLine(n); // 4
+
+      // bu notu ileride okuyun: "ya da / veya (or) (||)" operatörü soldaki değer true ise sağına hiç bakmaz, değerlendirmeye almaz.
+      // ve (&&) operatörü sol taraf false ise umudunu yitirir sağı hiç değerlendirmeye almaz.
+
+      let o = 40;
+      writeConsole(o < 39 && ++o == 41); // false
+      drawLine(o); // 40
+
+      let p = 2;
+      if (++p == p++) {
+        // 3 == 3 → true → if çalıştı → değer son olarak 4 oldu onu yazdı.
+        drawLine(p);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- https://learn.microsoft.com/en-us/cpp/c-language/precedence-and-order-of-evaluation?view=msvc-170 -->
