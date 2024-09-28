@@ -9,82 +9,121 @@
     <script src="../common/writeConsole.js"></script>
     <script>
       let a = 1;
-      a++; // a += 1 arasındaki fark nedir?
-      // bu ifadeyi ayrı bir cümle olarak kullanılır, diğerini (a++) ifade içinde de kullanabilirsin gibi
+      a++; // What is the difference with "a += 1"? | "a += 1" ile arasındaki fark nedir?
+
+      // The expression "a++" first uses the value and then increments it. Therefore, when used in an expression, it does not reflect the value immediately.
+      // "a += 1" increments the value immediately and uses the updated value. (ChatGPT 4o)
+
+      // "a++" ifadesi, önce değeri kullanır, sonra arttırır. Bu nedenle bir ifadede kullanıldığında değeri hemen yansıtmaz.
+      // "a += 1" ise değeri hemen arttırır ve güncellenmiş halini kullanır. (ChatGPT 4o)
+
       drawLine(a); // 2
-      // "++" gecikmeli arttırma
+      // "++" delayed increment (gecikmeli arttırma)
+      // The "++" operator increments the value after, not before, use. | "++" operatörü, değeri kullanmadan önce değil, sonra arttırır.
 
       let b = 1;
-      drawLine(b++ * 3); // 3 → b'nin değeri kullanım sonrası arttırılır.
+      drawLine(b++ * 3); // 3 → The value of b is incremented after use. | b'nin değeri kullanım sonrası arttırılır.
       drawLine(b); // 2
 
       let c = 5;
-      drawLine(c++); // 5
+      writeConsole(c++); // 5 → "c" is incremented by one after use. | "c", kullanıldıktan sonra bir arttırılır.
       drawLine(c); // 6
 
       let d = 3;
-      drawLine(d++ * d); // 3 * 4 = 12
+      drawLine(d++ * d); // 3 * 4 = 12 → "d"; first used, then incremented. | "d"; önce kullanılır, sonra arttırılır.
 
       let e = 3;
-      drawLine(++e * e); // 3 * 3 = 9
+      drawLine(++e * e); // 4 * 4 = 16 → "e" is first incremented and then used. | "e"; önce arttırılır, sonra kullanılır.
 
       let f = 10;
-      drawLine(f-- + --f); // 10 + 8 = 18
+      drawLine(f-- + --f); // 10 + 8 = 18 → "f" is first used as 10, then becomes 9 and becomes 8 with --f. | "f"; önce 10 olarak kullanılır, sonra 9 olur ve --f ile 8 olur.
 
-      // x++ önce x değeri kullanılır sonra arttırılır
-      // +xx önce arttırılır sonra x değeri kullanılır
+      // x++ → The value "x" is first used, then incremented.
+      // ++x → The value "x" is first incremented, then used.
+
+      // x++ → "x" değeri önce kullanılır, sonra arttırılır.
+      // ++x → "x" değeri önce arttırılır, sonra kullanılır.
 
       let g = 3;
       writeConsole(++g - g--); // 4 - 4 = 0
-      drawLine(g);
+      drawLine(g); // 3
 
       let h = 4;
-      h = h++;
+      h = h++; // The value "h" is first used and then incremented. However, its value does not change due to this assignment. | "h" değeri önce kullanılır, sonra arttırılır. Ancak, bu atama işleminden dolayı değeri değişmez. (ChatGPT 4o)
+
+      // Here "h++" first uses the current value of "h", i.e. 4. Then the value of "h" is increased to 5.
+      // However, during the assignment operation ("h = h++"), "h++" on the right returns 4, so "h" is assigned 4 again.
+      // Therefore the value of "h" does not change and remains 4. In fact, the increment of "h" disappears.
+
+      // Burada "h++" ifadesi önce "h"nin mevcut değerini kullanır, yani 4'ü kullanır. Ardından "h"nin değeri 5'e yükseltilir.
+      // Ancak atama işlemi ("h = h++") sırasında, sağdaki "h++" önce 4'ü döndürdüğü için "h"ye tekrar 4 atanır.
+      // Bu nedenle "h"nin değeri değişmez ve 4 olarak kalır. Aslında "h"nin artışı kaybolur.
+
       drawLine(h); // 4
 
       let i = 7;
-      i = ++i;
+      i = ++i; // The value "i" is first incremented and the new value is assigned. | "i" değeri önce arttırılır ve yeni değer atanır.
       drawLine(i); // 8
 
-      clearConsole();
+      // clearConsole();
 
       let j = 5;
-      j *= j++; // j = j * j++
+      j *= j++; // j = j * j++ → j = 5 * 5; → The value of "j" is then incremented. | "j" değeri daha sonra arttırılır, j = 25.
       drawLine(j); // 25
 
       let k = 0;
-      writeConsole(k++ - --k); //
-      drawLine(k);
+      writeConsole(k++ - --k); // 0 - 0 = 0
+      drawLine(k); // 0
 
       let l = 3;
-      l = l + l * l++; // 3 + 3 * 3
+      l = l + l * l++; // 3 + 3 * 3 = 12 → The value "l" is first used and then incremented. | "l" değeri önce kullanılır, sonra arttırılır.
       drawLine(l); // 12
 
-      // debugger; // console açıldıktan sonra F9 ile geçtikçe m'nin anlık değerlerini görebiliriz.
+      // debugger; // After opening the console, the instantaneous values of m can be seen as you pass with F9. | "console" açıldıktan sonra F9 ile geçtikçe m'nin anlık değerleri görülebilir.
       let m = 2;
-      m = m * (m + ++m);
+      m = m * (m + ++m); // m = 2 * (2 + 3) = 10
       drawLine(m); // 10
 
-      // mantıksal operatörler konusundan sonra bakın
+      // See after the topic "Logical Operators". | "Mantıksal Operatörler" konusundan sonra bakın.
       let n = 3;
-      let sonuc = n++ == 3 || ++n == 5; // 3 == 3 → true olduğu için sağ taraf çalışmaz dolayısıyla n değeri 4'te kalır.
+      let sonuc = n++ == 3 || ++n == 5;
+      // Since the left side (3 == 3) is true, the right side does not work. It becomes "n = 4" and "n" remains at "4".
+      // Sol taraf (3 == 3) doğru (true) olduğu için sağ tarafa bakılmaz, sağ taraf çalışmaz. "n = 4" olur ve "n", "4" değerinde kalır.
       writeConsole(sonuc); // true
       drawLine(n); // 4
 
-      // bu notu ileride okuyun: "ya da / veya (or) (||)" operatörü soldaki değer true ise sağına hiç bakmaz, değerlendirmeye almaz.
-      // ve (&&) operatörü sol taraf false ise umudunu yitirir sağı hiç değerlendirmeye almaz.
+      // The "OR (||)"" operator does not consider the right if the expression on the left is true (true).
+      // The "AND (&&)" operator gives up hope if the expression on the left is false and does not consider the right.
+
+      // "OR (ya da, veya) (||)" operatörü soldaki ifade doğru (true) ise sağına hiç bakmaz, değerlendirmeye almaz.
+      // "AND (ve) (&&)" operatörü soldaki ifade yanlış (false) ise umudunu yitirir sağını hiç değerlendirmeye almaz.
 
       let o = 40;
-      writeConsole(o < 39 && ++o == 41); // false
+      writeConsole(o < 39 && ++o == 41); // The right is not looked at because the left side is "false". | Sol taraf "yanlış" olduğu için sağa bakılmaz.
       drawLine(o); // 40
 
       let p = 2;
       if (++p == p++) {
-        // 3 == 3 → true → if çalıştı → değer son olarak 4 oldu onu yazdı.
-        drawLine(p);
+        // First, the expression +++p first increases the value of "p" by 1, so p becomes 3.
+        // Then a comparison is made: 3 == 3, which is true, so the if condition is satisfied.
+        // Then, the expression p+++ is executed and the value of p is increased to 4.
+        // So the if block is entered and the final value of p is printed as 4.
+
+        // İlk olarak, ++p ifadesi "p"nin değerini önce 1 artırır, yani p 3 olur.
+        // Sonra karşılaştırma yapılır: 3 == 3, bu doğru olduğu için if koşulu sağlanır.
+        // Ardından, p++ ifadesi çalışır ve p'nin değeri 4'e yükseltilir.
+        // Yani if bloğu içine girilir ve p'nin son değeri 4 olarak yazdırılır.
+        drawLine(p); // 4
       }
     </script>
   </body>
 </html>
 
+<!-- Precedence and order of evaluation (Öncelik ve değerlendirme sırası)-->
+<!-- Precedence and associativity of C operators (C operatörlerinin öncelik ve birlikteliği)-->
+
 <!-- https://learn.microsoft.com/en-us/cpp/c-language/precedence-and-order-of-evaluation?view=msvc-170 -->
+
+<!-- "This site is the official documentation from Microsoft that provides detailed information about the order of precedence of operators and the order of evaluation of expressions in the C language. It is a very useful resource for C programmers to understand how operators work and to see how complex expressions are evaluated. The example-rich content helps to better understand which operations to perform first when writing code. -->
+
+<!-- "Bu site, C dilinde operatörlerin öncelik sıralaması ve ifadelerin değerlendirme sırası hakkında ayrıntılı bilgi veren Microsoft'un resmi dokümantasyonudur. C programcıları için operatörlerin nasıl işlediğini anlamak ve karmaşık ifadelerin nasıl değerlendirildiğini görmek açısından oldukça faydalı bir kaynaktır. Örneklerle zenginleştirilmiş içerik, kod yazarken hangi işlemlerin önce gerçekleştirileceğini daha iyi kavramaya yardımcı olur." -->
