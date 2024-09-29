@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex; /* df tab */
+    justify-content: center; /* jcc tab */
+    align-items: center; /* aic tab */
+    background-color: black;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+}
+
+#clock {
+    font-size: 12vw;
+}

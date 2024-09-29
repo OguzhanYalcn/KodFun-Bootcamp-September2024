@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../common/writeConsole.js"></script>
+    <script>
+      /* 
+            DÖRT ÇEŞİT FONKSİYONU ÖRNEKLEYELİM
+            1. PARAMETRE ALMAYAN DEĞER DÖNDÜRMEYEN
+            2. PARAMETRE ALMAYAN DEĞER DÖNDÜREN
+            3. PARAMETRE ALAN DEĞER DÖNDÜRMEYEN (iş yapacak anlamına geliyor)
+            4. PARAMETRE ALAN DEĞER DÖNDÜREN
+      */
+
+      // parametre almayan değer döndürmeyen
+      // 1.
+      function ekranaTarihiVeSaatiYazdır() {
+        let date = new Date();
+        drawLine(date.toLocaleString("tr")); // toLocaleTimeString toLocaleDateString
+        // tr yazım formatına göre demek. yazılmsa bulunulan konuma göre bir yazım formatı olur.
+      }
+
+      ekranaTarihiVeSaatiYazdır();
+
+      // parametre almayan değer döndüren
+      // 2.
+      function dayOfMonth() {
+        let date = new Date();
+        return date.getDate();
+      }
+      let kacinci = dayOfMonth();
+      drawLine("Bugün ayın " + kacinci + ". günüdür."); // concatination(?)
+
+      // parametre alan değer döndürmeyen
+      // işçi fonksiyon: aldığı renk koduyla
+      // arka planı boyar.
+      // 3.
+      function arkaplaniBoya(renk) {
+        document.body.style.background = renk;
+      }
+
+      // arkaplaniBoya("linear-gradient(to left, #333, #777)"); // string olarak verilmeli
+      arkaplaniBoya("linear-gradient(to left, wheat, purple)");
+
+      // aldığı sayınınn bir fazlasını döndüren metot
+      // matematikteki "f(x) = x + 1" gibi
+      // parametre alan ve değer döndüren fonksiyon
+      // PARAMETRE ALAN DEĞER DÖNDÜREN
+      // 4.
+      function birFazlasi(x) {
+        return x + 1;
+      }
+
+      let sayi = 3;
+      sayi = birFazlasi(sayi);
+      drawLine(sayi);
+    </script>
+  </body>
+</html>
