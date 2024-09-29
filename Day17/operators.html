@@ -17,7 +17,7 @@
       writeConsole("test");
       drawLine("vs. vs.");
 
-      // "+" operatörü birleştirme yapar, taraflardan biri string ise diğerini de string yapar
+      // "+" operatörü birleştirme yapar. Taraflardan biri "string" ise diğerini de "string" yapar.
       // string concatenation
       writeConsole("4" + 4); // "44"
 
@@ -48,14 +48,12 @@
       // Kısayolu
       a += 4; // a = a + 4; // 7
       writeConsole(a);
-      // Aynı kısayol yazım şekli diğer işlemlerde de var:
+      // Bu kısayol yazım şekli diğer işlemler için de geçerlidir:
       // -=, *=, /=, %=,
       // a -= 2; // a = a - 2;  // 5
       // a *= 3; // a = a * 3;  // 15
       // a /= 5; // a = a / 5;  // 3
       // a %= 2; // a = a % 2;  // 1
-
-      // **=, <<=, >>=, >>>, <<, >>, >>>=, &=, ^=, |=
 
       // FIRST QUESTION
       let question1 = 2;
@@ -92,3 +90,142 @@
     </script>
   </body>
 </html>
+
+<!-- Önerilen Diğer Operatörler ve Anlamları -->
+<!-- **=, <<=, >>=, >>>, <<, >>, >>>=, &=, ^=, |= -->
+<!-- 
+      **= (Üs Alma ve Atama)
+      Bir sayıyı başka bir sayının üssüne yükseltir ve sonucu değişkene atar.
+      Örnek: a **= 3 → a = a ** 3 (a'nın 3. kuvveti)
+
+      let a = 2;
+      a **= 3; // a = a ** 3; yani a = 2^3; Sonuç: 8
+-->
+<!-- 
+      <<= (Sol Kaydırma ve Atama)
+      Bit seviyesinde bir sayıyı belirli bir sayı kadar sola kaydırır ve sonucu değişkene atar.
+      Örnek: a <<= 2 → a = a << 2 (a'nın bitlerini 2 birim sola kaydırır.)
+
+      let a = 2; // 00000010 (binary)
+      a <<= 1; // a = a << 1;  // Sonuç: 4 (00000100)
+-->
+<!-- 
+      >>= (Sağ Kaydırma ve Atama)
+      Bit seviyesinde bir sayıyı belirli bir sayı kadar sağa kaydırır ve sonucu değişkene atar. Bu işlem sırasında işaret biti korunur (negatif sayılar için işaret biti sabit kalır).
+      Örnek: a >>= 2 → a = a >> 2 (a'nın bitlerini 2 birim sağa kaydırır.)
+
+      let a = 4; // 00000100 (binary)
+      a >>= 1; // a = a >> 1;  // Sonuç: 2 (00000010)
+-->
+<!-- 
+      >>> (Sıfırla Doldurularak Sağa Kaydırma)
+      Negatif işaretli sayılarda bile, bitleri sağa kaydırır ve boş kalan bitleri sıfırla doldurur.
+      Örnek: a >>>= 2 → a = a >>> 2 (a'yı sağa kaydırır ve boş yerleri sıfırla doldurur)
+
+      let a = -4; // 11111100 (binary)
+      a >>>= 1; // a = a >>> 1;  // Sonuç: Pozitif bir değer (2'nin binary karşılığı)
+-->
+<!-- 
+      << (Sol Kaydırma)
+      Bit seviyesinde sayıyı sola kaydırır.
+      Örnek: a << 1 (a'nın bitlerini bir birim sola kaydırır.)
+
+      let a = 3; // 00000011 (binary)
+      a = a << 1; // a = 6 // 00000110 (binary)
+-->
+<!-- 
+      >> (Sağ Kaydırma)
+      Bit seviyesinde sayıyı sağa kaydırır.
+      Örnek: a >> 1 (a'nın bitlerini bir birim sağa kaydırır.)
+
+      let a = 8; // 00001000 (binary)
+      a = a >> 1; // a = 4 // 00000100 (binary)
+-->
+<!-- 
+      >>>= (Sıfırla Doldurularak Sağa Kaydırma ve Atama)
+      Sayıyı sıfırla doldurarak sağa kaydırır ve sonucu değişkene atar. Bitleri sağa kaydırırken işaret biti dikkate alınmaz. Negatif sayılar için bile işaretsiz kaydırma yapılır.
+      Örnek: a >>>= 1 → a = a >>> 1
+
+      let a = -4; // 11111100 (binary)
+      a >>>= 1; // a = a >>> 1;  // Sonuç: Pozitif bir değer (2'nin binary karşılığı)
+-->
+<!-- 
+      &= (Ve ve Atama)
+      İkili (bitwise) "ve" işlemi yapar ve sonucu değişkene atar.
+      Örnek: a &= 2 → a = a & 2 (a ve 2'nin bitwise 've' işlemi sonucu a'ya atanır.)
+
+      let a = 6; // 110 (binary)
+      a &= 3; // a = 2; // 010 (binary)
+-->
+<!-- 
+      ^= (XOR ve Atama)
+      İkili (bitwise) "özel veya" (XOR) işlemi yapar ve sonucu değişkene atar.
+      Örnek: a ^= 2 → a = a ^ 2 (a ve 2'nin bitwise XOR işlemi sonucu a'ya atanır.)
+
+      let a = 5; // 101 (binary)
+      a ^= 3; // a = 6; // 110 (binary)
+-->
+<!-- 
+      |= (Veya ve Atama)
+      İkili (bitwise) "veya" işlemi yapar ve sonucu değişkene atar.
+      Örnek: a |= 2 → a = a | 2 (a ve 2'nin bitwise 'veya' işlemi sonucu a'ya atanır.)
+
+      let a = 4; // 100 (binary)
+      a |= 2; // a = 6; // 110 (binary)
+-->
+
+<!-- 
+      Aslında, verdiğin operatör çiftleri arasındaki fark, operatörlerin basit sağa/sola kaydırma işlemi ile kaydırma ve atama işlemi arasında olmasıdır. Şimdi bu farkı açıklayalım:
+
+      1. >> (Sağa Kaydırma) vs. >>= (Sağa Kaydırma ve Atama)
+      >> (Sağa Kaydırma):
+      Bu operatör, bir sayının bitlerini sağa kaydırır, ancak kaydırma sonucu sayının kendisi değişmez. Yani orijinal değer korunur, ancak sonuç olarak kaydırılmış değeri döndürür.
+      Örnek:
+      let a = 8; // 00001000 (binary)
+      let result = a >> 1; // Sonuç: 4 // 00000100 (binary)
+      console.log(a); // a hâlâ 8 olarak kalır.
+      >>= (Sağa Kaydırma ve Atama):
+      Bu operatör, sağa kaydırma işlemini gerçekleştirir ve sonucu doğrudan değişkene atar. Yani, değişkenin değeri kaydırma sonucu ile değiştirilir.
+      Örnek:
+      let a = 8; // 00001000 (binary)
+      a >>= 1; // Sonuç: 4 // 00000100 (binary)
+      console.log(a); // a artık 4 olarak değiştirilir.
+
+      2. << (Sola Kaydırma) vs. <<= (Sola Kaydırma ve Atama)
+      << (Sola Kaydırma):
+      Bu operatör, bir sayının bitlerini sola kaydırır, fakat kaydırma işlemi sadece geçici bir sonuç döndürür. Sayının kendisi değişmez.
+      Örnek:
+      let a = 3; // 00000011 (binary)
+      let result = a << 1; // Sonuç: 6 // 00000110 (binary)
+      console.log(a); // a hâlâ 3 olarak kalır.
+      <<= (Sola Kaydırma ve Atama):
+      Bu operatör, sola kaydırma işlemini yapar ve sonucu doğrudan değişkene atar. Yani, değişkenin değeri kaydırma sonucu ile değiştirilir.
+      Örnek:
+      let a = 3; // 00000011 (binary)
+      a <<= 1; // Sonuç: 6 // 00000110 (binary)
+      console.log(a); // a artık 6 olarak değiştirilir.
+
+      3. >>> (Sıfırla Doldurularak Sağa Kaydırma) vs. >>>= (Sıfırla Doldurularak Sağa Kaydırma ve Atama)
+      >>> (Sıfırla Doldurularak Sağa Kaydırma):
+      Bu operatör, sayının bitlerini sağa kaydırır ve boş kalan yerlere sıfır atar, ancak sayının kendisi değişmez. Sadece sonucu döndürür.
+      Örnek:
+      let a = -4; // 11111100 (binary)
+      let result = a >>> 1; // Sonuç: 2147483646 (pozitif bir değer)
+      console.log(a); // a hâlâ -4 olarak kalır.
+      >>>= (Sıfırla Doldurularak Sağa Kaydırma ve Atama):
+      Bu operatör, sıfırla doldurularak sağa kaydırma işlemi yapar ve sonucu değişkene atar. Yani, değişkenin değeri kaydırma sonucu ile değiştirilir.
+      Örnek:
+      let a = -4; // 11111100 (binary)
+      a >>>= 1; // Sonuç: 2147483646 (pozitif bir değer)
+      console.log(a); // a artık 2147483646 olarak değiştirilir.
+
+      
+      Sonuç:
+      >>, <<, >>>: Kaydırma işlemi yapılır ancak değişkenin değeri değişmez, sadece sonuç döner.
+      >>=, <<=, >>>=: Kaydırma işlemi yapılır ve değişkenin değeri kaydırma sonucuyla güncellenir.
+      
+      Bu fark aslında şudur: Atama yapmayan versiyonlar sadece işlemin sonucunu döndürürken, atama yapan versiyonlar (= ile olanlar) sonucu değişkene atar ve günceller.
+
+-->
+
+<!-- Bu operatörler bit seviyesinde işlemler yapmak için kullanılır ve genellikle performans odaklı uygulamalarda ya da düşük seviyeli programlamada faydalıdır. -->
