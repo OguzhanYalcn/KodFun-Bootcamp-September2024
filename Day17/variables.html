@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables (Değişkenler) (JS)</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Değişken Tanımlama (Variable Declaration)
+      // variable = var
+      // var a = 3;
+      let a = 3; // Sayı (Number)
+      document.write(a); // 3
+      document.write("a"); // çift tırnak
+      document.write('a'); // tek tırnak
+      a = 4.5;
+      document.write(a); // 4.5
+
+      let b = alert; //  "alert" fonksiyonunu bir değişkende tutar. Amaç fonksiyonu çalıştırmak değil, depolamak.
+      // b("George Boole"); // "alert" fonksiyonu çalışır.
+
+      let c = "Level"; // Metin (String)
+      document.write(c); // Level
+
+      let d = true; // Boolean (true/false)
+
+      // Sabit (const) tanımlama ve değiştirilememe durumu
+      // let willYouMarryMe = false;
+      /* const willYouMarryMe = false; */ /* "const" ile oluşturulan değişkenlerin değeri değiştirilemez. */
+      /* willYouMarryMe = true; */ /* Hata verecektir çünkü const ile tanımlanmış bir değişkenin değeri değiştirilemez. Hata mesajı konsolda görülebilir. */
+
+      let e = document; // "document" nesnesi, önden tanımlı bir object
+      document.write(e.title); // Sayfanın başlığını yazdırır
+ 
+      let f; // Tanımlandı ama değer atanmamış (undefined)
+
+      let g = null; // null'ın veri türü object'tir. // Boş değer, veri türü "object"tir.
+
+      document.body.innerHTML += "<hr>"; // HTML içeriğine yatay çizgi ekler
+      document.write("<hr>");
+      // console.log("Look at the window !!!");
+
+      // Değişken türlerini yazdırma
+      document.write("<h3>Veri Türleri</h3>");
+      document.write(typeof a); // number
+      document.write("<br>");
+      document.write(typeof b); // function
+      document.write("<br>");
+      document.write(typeof c); // string
+      document.write("<br>");
+      document.write(typeof d); // boolean
+      document.write("<br>");
+      document.write(typeof e); // object
+      document.write("<br>");
+      document.write(typeof f); // undefined
+      document.write("<br>");
+      document.write(typeof g); // object
+    </script>
+  </body>
+</html>
