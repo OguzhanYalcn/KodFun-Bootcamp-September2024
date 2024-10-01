@@ -3,35 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Örnek</title>
+    <title>Grid Example</title>
     <style>
-      div.resimler {
-        display: grid;
-        /* grid-template-columns: 1fr 1fr 1fr; */
+      div.images {
+        display: grid; /* ızgara yapısı, tablo gibi bir yapıya büründürüyor. */
+        /* grid-template-columns: 1fr 1fr 1fr; */ /* Her biri 1 birim olan 3 sütun olsun demek. 1fr 2fr 1fr gibi değişik oranlar da verilebilir. "auto auto auto" da verilebilir. Gelişmiş grid özellikleri de mevcuttur. (w3schools sitesinden incelenebilir.) fr? */
         grid-template-columns: repeat(3, 1fr);
-        gap: 1vw;
+        gap: 1vw; /* Aralarına belli bir boşluk bırakılır. */
       }
-      div.resimler > img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
+      div.images > img {
+        width: 100%; /* 3 sütuna sığacak şekilde resimlerin genişliğini %100 yapmak. */
+        aspect-ratio: 1 / 1; /* en-boy oranını eşitlemek için verilmiş bir özellik. Ama bazı durumlarda resimlerin şeklini bozabilir. */
+        object-fit: cover; /* Nesnenin "1/1" orandaki çerçeveye nasıl sığacağı ile ilgili olarak verilen özellik. "cover" verildiği zaman resmin en-boy oranını bozmadan kaplayacak şekilde genişletiyor. Bu da resmin bir kısmının feda edildiği anlamına geliyor. Dikeyse üstten-alttan, yataysa sağdan-soldan kırpılması ile sonuçlanıyor. */
       }
     </style>
   </head>
   <body>
-    <div class="resimler">
-      <img src="https://picsum.photos/id/576/300/200" alt="resim" />
-      <img src="https://picsum.photos/id/500/500/500" alt="resim" />
-      <img src="https://picsum.photos/id/280/200/300" alt="resim" />
-      <img src="https://picsum.photos/id/700/600/400" alt="resim" />
-      <img src="https://picsum.photos/id/409/350/450" alt="resim" />
-      <img src="https://picsum.photos/id/550/550/350" alt="resim" />
-      <img src="https://picsum.photos/id/350/400/700" alt="resim" />
-      <img src="https://picsum.photos/id/666/500/600" alt="resim" />
-      <img src="https://picsum.photos/id/1000/600/400" alt="resim" />
-      <img src="https://picsum.photos/id/890/700/350" alt="resim" />
-      <img src="https://picsum.photos/id/433/600/600" alt="resim" />
-      <img src="https://picsum.photos/id/613/600/800" alt="resim" />
+    <div class="images">
+      <img src="https://picsum.photos/id/576/300/200" alt="picture" />
+      <img src="https://picsum.photos/id/500/500/500" alt="picture" />
+      <img src="https://picsum.photos/id/280/200/300" alt="picture" />
+      <img src="https://picsum.photos/id/700/600/400" alt="picture" />
+      <img src="https://picsum.photos/id/409/350/450" alt="picture" />
+      <img src="https://picsum.photos/id/550/550/350" alt="picture" />
+      <img src="https://picsum.photos/id/350/400/700" alt="picture" />
+      <img src="https://picsum.photos/id/666/500/600" alt="picture" />
+      <img src="https://picsum.photos/id/1000/600/400" alt="picture" />
+      <img src="https://picsum.photos/id/890/700/350" alt="picture" />
+      <img src="https://picsum.photos/id/433/600/600" alt="picture" />
+      <img src="https://picsum.photos/id/613/600/800" alt="picture" />
     </div>
   </body>
 </html>
