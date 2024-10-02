@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-2</title>
+</head>
+<body>
+    <script src="../common/writeConsole.js"></script>
+    <script>
+        // Constructor - Generate an object with a function (Fonksiyon ile nesne üretme)
+        function car(brand, year, color) {
+            this.brand = brand; // function a referans veriyor = gelen inputa referans veriyor
+            this.year = year;
+            this.color = color;
+
+            this.summarize = function(){
+                return this.color + " colored " + this.year + " model " + this.brand;
+            };
+
+            drawLine("I've got a car!");
+        }
+
+        let c1 = new car("Porsche 911 Turbo S", 2024, "Light Anthracite");
+        console.log(c1);
+        c1.year = 2025; // Updated the property of the created object. (Oluşmuş nesnenin özelliği güncellendi.)
+        drawLine(c1.summarize());
+
+        let c2 = new car("Audi RS6", 2024, "Black");
+        drawLine(c2.summarize());
+    </script>
+</body>
+</html>
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new -->

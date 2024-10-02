@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects-3 | Area Calculation</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-4">Rectangular Area Calculation</h1>
+      <div class="mb-3">
+        <label class="form-label" for="wid">Width</label>
+        <input class="form-control" type="number" id="wid" value="0" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="hei">Height</label>
+        <input class="form-control" type="number" id="hei" value="0" />
+      </div>
+      <div class="alert alert-info">
+        Area of the rectangular whose properties are entered:
+        <strong><span id="result">0</span>br²</strong>
+      </div>
+    </div>
+
+    <script>
+      // First, Let's Pour the Ingredients on the Counter (Önce Tezgaha Malzemeleri Dökelim)
+      const inputWid = document.getElementById("wid");
+      const inputHei = document.getElementById("hei");
+      const spnResult = document.getElementById("result");
+
+      // Create Our Data Object (Veri Nesnemizi Oluşturalım)
+      let rectangular = {
+        width: 0,
+        height: 0,
+        area: function () {
+          return this.width * this.height;
+        },
+      };
+
+      // Defining the Functions to be Needed (İhtiyaç Duyulacak Fonksiyonların Tanımlanması)
+      function updateResult() {
+        rectangular.width = inputWid.value;
+        rectangular.height = inputHei.value;
+        spnResult.textContent = rectangular.area();
+      }
+
+      // event tanımlaması: ne değişince ne olsun?
+      inputWid.oninput = updateResult; // .onchange olduğun girilen sayı değerini onaylamadan, entere basmadan, başka yere tıklamadan onaylamaz.
+      inputHei.oninput = updateResult; // .oninput ne zamanki bu değer değişirse bu fonksiyonu çağır.
+    </script>
+  </body>
+</html>
+<!-- https://getbootstrap.com/docs/5.3/forms/form-control/ -->
+<!-- https://getbootstrap.com/docs/5.3/forms/layout/ -->
