@@ -1,0 +1,233 @@
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+        margin: 0;
+        background-color: #f1f1f1;
+      }
+
+      .w3-tag {
+        background-color: black;
+        color: white;
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+      }
+
+      header {
+        padding: 2rem;
+        margin: 1rem 0 2rem 0;
+        text-align: center;
+      }
+
+      header > h1 {
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+
+      main {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .col1 {
+        flex: 2;
+        margin: 0 1rem;
+      }
+
+      .col2 {
+        flex: 1;
+        margin: 0 1rem;
+      }
+
+      .box {
+        background-color: white;
+        margin-bottom: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      footer {
+        background-color: #616161;
+        margin-top: 1rem;
+        padding: 1rem;
+        color: white;
+        text-align: center;
+      }
+
+      @media (max-width: 990px) {
+        main {
+          flex-direction: column;
+        }
+      }
+
+      p, .card-description {
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        margin-top: 27px;
+        margin-bottom: 28px;
+      }
+
+      .image {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 0.1rem 1rem 1rem ;
+      }
+
+      .card-body-right{
+        padding-top: 20px;
+        height: 70px;
+        background-color: #f1f1f1;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      .card-title {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .card-body-tags{
+        margin-top: 12px;
+      }
+
+      .text-muted {
+        color: #6c757d;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.375rem 0.75rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .btn-container span {
+        padding-top: 5px;
+      }
+
+      .btn-outline-dark {
+        color: #343a40;
+        border: 1px solid lightgrey;
+        padding: 13px 21px;
+      }
+
+      .btn-outline-dark:hover {
+        background-color: #cccccc;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.25em 0.4em;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+      }
+
+      .badge-dark {
+        color: #fff;
+        background-color: #000000;
+        padding: 4px 9px;
+      }
+
+      .badge-dark-2 {
+        border-radius: 50%;
+      }
+
+      .badge-light {
+        color: #212529;
+        background-color: #f1f1f1;
+        margin-bottom: 20px;
+      }
+
+      .badge-travel {
+        font-size: 14px;
+      }
+
+      .date {
+        opacity: 0.6;
+      }
+
+      .popular-post {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        text-decoration: none;
+        color: inherit;
+        border-top: 1px solid #eee; /* yoruma açık */
+      }
+
+      .popular-post:hover {
+        background-color: #f1f1f1;
+      }
+
+      .popular-post img {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+      }
+
+      .lorem {
+        font-size: 18px;
+      }
+
+      .card-title-my-name{
+        font-size: 20px;
+      }
+      .p-my-name {
+        margin-top: 17px;
+        margin-bottom: 0;
+      }
+
+      .btn-footer {
+        color: white; 
+        border-color: white;
+        border: none; 
+      }
+
+      .ftr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+
+      .previous {
+        background-color: rgba(0, 0, 0, 0.2); 
+        cursor: not-allowed; 
+        pointer-events: none;
+      }
+      .next {
+        background-color: #000;
+      }
+      .next:hover {
+        color: #000;
+      }
+      .footer-link {
+        color: white;
+      }

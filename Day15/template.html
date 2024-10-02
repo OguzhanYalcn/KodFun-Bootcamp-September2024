@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -18,7 +18,7 @@
       }
 
       body {
-        font-family: "Lato", sans-serif;
+        font-family: "Raleway", sans-serif;
         margin: 0;
         background-color: #f1f1f1;
       }
@@ -42,7 +42,7 @@
 
       main {
         display: flex; /* Kutular soldan sağa doğru dizilecek (default) */
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto; /* ortalamak için. sağdan soldan otomatik olarak ittirebildiği kadar ittirir. */ /* üstten alttan 0, sağdan soldan auto */
       }
 
@@ -81,7 +81,7 @@
 
   <body>
     <header>
-      <h1>My Blog</h1>
+      <h1><b>My Blog</b></h1>
       <div class="site-desc">Welcome to the blog of <mark>unknown</mark></div>
       <!-- mark: işaretleyici. fosforlu kalemle çizilmiş gibi. mark yerine span de kullanılabilir. -->
     </header>
@@ -274,14 +274,22 @@
         </div>
       </div>
     </main>
-    <footer><!-- sayfanın en alt kısmı (copy right, vs) -->
+    <footer>
+      <!-- sayfanın en alt kısmı (copy right, vs) -->
       <div>
-        <a href="#" class="btn btn-dark px-4 py-2 disabled rounded-0">Previous</a>
+        <a href="#" class="btn btn-dark px-4 py-2 disabled rounded-0"
+          >Previous</a
+        >
         <a href="#" class="btn btn-dark px-4 py-2 rounded-0">Next &raquo;</a>
-    </div>
-    <p class="text-light mt-4">
-        Powered by <a href="https://www.w3schools.com/w3css/default.asp" class="text-light footer-link">w3.css</a>
-    </p>
+      </div>
+      <p class="text-light mt-4">
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          class="text-light footer-link"
+          >w3.css</a
+        >
+      </p>
     </footer>
   </body>
 </html>
