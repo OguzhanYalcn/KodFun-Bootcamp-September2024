@@ -8,27 +8,31 @@
   <body>
     <script src="../common/writeConsole.js"></script>
     <script>
+      // Object Definition (Nesne Tanımlama)
       let table = {
-        height: 71,
-        color: "white",
-        raise: function () {
-          this.height++;
+        height: 71, // Initial height of the object (Nesnenin başlangıç yüksekliği)
+        color: "white", // Color of the object (Nesnenin rengi)
+        raise: function () { // Method to increase height (Yüksekliği artıran method)
+          this.height++; // "this" refers to the object itself, increases height by 1 ("this", nesneyi temsil eder, height 1 artırılır)
         },
-        lower: function () {
-          this.height--;
+        lower: function () { // Method to decrease height (Yüksekliği azaltan method)
+          this.height--; // Decreases height by 1 (height 1 azaltılır)
         },
       };
 
-      writeConsole("Height: " + table.height);
-      writeConsole("Color: " + table.color);
+      // Display initial values (İlk değerleri yazdırma)
+      writeConsole("Height: " + table.height); // 71
+      writeConsole("Color: " + table.color); // white (beyaz)
 
+      // Call method to increase height (Methodu çağırarak yüksekliği artırma)
       table.raise();
-      writeConsole("New Height: " + table.height);
+      writeConsole("New Height: " + table.height); // New height: 72 (Yeni yükseklik: 72)
 
+      // Call the lowering method several times (Yüksekliği azaltan methodu birkaç kez çağırma)
       table.lower();
       table.lower();
       table.lower();
-      writeConsole("New Height: " + table.height);
+      writeConsole("New Height: " + table.height); // New height: 69 (Yeni yükseklik: 69)
     </script>
   </body>
 </html>
