@@ -25,29 +25,47 @@
 
     <script>
       // First, Let's Pour the Ingredients on the Counter (Önce Tezgaha Malzemeleri Dökelim)
-      const inputWid = document.getElementById("wid");
-      const inputHei = document.getElementById("hei");
-      const spnResult = document.getElementById("result");
+      const inputWid = document.getElementById("wid"); // Get the input element for width (Genişlik için input elemanını al)
+      const inputHei = document.getElementById("hei"); // Get the input element for height (Yükseklik için input elemanını al)
+      const spnResult = document.getElementById("result"); // Get the span element for displaying the result (Sonucun gösterileceği span elemanını al)
 
       // Create Our Data Object (Veri Nesnemizi Oluşturalım)
       let rectangular = {
-        width: 0,
-        height: 0,
+        width: 0, // Initial width value (Başlangıç genişlik değeri)
+        height: 0, // Initial height value (Başlangıç yükseklik değeri)
         area: function () {
-          return this.width * this.height;
+          return this.width * this.height; // Area is calculated as width * height (Alan, genişlik * yükseklik olarak hesaplanır)
         },
       };
 
       // Defining the Functions to be Needed (İhtiyaç Duyulacak Fonksiyonların Tanımlanması)
       function updateResult() {
-        rectangular.width = inputWid.value;
-        rectangular.height = inputHei.value;
-        spnResult.textContent = rectangular.area();
+        rectangular.width = inputWid.value; // Update the object's width property (Nesnenin genişlik özelliğini güncelle)
+        rectangular.height = inputHei.value; // Update the object's height property (Nesnenin yükseklik özelliğini güncelle)
+        spnResult.textContent = rectangular.area(); // Display the calculated area in the result span (Hesaplanan alanı sonuç span'ında göster)
       }
 
-      // event tanımlaması: ne değişince ne olsun?
-      inputWid.oninput = updateResult; // .onchange olduğun girilen sayı değerini onaylamadan, entere basmadan, başka yere tıklamadan onaylamaz.
-      inputHei.oninput = updateResult; // .oninput ne zamanki bu değer değişirse bu fonksiyonu çağır.
+      // Event Definition: What should happen when a change occurs? (Olay Tanımlaması: Bir değişiklik olduğunda ne olsun?)
+      inputWid.oninput = updateResult; // The function is called whenever the width input changes (Genişlik inputu değiştiğinde fonksiyon çağrılır)
+      inputHei.oninput = updateResult; // The function is called whenever the height input changes (Yükseklik inputu değiştiğinde fonksiyon çağrılır)
+
+      /* 
+        .onchange: The function is triggered when the user confirms the input by pressing "Enter" or clicking outside the input field. It waits for the user to finish editing. 
+        (Girilen sayı değerini onaylamadan, "Enter" tuşuna basmadan ya da başka bir yere tıklamadan tetiklenmez. Kullanıcı düzenlemeyi tamamlayana kadar bekler.)
+      */
+      /* 
+        .onchange is triggered when the user completes the input, either by clicking elsewhere or pressing "Enter." It is more appropriate for cases requiring a final confirmation, such as when a form is filled and "Submit" is clicked. 
+        (Kullanıcı inputu tam olarak tamamlayıp başka bir yere tıkladığında ya da "Enter" tuşuna bastığında tetiklenir. Özellikle kesin bir onay gerektiren durumlar için daha uygun olabilir, örneğin bir form doldurulup "Submit" yapılana kadar.) 
+      */
+
+      /* 
+        .oninput: The function is triggered immediately when the value of the input changes, for example, when the user types. It responds to every change in real-time. 
+        (Değer değiştiği anda fonksiyon tetiklenir. Kullanıcı her harf, rakam veya sembol girdiğinde anında tepki verir, yani gerçek zamanlı olarak çalışır.)
+      */
+      /* 
+        .oninput is typically used when more dynamic and instant feedback is needed. For example, it's suitable for actions like updating search results as each character is typed. 
+        (Genellikle daha dinamik ve anında geri bildirim sağlamak istendiğinde kullanılır. Örneğin, bir arama alanı için, her harf girildiğinde sonuçların güncellenmesi gibi işlemler için uygundur.) 
+      */
     </script>
   </body>
 </html>
