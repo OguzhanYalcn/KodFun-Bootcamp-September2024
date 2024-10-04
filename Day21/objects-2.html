@@ -10,24 +10,25 @@
     <script>
         // Constructor - Generate an object with a function (Fonksiyon ile nesne üretme)
         function car(brand, year, color) {
-            this.brand = brand; // function a referans veriyor = gelen inputa referans veriyor
+            this.brand = brand; // Refers to the function itself <=> assigns the input to the object. (Fonksiyonun kendisine referans verir <=> gelen inputu nesneye atar.)
             this.year = year;
             this.color = color;
 
             this.summarize = function(){
                 return this.color + " colored " + this.year + " model " + this.brand;
+                // Returns a summary string combining the object's properties. (Nesnenin özelliklerini birleştirip bir özet string döner.)
             };
 
             drawLine("I've got a car!");
         }
 
         let c1 = new car("Porsche 911 Turbo S", 2024, "Light Anthracite");
-        console.log(c1);
+        console.log(c1); // Logs the newly created car object. (Yeni oluşturulan araba nesnesini yazdırır.)
         c1.year = 2025; // Updated the property of the created object. (Oluşmuş nesnenin özelliği güncellendi.)
-        drawLine(c1.summarize());
+        drawLine(c1.summarize()); // Displays the updated car summary. (Güncellenmiş araba özetini gösterir.)
 
-        let c2 = new car("Audi RS6", 2024, "Black");
-        drawLine(c2.summarize());
+        let c2 = new car("Audi RS6 Performance", 2024, "Black");
+        drawLine(c2.summarize()); // Displays the summary of the second car. (İkinci arabanın özetini gösterir.)
     </script>
 </body>
 </html>
