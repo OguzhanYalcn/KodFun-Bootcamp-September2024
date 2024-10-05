@@ -6,15 +6,36 @@
     <title>Grid Example</title>
     <style>
       div.images {
-        display: grid; /* ızgara yapısı, tablo gibi bir yapıya büründürüyor. */
-        /* grid-template-columns: 1fr 1fr 1fr; */ /* Her biri 1 birim olan 3 sütun olsun demek. 1fr 2fr 1fr gibi değişik oranlar da verilebilir. "auto auto auto" da verilebilir. Gelişmiş grid özellikleri de mevcuttur. (w3schools sitesinden incelenebilir.) fr? */
+        display: grid; /* The grid layout creates a table-like structure. | Izgara yapısı, tablo gibi bir yapıya büründürüyor. */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* This defines 3 equal columns. You can also give different proportions like 1fr 2fr 1fr or use "auto auto auto" for automatic sizing. 
+        Advanced grid features can also be used. (Check out w3schools for more.) | Her biri 1 birim olan 3 sütun olsun demek. 1fr 2fr 1fr gibi değişik oranlar da verilebilir. "auto auto auto" da verilebilir. Gelişmiş grid özellikleri de mevcuttur. (w3schools sitesinden incelenebilir.) */
+
+        /*
+          "fr" stands for fractional unit, a unit in CSS Grid that represents a fraction of the available space. It helps distribute the available space among grid items based on the given ratios. If you assign 1fr to an item, it will get an equal share of the space; if you assign 2fr, that item will take twice as much space as the others.
+          ("fr" aslında fractional unit yani kesir birimi anlamına gelir. CSS Grid'de kullanılan birimdir ve kullanılabilir alanın belirli bir bölümünü belirtir. Grid'deki her öğeye kalan alanı, verilen oranlarda paylaştırmanı sağlar. Bir öğeye 1fr verirsen, toplam alanın eşit paylaştırılmasını istersin; 2fr verirsen, o öğe diğerlerinden iki kat daha geniş olur.)
+
+          grid-template-columns: 1fr 2fr 1fr;
+
+          This code means: (Bu kod şu anlama gelir:)
+            The first column takes 1 fraction of the available space. (İlk sütun kullanılabilir alanın 1 birimlik kısmını alır.)
+            The second column takes 2 fractions (it's wider than the others). [İkinci sütun 2 birimlik kısmını alır (diğer sütunlardan daha geniş).]
+            The third column takes 1 fraction of the available space. (Üçüncü sütun yine 1 birimlik kısmını alır.)
+    
+          In short, the "fr" unit is a flexible ratio for dividing space among grid items. (Yani, "fr" birim, bir nevi esnek pay oranıdır. Kesir birimi, alanın tüm öğeler arasında nasıl bölüneceğini belirlemeye yarar.)
+        */
+
         grid-template-columns: repeat(3, 1fr);
-        gap: 1vw; /* Aralarına belli bir boşluk bırakılır. */
+        /* This sets 3 columns, each taking 1 fraction of the available space. | Bu, her biri 1 birim yer kaplayacak 3 sütun oluşturur. */
+
+        gap: 1vw; /* Adds a gap between the grid items. | Izgara öğeleri arasında boşluk bırakır. */
       }
       div.images > img {
-        width: 100%; /* 3 sütuna sığacak şekilde resimlerin genişliğini %100 yapmak. */
-        aspect-ratio: 1 / 1; /* en-boy oranını eşitlemek için verilmiş bir özellik. Ama bazı durumlarda resimlerin şeklini bozabilir. */
-        object-fit: cover; /* Nesnenin "1/1" orandaki çerçeveye nasıl sığacağı ile ilgili olarak verilen özellik. "cover" verildiği zaman resmin en-boy oranını bozmadan kaplayacak şekilde genişletiyor. Bu da resmin bir kısmının feda edildiği anlamına geliyor. Dikeyse üstten-alttan, yataysa sağdan-soldan kırpılması ile sonuçlanıyor. */
+        width: 100%; /* Ensures the images fill the width of their respective grid columns. | Görüntülerin ilgili ızgara sütunlarının genişliğini doldurmasını sağlar. */ /* (3 columns in this example) | (Bu örnekte 3 sütunu kaplayacak şekilde) */
+        
+        aspect-ratio: 1 / 1; /* Maintains a square aspect ratio (1:1). This can distort the image in some cases. | En-boy oranını 1:1 olacak şekilde ayarlayan özellik. Ancak bazı durumlarda resimlerin şeklini bozabilir. */
+        
+        object-fit: cover; /* Fits the image within the 1:1 aspect ratio without stretching. Crops part of the image if necessary (e.g., cropping from the sides for landscape images). | Resmin en-boy oranını bozmadan 1/1 çerçeveye sığdırır. Bu, resmin bazı kısımlarının kırpılması anlamına gelir (dikeyse üstten-alttan, yataysa sağdan-soldan kırpılır). */
       }
     </style>
   </head>
