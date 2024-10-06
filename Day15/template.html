@@ -7,9 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
       *,
       *::before,
@@ -18,7 +17,7 @@
       }
 
       body {
-        font-family: "Raleway", sans-serif;
+        font-family: "Lato", sans-serif;
         margin: 0;
         background-color: #f1f1f1;
       }
@@ -41,27 +40,27 @@
       }
 
       main {
-        display: flex; /* Kutular soldan sağa doğru dizilecek (default) */
-        max-width: 1400px;
-        margin: 0 auto; /* ortalamak için. sağdan soldan otomatik olarak ittirebildiği kadar ittirir. */ /* üstten alttan 0, sağdan soldan auto */
+        display: flex; /* The boxes are aligned from left to right (default). (Kutular soldan sağa doğru dizilecek.) */
+        max-width: 1200px;
+        margin: 0 auto; /* Centers the content by pushing it automatically from both sides.(İçeriği her iki taraftan otomatik olarak iterek ortalar.) (Ortalamak için. Sağdan soldan otomatik olarak ittirebildiği kadar ittirir.) */ /* top to bottom 0, right to left auto */
       }
 
       .col1 {
-        flex: 2; /* Genişlik oranı */
-        margin: 0 1rem; /* üstten alttan 0, sağdan soldan 1 rem */
+        flex: 2; /* Sets the width ratio. (Genişlik oranını ayarlar.) */
+        margin: 0 1rem; /* 0 from top-bottom, 1rem from left-right. (Üstten alttan 0, sağdan soldan 1 rem.) */
       }
 
       .col2 {
-        flex: 1; /* Genişlik oranı */
-        margin: 0 1rem; /* üstten alttan 0, sağdan soldan 1 rem */
+        flex: 1; /* Sets the width ratio. (Genişlik oranını ayarlar.) */
+        margin: 0 1rem; /* 0 from top-bottom, 1rem from left-right. (Üstten alttan 0, sağdan soldan 1 rem.) */
       }
 
       .box {
         background-color: white;
         margin-bottom: 2rem;
         min-height: 150px; /* SİL */
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        /* getcssscan.com/css-box-shadow-examples */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Shadow effect for the boxes. (Kutulara gölge efekti.) */
+        /* For more box-shadow examples: getcssscan.com/css-box-shadow-examples */
       }
 
       footer {
@@ -71,7 +70,8 @@
       }
 
       /* 990 yap */
-      @media (max-width: 990px) {
+      /* Responsive design: adjusts the layout when the width is 600px or smaller. (Responsive tasarım: Genişlik 600px veya daha küçük olduğunda düzeni ayarlar.) */
+      @media (max-width: 600px) {
         main {
           flex-direction: column;
         }
@@ -83,222 +83,31 @@
     <header>
       <h1><b>My Blog</b></h1>
       <div class="site-desc">Welcome to the blog of <mark>unknown</mark></div>
-      <!-- mark: işaretleyici. fosforlu kalemle çizilmiş gibi. mark yerine span de kullanılabilir. -->
+      <!-- "mark" highlights the text as if using a highlighter pen. "span" could also be used here. | "mark": işaretlemek | "mark" metni fosforlu kalem kullanıyormuş gibi vurgular. "span" da burada kullanılabilir. -->
     </header>
     <main>
       <div class="col1">
-        <div class="box">
-          <img src="https://picsum.photos/700/220" alt="title" class="w-100" />
-          <div class="card-body">
-            <h3 class="card-title font-weight-bold">TITLE HEADING</h3>
-            <p class="lead">
-              Title description, <span class="text-muted">April 7, 2014</span>
-            </p>
-            <p class="card-text">
-              Mauris neque quam, fermentum ut nisl vitae, convallis maximus
-              nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-              magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-              mi non congue ullam corper. Praesent tincidunt sed tellus ut
-              rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-              congue gravida diam non fringilla.
-            </p>
-            <div class="d-flex justify-content-between align-items-md-baseline">
-              <a
-                href="#"
-                class="btn btn-outline-dark rounded-0 border-secondary"
-              >
-                READ MORE &raquo;
-              </a>
-              <a
-                href="#"
-                class="btn btn-link text-dark d-none d-sm-inline-block"
-              >
-                Comments<span class="badge badge-dark rounded-0 badge-big ml-2"
-                  >0</span
-                >
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://picsum.photos/700/220"
-            alt="about me"
-            class="w-100"
-          />
-          <div class="card-body">
-            <h3 class="card-title font-weight-bold">BLOG ENTRY</h3>
-            <p class="lead">
-              Title description, <span class="text-muted">April 2, 2014</span>
-            </p>
-            <p class="card-text">
-              Mauris neque quam, fermentum ut nisl vitae, convallis maximus
-              nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-              magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-              mi non congue ullam corper. Praesent tincidunt sed tellus ut
-              rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-              congue gravida diam non fringilla.
-            </p>
-            <div class="d-flex justify-content-between align-items-md-baseline">
-              <a
-                href="#"
-                class="btn btn-outline-dark rounded-0 border-secondary"
-              >
-                READ MORE &raquo;
-              </a>
-              <a
-                href="#"
-                class="btn btn-link text-dark d-none d-sm-inline-block"
-              >
-                Comments<span class="badge badge-dark rounded-0 badge-big ml-2"
-                  >2</span
-                >
-              </a>
-            </div>
-          </div>
-        </div>
+        <div class="box"></div>
+        <div class="box"></div>
       </div>
       <div class="col2">
-        <div class="box">
-          <div class="card border-0 rounded-0 shadow mb-4">
-            <img
-              src="https://picsum.photos/400/250"
-              alt="about me"
-              class="w-100"
-            />
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">My Name</h5>
-              <p class="card-text">
-                Just me, myself and I, exploring the universe of uknownment. I
-                have a heart of love and a interest of lorem ipsum and mauris
-                neque quam blog. I want to share my world with you.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="card border-0 rounded-0 shadow mb-4">
-            <h5 class="card-header py-3">Popular Posts</h5>
-            <div class="list-group list-group-flush">
-              <a
-                href="#"
-                class="list-group-item list-group-item-action pp-action d-flex align-items-center"
-              >
-                <img
-                  src="https://picsum.photos/300/300"
-                  alt="walking"
-                  width="50"
-                  height="50"
-                  class="float-left mr-3"
-                />
-                <span>
-                  Lorem<br />
-                  <small>Sed mattis nunc</small>
-                </span>
-              </a>
-              <a
-                href="#"
-                class="list-group-item list-group-item-action pp-action d-flex align-items-center"
-              >
-                <img
-                  src="https://picsum.photos/300/300"
-                  alt="city"
-                  width="50"
-                  height="50"
-                  class="float-left mr-3"
-                />
-                <span>
-                  Ipsum<br />
-                  <small>Praes tinci sed</small>
-                </span>
-              </a>
-              <a
-                href="#"
-                class="list-group-item list-group-item-action pp-action d-flex align-items-center"
-              >
-                <img
-                  src="https://picsum.photos/300/300"
-                  alt="cup"
-                  width="50"
-                  height="50"
-                  class="float-left mr-3"
-                />
-                <span>
-                  Dorum<br />
-                  <small>Ultricies congue</small>
-                </span>
-              </a>
-              <a
-                href="#"
-                class="list-group-item list-group-item-action pp-action d-flex align-items-center"
-              >
-                <img
-                  src="https://picsum.photos/300/300"
-                  alt="roads"
-                  width="50"
-                  height="50"
-                  class="float-left mr-3"
-                />
-                <span>
-                  Mingsum<br />
-                  <small>Lorem ipsum dipsum</small>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="card border-0 rounded-0 shadow mb-4">
-            <h5 class="card-header py-3">Tags</h5>
-            <div class="card-body">
-              <p class="card-text">
-                <span class="badge badge-dark mb-2 rounded-0 badge-big"
-                  >Travel</span
-                >
-                <span class="badge badge-light mb-2 rounded-0">New York</span>
-                <span class="badge badge-light mb-2 rounded-0">London</span>
-                <span class="badge badge-light mb-2 rounded-0">IKEA</span>
-                <span class="badge badge-light mb-2 rounded-0">NORWAY</span>
-                <span class="badge badge-light mb-2 rounded-0">DIY</span>
-                <span class="badge badge-light mb-2 rounded-0">Ideas</span>
-                <span class="badge badge-light mb-2 rounded-0">Baby</span>
-                <span class="badge badge-light mb-2 rounded-0">Family</span>
-                <span class="badge badge-light mb-2 rounded-0">News</span>
-                <span class="badge badge-light mb-2 rounded-0">Clothing</span>
-                <span class="badge badge-light mb-2 rounded-0">Shopping</span>
-                <span class="badge badge-light mb-2 rounded-0">Sports</span>
-                <span class="badge badge-light mb-2 rounded-0">Games</span>
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
       </div>
     </main>
     <footer>
-      <!-- sayfanın en alt kısmı (copy right, vs) -->
-      <div>
-        <a href="#" class="btn btn-dark px-4 py-2 disabled rounded-0"
-          >Previous</a
-        >
-        <a href="#" class="btn btn-dark px-4 py-2 rounded-0">Next &raquo;</a>
-      </div>
-      <p class="text-light mt-4">
-        Powered by
-        <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          class="text-light footer-link"
-          >w3.css</a
-        >
-      </p>
+      Page footer (copyright, etc.) | Sayfanın alt kısmı (telif hakkı, vb.)
     </footer>
   </body>
 </html>
 <!-- https://www.w3schools.com/css/css_rwd_templates.asp -->
-<!-- Blog Template -->
-<!-- Seçilme Sebepleri -->
+<!-- https://www.w3schools.com/w3css/tryw3css_templates_blog.htm -->
+
+<!-- Blog Template: Reasons for Selection | Blog Şablonu: Seçilme Sebepleri -->
 <!-- 
-    1. Responsive (Küçüldüğü zaman tek sütuna iniyor.) (media query kullanılmış.)
-    2. İki sütunlu yapı var. Burada "flex"i kullanabiliriz.
-    3. "box-shadow" var. Kutular var. Aralarında margin var. Gap var...
-    4. "max-width" verilmiş.
+    1. Responsive (Adapts to a single column when the screen shrinks.) (Ekran küçüldüğünde tek bir sütuna uyum sağlar.) (media query)
+    2. Two-column layout. We can use "flex" here. (İki sütunlu yapı var. Burada "flex"i kullanabiliriz.)
+    3. Includes "box-shadow". The boxes have margin and gaps between them. (Kutuların gölgeleri var. Aralarında margin ve gap kullanılmış.)
+    4. "max-width" is defined. (Maksimum genişlik tanımlanmış.)
 -->
