@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Introduction to JavaScript</h1>
     <h1>Learning JavaScript</h1>
-    <p><!-- Buranın içini js ile değiştirebilir miyiz? --></p>
-    
+    <p>
+      <!-- Can we change this content with JS? (Buranın içini JS ile değiştirebilir miyiz?) -->
+    </p>
 
     <script>
-        /* Burası JS bölgesi */
-        
-        // JS'te HTML dokümanına karşılık gelen document adında bir nesne vardır. (çizim yaparken her şeyin başı olarak DOM ağacının tepesinde gösterdik)
-        // document nesnesi üzerinden mevcut sayfadaki dokümanın tüm elementlerine erişebiliriz (belirli yöntemlerle)
+      /* This is the JavaScript section (Burası JavaScript bölgesi) */
 
-        // safyadaki ilk p elementine eriş ve içinde metni değiştir
-        // özelliklerde parantez olmaz ama komutlarda vardır.
-        // p adındaki ilk elementi getir, nokta diyerek text contentini şu yap diyeceğiz.
-        
-        // nesneleri değişkenlere taşıyabiliriz
-        let ilkParag = document.querySelector("p");
+      // In JavaScript, there is an object called "document" that represents the HTML document. (This object is shown at the top of the DOM tree in diagrams.)
+      // JS'te HTML dokümanına karşılık gelen "document" adında bir nesne vardır. (Çizim yaparken DOM ağacının tepesinde gösterildi.)
+      // Through the "document" object, all elements of the current page can be accessed using specific methods.
+      // "document" nesnesi üzerinden mevcut sayfadaki dokümanın tüm elementlerine belirli yöntemlerle erişilebilir.
 
-        //nesnelerin özelliklerine . operatörü ile erişiriz
-        // = operatörü ile yeni değerler veririz
-        ilkParag.textContent = "Biz kimseyi yarı yolda bırakmadık, onlar müsait bir yerde indiler... - Bir Kamyon Arkası Sözü";
+      // "Access the first 'p' element in the document and change its text content." ("Sayfadaki ilk 'p' elementine eriş ve metnini değiştir.")
+      // Attributes do not have parentheses, but methods do. (Özelliklerde parantez olmaz, ancak metodlarda parantez kullanılır.)
+      // We will retrieve the first element named "p" and then set its "text content" to a new value. ("'p' adındaki ilk elementi getir, ardından 'text content'ini şu yap" diyeceğiz.)
 
-        // elementlerin özelliklerinin özelliklerine erişip değiştirebiliriz
-        ilkParag.style.color = "purple";
+      // Objects can be stored in variables. (Nesneler, değişkenlere taşınabilir.)
+      let firstParagraph = document.querySelector("p");
 
-        // DOM ağacının ilk dallarından biri olan body'ye bu şekilde erişebiliriz.
-        document.body.style.background = "linear-gradient(to right ,orange, white)";
+      // Object properties are accessed using the "." operator. (Nesnelerin özelliklerine "." operatörü ile erişilir.)
+      // New values are assigned using the "=" operator. ("=" operatörü ile yeni değerler atanır.)
+      firstParagraph.textContent =
+        "We never left anyone halfway; they got off at a convenient place... - A Truck Bumper Quote (Biz kimseyi yarı yolda bırakmadık, onlar müsait bir yerde indiler... - Bir Kamyon Arkası Sözü)";
 
-        // Programlama:
-        // KOmutların belli sırada belirli bir amaç için çalıştırılması (Algoritma ile)
-        // Komutlar insan diline yakın bir dille bilgisayara iş yapması için fısıldamaktır.
-        // alert("Hoooop ... palaaa!!!");
-        // alert("Welcome :)");
-        // Alert metodu ingilizcedeki anlamına yakın bir şekilde bir uyarı mesajı vermek için kullanılır.
+      // Properties of elements' properties can be accessed and modified. (Elementlerin özelliklerinin özelliklerine erişilebilir ve bunlar değiştirilebilir.)
+      firstParagraph.style.color = "purple";
 
+      // This is how to access "body", one of the first branches of the DOM tree. (DOM ağacının ilk dallarından biri olan "body"ye bu şekilde erişilebilir.)
+      document.body.style.background = "linear-gradient(to right ,#b3f1ff, #4d88ff)";
 
+      // Programming is executing commands in a specific order to achieve a goal (with an algorithm).
+      // (Programlama: Komutların belirli bir sırada belirli bir amaç için çalıştırılmasıdır (Algoritma ile).)
+      
+      // Commands are like whispering instructions to the computer in a language close to human language. (Komutlar, insan diline yakın bir dille bilgisayara iş yaptırmak için fısıldamaktır.)
+      
+      // alert("Hey there!"); // Display an alert message (Bir uyarı mesajı görüntüleme)
+      
+      // alert("Welcome :)"); // Alert method is used to show warning messages to users. (Uyarı yöntemi, kullanıcılara uyarı mesajları göstermek için kullanılır.)
+      
+      // The alert method is used to display a warning message, similar to its meaning in English. (Alert metodu İngilizcedeki anlamına yakın bir şekilde bir uyarı mesajı vermek için kullanılır.)
     </script>
-</body>
+  </body>
 </html>
