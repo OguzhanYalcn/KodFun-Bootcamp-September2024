@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Regions</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>JavaScript Bölgeleri</title>
-</head>
+  <body>
+    <h1><span lang="en">JavaScript</span> Introduction II</h1>
+    <p>
+      Bir HTML dökümanında JavaScript'i 3 farklı şekilde dökümana dahil edebiliriz.
+      <!-- JavaScript can be included in an HTML document in three different ways. (JavaScript bir HTML dökümanına üç farklı şekilde dahil edilebilir.) -->
+    </p>
 
-<body>
-    <h1><span lang="en">JavaScript</span> Giriş II</h1>
-    <p>Bir HTML dökümanında JavaScript'i 3 farklı şekilde dökümana dahil edebiliriz.</p>
-
-    <!-- A. SCRIPT TAGLARI ARASINDA -->
+    <!-- A. Between SCRIPT Tags | A. SCRIPT TAGLARI ARASINDA -->
     <script>
-        let x = 2 + 2;
-        document.write("<hr>");
-        document.write(x);
+      let x = 2 + 2;
+      document.write("<hr>");
+      document.write(x);
     </script>
-    <!-- B. HARİCİ DOSYA -->
-    <script src="kod.js"></script>
-    <hr>
 
-    <!-- INLINE JAVASCRIPT -->
-    <button onclick="alert('BAŞIN GÖĞE ERDİ Mİ?');">BANA TIKLAMA</button>
+    <!-- B. External File | B. HARİCİ DOSYA -->
+    <script src="code.js"></script>
+    <hr />
 
-    <hr>
-    <button id="minnos" onmouseenter="document.getElementById('minnos').textContent = 'ŞAKA YAPTIM :)'">
-        ÜZERİME GELMEYİN! BURAYI TERK EDERİM!!
+    <!-- INLINE JAVASCRIPT | Satır İçi JavaScript -->
+    <button onclick="alert('BAŞIN GÖĞE ERDİ Mİ?');">DON'T CLICK ME</button>
+    <!-- Inline JavaScript is added directly in the HTML element's attribute. (Satır içi JavaScript, doğrudan HTML öğesinin özniteliğine eklenir.) -->
+
+    <hr />
+    <button
+      id="tiny"
+      onmouseenter="document.getElementById('tiny').textContent = 'I WAS JOKING :)'"
+    >
+      DON'T COME ON ME! I'LL LEAVE!!
     </button>
-</body>
-
+    <!-- Inline event handlers like "onmouseenter" are often used for quick interactions but are generally avoided in favor of external scripts for better maintainability. (Satır içi olay işleyiciler "onmouseenter" gibi, hızlı etkileşimler için kullanılır ancak genellikle harici betikler tercih edilir.) -->
+  </body>
 </html>
