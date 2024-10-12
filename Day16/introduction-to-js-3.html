@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tıkladıkça Büyüyen Kutu</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box That Grows As You Click (Tıkladıkça Büyüyen Kutu)</title>
     <style>
-        #kutu {
-            background-color: black;
-            color: white;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: bold;
-            cursor: crosshair;
-            border-radius: .5rem;
-        }
+      #box {
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: crosshair;
+        border-radius: 0.5rem;
+      }
     </style>
-</head>
-<body>
-    <div id="kutu" onclick="yap()">100</div>
+  </head>
+  <body>
+    <!-- The box element that grows when clicked (Tıklandığında büyüyen kutu elementi) -->
+    <div id="box" onclick="doit()">100</div>
 
     <script>
-        let k = document.getElementById("kutu");
-        let x = 100;
+      let k = document.getElementById("box"); // Get the box element (Kutu elementini al)
+      let x = 100; // Initial size of the box (Kutunun başlangıç boyutu)
 
-        // yap adında bir fonksiyon tanımlıyoruz
-        function yap() {
-            x = x + 50; // x'in değerini 1 fazlasına eşitle
-            k.textContent = x;
-            k.style.width = x + "px";
-            k.style.height = x + "px";
-        }
+      // Define a function named "doit" ("doit" adında bir fonksiyon tanımlıyoruz)
+      function doit() {
+        x = x + 50; // Increase x by 50 (x'in değerini 50 artır)
+        k.textContent = x; // Update the text content of the box (Kutunun metin içeriğini güncelle)
+        k.style.width = x + "px"; // Update the width of the box (Kutunun genişliğini güncelle)
+        k.style.height = x + "px"; // Update the height of the box (Kutunun yüksekliğini güncelle)
+      }
     </script>
-</body>
+  </body>
 </html>
