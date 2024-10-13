@@ -14,42 +14,44 @@
   </head>
   <body>
     <script>
-      // Değişken Tanımlama (Variable Declaration)
+      // Variable Declaration (Değişken Tanımlama)
       // variable = var
       // var a = 3;
-      let a = 3; // Sayı (Number)
-      document.write(a); // 3
-      document.write("a"); // çift tırnak
-      document.write('a'); // tek tırnak
+      let a = 3; // Number (Sayı)
+      document.write(a); // Output: 3
+      document.write("a"); // Double quotes (Çift tırnak)
+      document.write('a'); // Single quotes (Tek tırnak)
       a = 4.5;
-      document.write(a); // 4.5
+      document.write(a); // Output: 4.5
 
-      let b = alert; //  "alert" fonksiyonunu bir değişkende tutar. Amaç fonksiyonu çalıştırmak değil, depolamak.
-      // b("George Boole"); // "alert" fonksiyonu çalışır.
+      // Storing a function in a variable (Bir fonksiyonu değişkende tutma)
+      let b = alert; // Stores the "alert" function in a variable. The purpose is to store the function, not to execute it. ("alert" fonksiyonunu bir değişkende tutar. Amaç fonksiyonu çalıştırmak değil, depolamak.)
+      // b("George Boole"); // This would execute the "alert" function. ("alert" fonksiyonu çalışır.)
 
-      let c = "Level"; // Metin (String)
-      document.write(c); // Level
+      let c = "Level"; // String (Metin)
+      document.write(c); // Output: Level
 
       let d = true; // Boolean (true/false)
 
-      // Sabit (const) tanımlama ve değiştirilememe durumu
+      // Constant declaration and immutability (Sabit (const) tanımlama ve değiştirilememe durumu)
       // let willYouMarryMe = false;
-      /* const willYouMarryMe = false; */ /* "const" ile oluşturulan değişkenlerin değeri değiştirilemez. */
-      /* willYouMarryMe = true; */ /* Hata verecektir çünkü const ile tanımlanmış bir değişkenin değeri değiştirilemez. Hata mesajı konsolda görülebilir. */
+      /* const willYouMarryMe = false; */ /* Variables created with "const" cannot be changed. ("const" ile oluşturulan değişkenlerin değeri değiştirilemez.) */
+      /* willYouMarryMe = true; */ /* This will cause an error because you can't change a const variable. The error message can be seen in the console. (Hata verecektir çünkü const ile tanımlanmış bir değişkenin değeri değiştirilemez. Hata mesajı konsolda görülebilir.) */
 
-      let e = document; // "document" nesnesi, önden tanımlı bir object
-      document.write(e.title); // Sayfanın başlığını yazdırır
+      let e = document; // "document" is a predefined object ("document" nesnesi, önden tanımlı bir object)
+      document.write(e.title); // Prints the title of the page (Sayfanın başlığını yazdırır)
  
-      let f; // Tanımlandı ama değer atanmamış (undefined)
+      let f; // Declared but not assigned (undefined) (Tanımlandı ama değer atanmamış (undefined))
 
-      let g = null; // null'ın veri türü object'tir. // Boş değer, veri türü "object"tir.
+      let g = null; // null's data type is object. (null'ın veri türü object'tir.) // Empty value, data type is "object". (Boş değer, veri türü "object"tir.)
 
-      document.body.innerHTML += "<hr>"; // HTML içeriğine yatay çizgi ekler
+      // Adding horizontal lines to the document (HTML içeriğine yatay çizgi ekler)
+      document.body.innerHTML += "<hr>";
       document.write("<hr>");
       // console.log("Look at the window !!!");
 
-      // Değişken türlerini yazdırma
-      document.write("<h3>Veri Türleri</h3>");
+      // Printing variable types (Değişken türlerini yazdırma)
+      document.write("<h3>Data Types (Veri Türleri)</h3>");
       document.write(typeof a); // number
       document.write("<br>");
       document.write(typeof b); // function
