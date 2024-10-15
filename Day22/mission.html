@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission 1</title>
+  </head>
+  <body>
+    <h1>Mission</h1>
+    <ul>
+        <li>Create an array of 6 numbers: 4, 8, 15, 16, 23, 42 (Numbers in the TV series Lost) </li> <!-- (6 elemanlı bir sayı dizisi oluştur: 4, 8, 15, 16, 23, 42) ('Lost' dizisindeki sayılar)-->
+        <li>Add 10 to the beginning </li> <!-- (Başına 10 ekle) -->
+        <li>Add 99 to the end </li> <!-- (Sonuna 99 ekle) -->
+        <li>Remove 3 numbers starting from index 2 </li> <!-- (2. indeksten başlayarak 3 adet sayı sil) -->
+        <li>Insert 77 at index 3 without removing any existing elements </li> <!-- (3. indekse 77 sayısını sok, mevcutlara dokunma) -->
+        <li>Update the number at index 2 to 66 </li> <!-- (2. indeksteki sayıyı 66 olarak güncelle) -->
+        <li>Remove the first element and display it </li> <!-- (başını sil ve silineni yazdır) -->
+        <li>Remove the last element and display it </li> <!-- (sonunu sil ve silineni yazdır) -->
+    </ul>
+
+    <script src="../common/writeConsole.js"></script>
+    <script>
+        drawLine(); // Adds a visual separator line on the output (Çıktıda bir ayırıcı çizgi ekler)
+        
+        // Step 1: Create an array with Numbers in the TV series Lost (Adım 1: Lost dizisindeki sayılarla bir dizi oluştur)
+        let lostNumbers = [4, 8, 15, 16, 23, 42];
+        drawLine("Numbers in the TV series Lost: " + lostNumbers); // Output the array (Diziyi yazdır)
+
+        // Step 2: Add 10 to the beginning of the array (Adım 2: Dizinin başına 10 ekle)
+        lostNumbers.unshift(10);
+        drawLine("Added 10 to the beginning: <br>" + lostNumbers); // Dizinin başına 10 eklendi
+
+        // Step 3: Add 99 to the end of the array (Adım 3: Dizinin sonuna 99 ekle)
+        lostNumbers.push(99);
+        drawLine("Added 99 to the end: <br>" + lostNumbers); // Dizinin sonuna 99 eklendi
+
+        // Step 4: Remove 3 elements starting from index 2 (Adım 4: 2. indeksten başlayarak 3 eleman sil)
+        lostNumbers.splice(2, 3); // splice(startIndex, deleteCount) removes 3 elements (splice ile 2. indeksten başlayarak 3 eleman silinir)
+        drawLine("Removed 3 numbers from index 2: <br>" + lostNumbers); // Dizinin 2. indeksinden başlayarak 3 sayı silindi 
+
+        // Step 5: Insert 77 at index 3 without removing anything (Adım 5: 3. indekse 77 ekle, mevcutları silmeden)
+        lostNumbers.splice(3, 0, 77); // Insert '77' at index 3 (3. indekse 77 ekle)
+        drawLine("Added 77 at index 3: <br>" + lostNumbers); // Dizinin 3. indeksine 77 sayısını ekle
+
+        // Step 6: Update the number at index 2 to 66 (Adım 6: 2. indeksteki sayıyı 66 olarak güncelle)
+        lostNumbers[2] = 66; // Set the value at index 2 to 66 (2. indeksteki elemanı 66 yap)
+        drawLine("Updated index 2 to 66: <br>" + lostNumbers); // Dizinin 2. indeksi 66 olarak güncellendi
+
+        // Step 7: Remove the first element and display it (Adım 7: İlk elemanı sil ve yazdır)
+        /* let first = lostNumbers.shift();
+        writeConsole("silinen: " + first); */
+        writeConsole("Removed first element: " + lostNumbers.shift()); // shift removes the first element (shift ilk elemanı siler ve geri döner)
+        drawLine("Removed the first element: <br>" + lostNumbers); // Dizinin ilk elemanı silindi
+
+        // Step 8: Remove the last element and display it (Adım 8: Son elemanı sil ve yazdır)
+        /* let last = lostNumbers.pop();
+        writeConsole("silinen: " + last); */
+        writeConsole("Removed last element: " + lostNumbers.pop()); // pop removes the last element (pop son elemanı siler ve geri döner)
+        drawLine("Removed the last element: <br>" + lostNumbers); // Dizinin son elemanı silindi
+
+        /* 
+           What we will do in the next lesson: (Sonraki derste neler yapacağız:)
+           Access array elements using loops (Döngülerle dizi elemanlarına erişme) | Maybe it can be left to the topic of loops. (Belki döngüler konusuna da bırakılabilir.)
+           Array methods (Dizi metotları)
+           Perform operations with arrays (Dizilerle işlemler yapma)
+           Working with objects inside arrays (Dizilerde nesnelerle çalışma) | Moving objects in arrays, etc. (Dizilerde nesne taşıma vs.)
+
+           Homework → Check out arrays section on w3schools (Ödev → w3schools'taki diziler konusuna göz at)
+           https://www.w3schools.com/js/js_arrays.asp
+        */ 
+    </script>
+  </body>
+</html>

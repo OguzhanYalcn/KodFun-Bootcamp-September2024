@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays (Diziler)</title>
+  </head>
+  <body>
+    <script src="../common/writeConsole.js"></script>
+    <script>
+        // let a = 3;
+        // let b = 4;
+        // let c = 7;
+
+        // The sum of three numbers can be calculated in this way. (Üç sayının toplamı bu şekilde hesaplanabilir.)
+        // let sum = a + b + c;
+        // drawLine(sum);
+
+        // Define an array representing residents in an apartment (Bir apartmandaki sakinleri temsil eden bir dizi tanımla)
+        // indexes:         0         1        2       3
+        let apartment = ["baris", "alper", "yilmaz", "ciro"];
+        
+        // Output the number of elements in the array (Dizideki eleman sayısını yazdır)
+        drawLine("Number of floors in the apartment: " + apartment.length); // (Apartmandaki kat sayısı)
+        
+        // Convert array to a string and display (Diziyi stringe çevir ve yazdır)
+        // Even without toString, JavaScript would convert the array to a string because the '+' operator does it implicitly
+        // (toString kullanmasak bile + operatörü diziyi stringe çevirecektir)
+        drawLine("Array elements: " + apartment.toString());
+        // The "+" operator converts the left side of the operator to a string if there is a string on the left side. ("+" operatörü, solunda string varsa sağını da stringe çevirir.)
+        
+        
+
+        // Add a new element to the end of the array (Dizinin sonuna yeni bir eleman ekle)
+        apartment.push("dries");
+        drawLine("dries added: <br>" + apartment); /* We use <br> for line break since innerHTML is used in writeConsole.js (writeConsole.js'te innerHTML kullandığımız için alt satıra geçmek için <br> kullanıyoruz) */
+
+
+
+        // Accessing an element by its index. (Bir elemana indeksi ile erişim.)
+        // Access the element of the array at a specific position (Dizinin belirli bir sıradaki elemanına erişme)
+        drawLine("Element at index 3: <br>" + apartment[3]);
+
+        
+        
+        // Replace the element at index 1 (1. indeksindeki elemanı değiştir)
+        apartment[1] = "kerem";
+        drawLine("Replaced element at index 1 with 'kerem': <br>" + apartment); // apartmanın 1. indeksine 'kerem' taşındı
+
+
+
+        // Add a new element to the beginning of the array (Dizinin başına yeni bir eleman ekle)
+        apartment.unshift("icardi"); // unshift adds the element at the beginning of the array (unshift dizinin başına ekleme yapar)
+        drawLine("Added 'icardi' at the beginning of the array: <br>" + apartment); // dizinin başına 'icardi' eklendi.
+
+
+
+        // Remove the first element and store it (İlk elemanı sil ve sakla) | Both stores the value and deletes the value. (Hem değeri saklar hem de değeri siler.)
+        let first = apartment.shift(); // 'shift' removes and returns the first element. ('shift' ilk elemanı siler ve geri döndürür.)
+        writeConsole("Removed: " + first); // Silinen
+        drawLine("Removed the first element of the array: <br>" + apartment); // Dizinin ilk elemanını silindi
+
+
+
+        // Remove the last element and store it (Son elemanı sil ve sakla)
+        let last = apartment.pop(); // pop removes and returns the last element (like 'shift') [pop son elemanı siler ve geri döner ('shift' gib)]
+        // apartment.pop(); → Böyle, sadece silme işlemi de yapılabilir
+        writeConsole("Removed element: " + last); // silineni son isimli değişkende tuttuk.
+        drawLine("Removed the last element: <br>" + apartment); // Dizinin son elemanını silindi
+
+
+
+        // Remove an element at a specific index (Belirli bir indeksteki elemanı sil)
+        apartment.splice(2, 1); // splice removes one element at index 2 (splice 2. indeksten başlayarak 1 eleman siler) // If we said (2,2), it would start at index 2 and remove 2 elements. [(2,2) deseydik 2. indeksten den başlayıp 2 tane eleman silerdi.]
+        writeConsole("After removing the element at index 2: "); // 2. indeksteki elemanı sildikten sonra
+        drawLine(apartment);
+
+
+
+        // Insert an element at index 2 without removing anything (Hiçbir şey silmeden 2. indekse yeni bir eleman ekle) 
+        // So it puts it at the beginning of index 2 (2. indeksin başına koyuyor yani)
+        writeConsole("Inserting 'osimhen' at index 2: "); // 2. indeksine 'osimhen' elemanını koy
+        apartment.splice(2, 0, "osimhen"); // Insert 'osimhen' at index 2 (osimhen'i 2. indekse ekle)
+        drawLine(apartment);
+
+        /* 
+        Summary of what we did in this lesson: (Bu ders boyunca neler yaptık:)
+        1. Defined an array (Dizi tanımladık)
+        2. Accessed elements by index (Elemanlara indeks numarası ile eriştik)
+        3. Updated an element by index (Bir elemanı indeks numarası ile güncelledik)
+        4. Added elements to the beginning, end, and middle (Başa, sona ve araya eleman ekledik)
+        5. Removed elements from the beginning, end, and middle (Baştan, sondan ve aradan eleman sildik)
+        */
+    </script>
+  </body>
+</html>
