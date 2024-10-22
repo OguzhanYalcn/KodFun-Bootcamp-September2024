@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ödev</title>
+    <style>
+      #button-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr); /* 10 sütunlu grid */
+            gap: 5px; /* Butonlar arasındaki boşluk */
+            padding: 10px; /* Konteynerin iç boşluğu */
+        }
+        .button {
+            padding: 20px; /* Butonun iç boşluğu */
+            font-size: 16px;
+            cursor: pointer; /* İmleç değişimi */
+            border-radius: 10px;
+        }
+        .button:hover{
+          background: #ccc;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>ÖDEV</h1>
+    <!-- JavaScript ile 100 buton koy ve her birinde 0 yazsın. -->
+    <!-- Hangisine tıklanırsa onun değeri 1 artsın. -->
+    <!-- CSS ile bu 100 butonu 10x10'luk grid olacak şekilde göster -->
+    <div id="button-container"></div>
+
+    <script>
+      // 100 buton oluştur
+      for (let i = 0; i < 100; i++) {
+        // Buton elemanını oluştur
+        const button = document.createElement("button");
+        button.className = "button";
+        button.textContent = "0"; // Başlangıç değeri 0
+
+        // Butona tıklama olayı ekle
+        button.addEventListener("click", function () {
+          // Butonun değerini 1 arttır
+          button.textContent = Number(button.textContent) + 1;
+        });
+
+        // Butonu konteynıra ekle
+        document.getElementById("button-container").appendChild(button);
+      }
+    </script>
+  </body>
+</html>

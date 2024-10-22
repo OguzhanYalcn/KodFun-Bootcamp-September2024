@@ -1,0 +1,34 @@
+<!-- TASK 1: Create an HTML document. print the sum of 2 and 2 in the body element using javascript. -->
+<!-- GÖREV 1: HTML dökümanı oluştur. "body" elementine javascript yardımıyla 2 ile 2'nin toplamını yazdır. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+  </head>
+  <body>
+    <h1>Task-1</h1>
+    <script>
+      // Method-1: Basic way to calculate and display the sum of 2 + 2 (Yöntem 1: 2 + 2'nin toplamını hesaplama ve yazdırmanın temel yolu)
+      let x = 2 + 2;
+      document.write(x);
+
+      document.write("<hr>");
+
+      // Method-2: Using innerHTML to update content (Yöntem 2: innerHTML kullanarak içeriği güncellemek)
+      // "+=" operator appends the content to existing content in the body element (+= operatörü, var olan içeriğin sonuna ekler)
+      document.body.innerHTML += "<strong> 2 + 2 = " + (2 + 2) + "</strong>";
+      // "+=" operator appends content to the existing HTML, while "=" would replace the entire content.
+      // "+=" operatörü, mevcut HTML içeriğinin sonuna ekleme yapar. "=" kullanılsaydı, tüm içeriği değiştirmiş olurdu.
+
+      // Method-3 (kodfun): Creating and styling a div element dynamically (Yöntem 3: Dinamik olarak bir div elementi oluşturup stil vermek)
+      let div = document.createElement("div"); // Creates a new 'div' element (Yeni bir 'div' elementi oluşturur)
+      div.textContent = 2 + 2; // Sets the text inside the div to the sum (Div'in içeriğini toplam ile doldurur)
+      div.style.background = "black"; // Sets the background color to black (Arka plan rengini siyah yapar)
+      div.style.color = "white"; // Sets the text color to white (Metin rengini beyaz yapar)
+      div.style.marginTop = "1rem"; // Adds margin at the top (Üst kısma boşluk ekler)
+      document.body.appendChild(div); // Appends the div to the body of the document (Div'i dökümanın "body" kısmına ekler)
+    </script>
+  </body>
+</html>

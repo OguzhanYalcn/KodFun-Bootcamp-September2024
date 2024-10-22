@@ -1,0 +1,51 @@
+<!-- ÖDEV 2:
+Bir kare yapın. Bu kareye tıklayınca sayfa üzerinde rastgele bir yere
+gitsin. (ipuçları: css'teki mutlak pozisyonlamadan yararlanılabilir.)
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev-6</title>
+    <style>
+      body {
+        position: relative;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden; /* Taşmayı önlemek için */
+      }
+      #kare {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 50%; /* Başlangıç konumu */
+        left: 50%; /* Başlangıç konumu */
+        transform: translate(-50%, -50%); /* Ortalamak için */
+        cursor: pointer; /* İmleci tıklanabilir göster */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kare"></div>
+
+    <script>
+      const kare = document.getElementById("kare");
+
+      kare.addEventListener("click", function () {
+        // Sayfa boyutlarını al
+        const bodyWidth = document.body.clientWidth;
+        const bodyHeight = document.body.clientHeight;
+
+        // Rastgele bir pozisyon hesapla
+        const randomX = Math.random() * (bodyWidth - 100); // 100 kare genişliği
+        const randomY = Math.random() * (bodyHeight - 100); // 100 kare yüksekliği
+
+        // Kareyi yeni pozisyona yerleştir
+        kare.style.left = randomX + "px";
+        kare.style.top = randomY + "px";
+      });
+    </script>
+  </body>
+</html>
