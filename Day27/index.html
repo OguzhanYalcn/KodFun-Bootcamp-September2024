@@ -8,57 +8,38 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/slate/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container py-5">
-      <h1 class="mt-4">Yapılacaklar</h1>
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 mx-auto border-0">Yapılacaklar Listem</span>
+      </div>
+    </nav>
 
-      <form class="row mt-3 gy-2 gx-3 align-items-center">
+    <div class="container py-5">
+      <h1 class="mt-4">Neler Yapılacak?</h1>
+
+      <form id="frmTask" class="row mt-3 gy-2 gx-3 align-items-center">
         <div class="col">
-          <input type="text" class="form-control" id="task" placeholder="Ne yapacaksın?"/>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="task"
+            placeholder="Ne yapacaksın?"
+            required
+          />
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Ekle</button>
+          <button type="submit" class="btn btn-lg btn-primary">Ekle</button>
         </div>
       </form>
 
       <div id="todos" class="mt-4 todos">
         
-        <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary "> <!-- py-dikey padding, px-yatay padding (5'e kadar, mx-0, yatay marginleri sıfırla) -->
-            <div class="col-auto">
-                <input type="checkbox">
-            </div>
-            <div class="col ps-0 d-flex align-items-center lead"> <!-- padding-start --> <!-- bir yazıyı öne çıkarmak istiyorsan lead ile yazabilirsin ya da fs-1 (en büyük h1 gibi) -->
-                Projeyi tamamla
-            </div>
-        </div>
-        <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary ">
-            <div class="col-auto">
-                <input type="checkbox">
-            </div>
-            <div class="col ps-0 d-flex align-items-center lead">
-                Yürüyüş yap
-            </div>
-        </div>
-        <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary ">
-            <div class="col-auto">
-                <input type="checkbox" checked>
-            </div>
-            <div class="col ps-0 d-flex align-items-center lead">
-                Faturaları öde
-            </div>
-        </div>
-        <div class="row mb-3 border border-secondary rounded py-3 px-2 mx-0 bg-primary ">
-            <div class="col-auto">
-                <input type="checkbox" checked>
-            </div>
-            <div class="col ps-0 d-flex align-items-center lead">
-                Vitaminlerini al
-            </div>
-        </div>
-
       </div>
+
+      <script src="website.js"></script>
     </div>
   </body>
 </html>
