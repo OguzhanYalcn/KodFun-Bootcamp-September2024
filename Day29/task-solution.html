@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Solution</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);;
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0,0,0, 0.35) 0px 5px 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <form id="frm">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" required>
+        <button>Remember Me</button>
+    </form>
+
+    <script>
+        const frm = document.getElementById("frm");
+        const txtName = document.getElementById("name");
+        
+        // hatırlanan veri varsa konsola yazalım
+        if (localStorage["textData"]) {
+            const rememberedName = localStorage["textData"];
+            welcome(rememberedName);
+        }
+        
+        function welcome(textName) {
+            frm.innerHTML = `Welcome ${textName} (<a href="#" onclick="forget()">Forget Me</a>)`;
+        }
+
+        function forget() {
+            localStorage.removeItem("textData");
+            // location.reload();
+            frm.textContent = "Bye Bye !";
+            setTimeout(() => location.reload(), 1500);
+        }
+
+        frm.onsubmit = function (event) {
+            event.preventDefault();
+            const textName = txtName.value;
+            localStorage["textData"] = textName;
+            frm.textContent = `Merhaba ${textName}, seni hatırlayacağım..`;
+            /* 1 saniye içinde sayfa yenilenecek */
+            // setTimeout(function() {
+            //     location.reload();
+            // }, 1500);
+            setTimeout(() => location.reload(), 1500);
+        };
+    </script>
+  </body>
+</html>

@@ -3,3 +3,12 @@
     height: 2rem;
     vertical-align: middle;
 }
+
+.done .todo-title {
+    text-decoration: line-through;
+    color: darkcyan;
+}
+
+.undone .todo-title {
+    color: coral;
+}
