@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disappearing Loading</title>
+    <link rel="stylesheet" href="spinner.css" />
+    <style>
+      body {
+        padding: 3rem;
+        line-height: 2;
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+      }
+      h1 {
+        text-align: center;
+        text-transform: capitalize;
+      }
+      .overlay {
+        background-color: rgb(245, 222, 179, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="loader"></div>
+    </div>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div>
+      <form>
+        <input id="sure" type="number" value="3" /> saniye
+        <button id="btnGoster" type="button">Show Loader</button>
+      </form>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut facere eius
+      unde obcaecati quasi, laudantium fuga culpa esse doloremque ut veritatis
+      illum, assumenda officiis maxime magnam, asperiores dolores consequuntur
+      tempora?
+    </p>
+    <p>
+      Quam quis, esse sed sequi, officiis iusto adipisci dolor, necessitatibus
+      odit rerum dicta illum explicabo voluptatem libero! Distinctio blanditiis
+      officiis velit itaque libero qui. Dolorum enim nemo veniam earum
+      accusamus.
+    </p>
+    <p>
+      Repudiandae minus sequi laudantium minima consectetur laborum aliquid
+      beatae maiores exercitationem esse error fugiat autem voluptatibus
+      voluptate, voluptates perferendis optio rem, expedita consequatur
+      doloremque animi. Beatae earum voluptate provident ipsum?
+    </p>
+    <p>
+      Hic neque laboriosam nihil quia quasi dignissimos cum quo, fugiat
+      distinctio. Ad porro harum totam, excepturi saepe ratione accusantium
+      culpa recusandae ipsa dicta, molestias debitis quibusdam ab commodi
+      praesentium maxime.
+    </p>
+    <p>
+      Fugit obcaecati ratione ullam vel quidem nihil molestiae! Numquam quod aut
+      rem ea repudiandae nostrum distinctio, voluptatum facilis iure, vel
+      exercitationem ullam sequi? Eos aut eligendi temporibus alias id dolores.
+    </p>
+    <p>
+      Eos nesciunt animi at quidem. Est aliquam provident illum consequuntur!
+      Voluptas consequatur quisquam accusamus aut deleniti porro quaerat illo
+      nostrum, est cupiditate officia voluptatem voluptatibus? Reiciendis quo
+      ipsum amet earum?
+    </p>
+    <p>
+      Saepe tenetur et quibusdam, voluptatum eligendi adipisci atque voluptas,
+      sed quos, voluptate deleniti laboriosam illo iste soluta quis rem vero!
+      Maxime officia iste exercitationem aliquam ducimus corporis temporibus
+      pariatur quae!
+    </p>
+    <p>
+      Quasi reiciendis eius quae id ipsa aspernatur voluptatum praesentium a
+      veniam expedita, perspiciatis accusamus. Tenetur, sunt ex in rerum ratione
+      distinctio officiis animi quam, itaque accusamus iste aperiam repudiandae
+      facere.
+    </p>
+    <p>
+      Reiciendis vero illo incidunt deserunt rem sed ratione laborum ipsam,
+      similique hic ipsum doloribus porro facere tempora distinctio amet beatae
+      officiis fuga, nam perferendis vitae libero totam. Pariatur, soluta
+      consequuntur!
+    </p>
+    <p>
+      Quo eum, incidunt odio praesentium vero, in deserunt est, veniam quos
+      adipisci rem voluptas illum quis. Alias repudiandae sunt tempora, dolor
+      illum libero voluptatibus voluptate impedit, sapiente facere sed error.
+    </p>
+    <p>
+      Odit illo voluptates magni nesciunt dolor voluptatum error veniam dolorem,
+      id repellat. Commodi eaque aspernatur corporis. Voluptatem eaque rerum sed
+      expedita tempora, eum impedit quos facilis ipsa nulla perspiciatis enim?
+    </p>
+    <p>
+      Incidunt soluta ut totam illum libero alias odit error in velit blanditiis
+      quaerat, itaque iure, dolore rem ducimus excepturi ea impedit. Labore
+      dolore soluta optio quae asperiores alias quibusdam quisquam.
+    </p>
+    <p>
+      Commodi, obcaecati aut molestiae nihil facilis quas distinctio similique
+      sapiente corrupti aliquam porro a consequuntur asperiores nemo accusantium
+      magni, earum veniam unde debitis culpa accusamus quis magnam! Ducimus,
+      dolorem dolores.
+    </p>
+    <p>
+      Alias animi ipsam beatae. Vitae soluta rem, eos tenetur laboriosam
+      blanditiis a mollitia non animi accusamus, at recusandae molestias error
+      reiciendis, aliquid hic facere! Ab libero optio quisquam corrupti!
+      Impedit.
+    </p>
+    <p>
+      Sint quidem nulla ratione veniam similique est magni enim atque at eaque
+      aut officia cum dolore praesentium aliquid tempore, delectus, quo
+      reiciendis consequuntur ipsa eos laudantium laboriosam ea. Voluptatibus,
+      culpa.
+    </p>
+    <p>
+      Sint facilis consequatur, unde ut ex recusandae eaque nesciunt eligendi
+      vel nostrum aperiam. Eum asperiores tenetur quam optio itaque repudiandae
+      voluptatibus voluptas! Culpa voluptatem optio maxime numquam corporis
+      beatae officiis!
+    </p>
+    <p>
+      Ab labore aut voluptatum accusamus at quo quis architecto cumque corporis
+      suscipit commodi aliquam delectus laborum praesentium, perferendis
+      sapiente animi neque iure? Ipsam distinctio ducimus, laboriosam quas quod
+      a totam?
+    </p>
+    <p>
+      Dolores enim assumenda inventore minima! Voluptatibus quas incidunt natus
+      eius alias nihil deleniti rerum at doloribus temporibus pariatur vitae
+      fugit non, dignissimos maiores iusto architecto a? Illo sequi ipsam est.
+    </p>
+    <p>
+      Cupiditate sequi incidunt earum, quia tempore modi ratione culpa ipsa
+      eveniet atque tempora nobis tenetur beatae sit consequatur mollitia
+      molestias voluptatum vel minima quas enim reprehenderit aliquam
+      perferendis! Quasi, voluptas!
+    </p>
+    <p>
+      Ab mollitia laborum voluptatibus fugit dolores voluptas minima quae
+      architecto, atque ipsam accusantium eius assumenda, libero, facilis
+      ducimus quos quod earum corporis eligendi quia! Iste ab sed impedit
+      facilis ut.
+    </p>
+    <p>
+      Asperiores recusandae minus accusantium sed delectus reprehenderit eum ex
+      ratione enim beatae ullam voluptatibus, eos quaerat excepturi sapiente,
+      placeat eaque dolores aliquam deleniti voluptate inventore corrupti animi
+      incidunt consequuntur? Officia!
+    </p>
+    <p>
+      Nesciunt, temporibus velit. Rerum, aliquam possimus unde repellat
+      voluptates, voluptas blanditiis, ex maxime ad qui eligendi. Veniam magnam
+      dolor suscipit, est sunt deserunt doloremque ipsum tempora vitae voluptas,
+      repellendus quam.
+    </p>
+    <p>
+      Minima sint aut beatae incidunt minus quae dolores similique sit nesciunt
+      laudantium delectus nemo, odit nostrum eligendi. Nesciunt, molestiae quos
+      modi sunt, quasi dolore at quibusdam non voluptate, repellat commodi.
+    </p>
+    <p>
+      Laboriosam repudiandae accusamus eius! Alias eveniet earum modi illum, qui
+      repellendus assumenda eligendi at unde odio obcaecati error, blanditiis
+      harum ut sapiente rerum. Ducimus praesentium est voluptatum fugit,
+      voluptatibus vero?
+    </p>
+    <p>
+      Consequatur magni natus accusantium eius. Consequuntur maxime ex, dolorum
+      tempore odio culpa! Consequatur esse veritatis eius. Animi, impedit
+      facere! Impedit maxime, animi exercitationem illo culpa deserunt similique
+      cum vel dignissimos.
+    </p>
+    <p>
+      Amet quam esse eligendi non et optio velit expedita fugit, porro,
+      doloribus iure cumque vitae necessitatibus ut tempora laboriosam laborum
+      fuga atque quidem voluptatem corrupti culpa. Aut animi eaque quibusdam?
+    </p>
+    <p>
+      Repellat delectus laborum optio tempora. Accusantium, cumque, optio
+      consequatur qui saepe laudantium quo ab cupiditate nihil in aliquid non
+      tenetur itaque maiores quos aspernatur explicabo reprehenderit.
+      Exercitationem, reiciendis. Officiis, dolor!
+    </p>
+    <p>
+      Sunt, eveniet cupiditate. Possimus error officiis similique quia eaque
+      ipsam, numquam, hic fuga molestiae incidunt sint cumque obcaecati illum
+      eligendi quas minima harum mollitia corporis eum illo. Similique, quasi
+      voluptatum!
+    </p>
+    <p>
+      Ducimus minima molestias sequi nulla ea omnis aperiam iste explicabo
+      asperiores distinctio sunt blanditiis vero similique sit animi itaque,
+      voluptate iusto. Recusandae praesentium pariatur soluta quia possimus
+      dignissimos provident esse!
+    </p>
+    <p>
+      Tempora reprehenderit sunt dolores rem aspernatur praesentium et maxime
+      accusamus molestias? Consequuntur necessitatibus rerum nulla quo dolor,
+      officia iure ea quis eveniet aliquam asperiores, obcaecati eligendi
+      reiciendis, quam fugiat facere!
+    </p>
+    <p>
+      Quaerat eligendi odio expedita iusto reiciendis fuga ipsam temporibus
+      alias quo quis facere repellat, unde, molestiae ad sed, eius nisi
+      repudiandae. Est dicta quia eius officiis magnam possimus ipsum expedita.
+    </p>
+    <p>
+      Similique nobis alias qui amet vel voluptas! Consectetur eveniet eaque,
+      tempore veniam qui quam. Est cum iusto quae odit minus reiciendis soluta
+      quod. Ipsam expedita, quas perspiciatis accusantium nobis natus?
+    </p>
+    <p>
+      Ea in esse, facere nam fugiat maiores nisi quo ut exercitationem, aliquam
+      delectus expedita deleniti vel pariatur labore natus amet enim, iure odio.
+      Excepturi, asperiores ipsam. Vero facilis perspiciatis esse?
+    </p>
+
+    <script>
+      function showLoader() {
+        document.querySelector(".overlay").style.display = "flex";
+      }
+
+      function hideLoader() {
+        document.querySelector(".overlay").style.display = "none";
+      }
+
+      // loader göster
+      showLoader();
+
+      // 2 saniye sonra gizle
+      setTimeout(hideLoader, 1000);
+
+      const inputSure = document.getElementById("sure");
+      const btnGoster = document.getElementById("btnGoster");
+
+      // GÖREV: Göster butonuna tıklandığından belirtilen süre kadar loading animasyonunu göster
+
+      function clicked() {
+        const sure = Number(inputSure.value);
+        showLoader();
+        setTimeout(hideLoader, sure * 1000);
+      }
+
+      btnGoster.addEventListener("click", clicked);
+
+      // https://stackoverflow.com/questions/11936816/execute-function-after-complete-page-load
+
+      // sayfa yüklendiğinde
+      window.onload = function () {
+        console.log("yüklendi");
+      };
+    </script>
+  </body>
+</html>
